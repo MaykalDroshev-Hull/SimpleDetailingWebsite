@@ -1,3 +1,4 @@
+//TODO: Need to add fade out when clicking on new page
 import { useEffect } from "react"
 import { Router } from "next/router"
 import Layout from "@/components/Layout"

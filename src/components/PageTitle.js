@@ -1,3 +1,4 @@
+//TODO: Need to implement fade out when click on new page
 import { useState, useEffect } from 'react'
 import styles from '../styles/PageTitle.module.css'
 
