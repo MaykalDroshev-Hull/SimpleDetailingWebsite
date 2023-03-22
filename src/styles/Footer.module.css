@@ -11,6 +11,10 @@
   flex-direction: column;
 }
 
+.footer p{
+  color: white;
+}
+
 .socialIcon,
 .menu {
   position: relative;
