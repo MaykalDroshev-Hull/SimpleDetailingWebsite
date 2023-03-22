@@ -1,6 +1,6 @@
 import styles from '../styles/Footer.module.css'
-import { Script } from 'next/script'
 import Link from 'next/link'
+import {FaFacebook} from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -11,7 +11,12 @@ const Footer = () => {
         <div className={`${styles.wave} ${styles.wave3}`} />
         <div className={`${styles.wave} ${styles.wave4}`} />
       </div>
-      <ul class={styles.menu}>
+      <ul className={styles.socialIcon}>
+        <Link href='https://www.facebook.com/GentrysAutoDetailing'>
+          <FaFacebook className={styles.socialIcon}/>
+        </Link>
+      </ul>
+      <ul className={styles.menu}>
         <li><Link href="/">Home</Link></li>
         <li><Link href="/about">About</Link></li>
         <li><Link href="/services">Services Offered</Link></li>
