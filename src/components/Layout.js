@@ -1,7 +1,7 @@
 import HamburgerMenu from './HamburgerMenu'
 import Footer from './Footer'
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
     <>
       <HamburgerMenu />

@@ -6,6 +6,8 @@
   clip-path: circle(24px at 32px 24px);
   -webkit-transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
   transition: -webkit-clip-path 0.5625s, clip-path 0.375s;
+  padding: 0 2px 2px 2px;
+  margin: 15px;
 }
 
 .nav:hover {
@@ -33,7 +35,6 @@
 
 .nav a:hover {
   background: rgb(22, 132, 151);
-  border: 1px solid beige;
 }
 
 .nav a:active {

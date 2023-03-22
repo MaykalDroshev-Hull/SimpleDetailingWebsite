@@ -1,27 +1,23 @@
-import Link from "next/link"
 import styles from '../styles/Footer.module.css'
-//TODO: 
-// 1) Make it so the footer spans the bottom of the web page
-// 2) Make it so the facebook logo appears and connects to facebook page
-// 3) Better appearance for footer
+import { Script } from 'next/script'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <body>
-      <footer className={styles.footer}>
-        <div className={styles.footer}>         
-          <div className={styles.row}>
-            
-          </div>
-          <div className={styles.row}>
-            <Link href='/'>Home</Link>
-            <Link href='/about'>About</Link>
-            <Link href='/services'>Services Offered</Link>
-            <Link href='/contact'>Contact</Link>
-          </div>
-        </div>
-      </footer>
-    </body>
+    <footer className={styles.footer}>
+      <div>
+        <div className={`${styles.wave} ${styles.wave1}`} />
+        <div className={`${styles.wave} ${styles.wave2}`} />
+        <div className={`${styles.wave} ${styles.wave3}`} />
+        <div className={`${styles.wave} ${styles.wave4}`} />
+      </div>
+      <ul class={styles.menu}>
+        <li><Link href="/">Home</Link></li>
+        <li><Link href="/about">About</Link></li>
+        <li><Link href="/services">Services Offered</Link></li>
+        <li><Link href="/contact">Contact</Link></li>
+      </ul>
+    </footer>
   )
 }
 
