@@ -1,0 +1,9 @@
+.slider{
+  width: 50%;
+  margin: auto;
+  background-color: lightgray;
+}
+
+.slider Image{
+  display: flex;
+}
