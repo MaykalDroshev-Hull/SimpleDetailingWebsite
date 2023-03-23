@@ -10,7 +10,7 @@ const PageTitle = ({ title }) => {
   }, [])
 
   return (
-    <div className={styles.div}>
+    <div className={styles.outerDiv}>
       <h1 className={`${styles.h1} ${isMounted ? styles['fade-in'] : ''}`}>
         {title}
       </h1>

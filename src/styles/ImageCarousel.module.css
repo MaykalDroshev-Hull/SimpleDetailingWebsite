@@ -1,7 +1,19 @@
-.slider{
+.background{
+  background-color: aqua;
+  padding: 5px;
   width: 50%;
+  justify-content: center;
+  position: relative;
   margin: auto;
-  background-color: lightgray;
+  border-radius: 5px;
+  background-color: #bdbdbd;
+}
+.slider{
+  background-color: #ebedf3;
+  top: 50%;
+  border-radius: 5px;
+  border-width: thick;
+  border-color: green;
 }
 
 .slider Image{
