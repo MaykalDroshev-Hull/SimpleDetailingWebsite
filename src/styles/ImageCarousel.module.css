@@ -1,13 +1,15 @@
 .background{
   background-color: aqua;
   padding: 5px;
-  width: 50%;
+  width: 90%;
+  height: auto;
   justify-content: center;
   position: relative;
   margin: auto;
   border-radius: 5px;
   background-color: #bdbdbd;
 }
+
 .slider{
   background-color: #ebedf3;
   top: 50%;

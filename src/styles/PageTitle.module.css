@@ -1,6 +1,7 @@
 .outerDiv{
   text-align: center;
-  background-color: green;
+  background-color: #6c9cac;
+  border-bottom: 10px #676767;
 }
 
 .outerDiv h1 {
@@ -10,8 +11,9 @@
   font-style: 'Colombo-sans';
   font-size: 50px;
   font-weight: 500;
-  color: white;
+  color: beige;
   opacity: 0;
+  font-weight: 700;
 }
 
 .h1.fade-in{

@@ -4,7 +4,8 @@ import ImageCarousel from "@/components/ImageCarousel"
 export default function Home() {
   return (
     <>
-      <PageTitle title={`Gentry's Auto Detailing`} />
+      <PageTitle title={`Welcome!`} />
+      <br />
       <br />
       <ImageCarousel />
     </>

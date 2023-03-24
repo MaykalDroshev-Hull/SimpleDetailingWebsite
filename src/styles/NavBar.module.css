@@ -1,0 +1,38 @@
+.navBar {
+  padding: 15px 15px 5px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 20px;
+  position: relative; /* add position:relative to parent container */
+}
+
+.navBar a {
+  text-decoration: none;
+  color: #737373;
+  font-weight: 700;
+  position: relative; /* add position:relative to anchor tags */
+}
+
+.navBar a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #b4b4b4;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.3s ease; /* add transition effect for smooth animation */
+}
+
+.navBar a:hover{
+  color: #b4b4b4;
+}
+
+.navBar a:hover::after,
+.navBar a.active::after {
+  width: 100%;
+  opacity: 1;
+}
