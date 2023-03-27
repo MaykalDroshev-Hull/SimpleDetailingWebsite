@@ -1,16 +1,37 @@
+.header {
+  display: flex;
+  background-color: #e4ecec;
+  width: 100%;
+  border-top: 2px solid #bdbdbd;
+  border-bottom: 2px solid #bdbdbd;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sticky{
+  position: fixed;
+  z-index: 9999;
+}
+
+.websiteTitle{
+  margin-left: auto;
+  padding-right: 15px;
+}
+
+.navBar a,
+.websiteTitle{
+  font-weight: 700;
+  color: #737373;
+  text-decoration: none;
+  position: relative;
+}
+
 .navBar {
   padding: 15px 15px 5px;
   display: grid;
   grid-auto-flow: column;
   grid-column-gap: 20px;
   position: relative; /* add position:relative to parent container */
-}
-
-.navBar a {
-  text-decoration: none;
-  color: #737373;
-  font-weight: 700;
-  position: relative; /* add position:relative to anchor tags */
 }
 
 .navBar a::after {

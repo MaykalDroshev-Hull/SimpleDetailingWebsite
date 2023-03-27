@@ -1,7 +1,8 @@
 .outerDiv{
   text-align: center;
   background-color: #6c9cac;
-  border-bottom: 10px #676767;
+  border-top: 3px solid #bdbdbd;
+  border-bottom: 3px solid #bdbdbd;
 }
 
 .outerDiv h1 {

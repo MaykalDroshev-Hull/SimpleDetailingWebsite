@@ -11,11 +11,9 @@ const PageTitle = ({ title }) => {
 
   return (
     <div className={styles.outerDiv}>
-      <hr></hr>
       <h1 className={`${styles.h1} ${isMounted ? styles['fade-in'] : ''}`}>
         {title}
       </h1>
-      <hr></hr>
     </div>
   )
 }
