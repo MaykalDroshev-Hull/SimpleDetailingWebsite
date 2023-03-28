@@ -11,17 +11,17 @@ const Footer = () => {
         <div className={`${styles.wave} ${styles.wave3}`} />
         <div className={`${styles.wave} ${styles.wave4}`} />
       </div>
-      <ul className={styles.socialIcon}>
+      <div className={styles.socialIcon}>
         <Link href='https://www.facebook.com/GentrysAutoDetailing'>
-          <FaFacebook className={styles.socialIcon}/>
+          <FaFacebook/>
         </Link>
-      </ul>
-      <ul className={styles.menu}>
+      </div>
+      <div className={styles.menu}>
         <li><Link href="/">Home</Link></li>
         <li><Link href="/about">About</Link></li>
         <li><Link href="/services">Services Offered</Link></li>
         <li><Link href="/contact">Contact</Link></li>
-      </ul>
+      </div>
       <p>Website Designed by Lofton Gentry</p>
     </footer>
   )

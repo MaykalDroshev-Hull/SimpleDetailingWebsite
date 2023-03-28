@@ -1,6 +1,5 @@
-//TODO: Need to add fade out when clicking on new page
 import Layout from "@/components/Layout"
-import {Nunito} from 'next/font/google'
+import { Nunito } from 'next/font/google'
 import styles from '../styles/globals.css'
 
 const nunito = Nunito({
@@ -10,9 +9,9 @@ const nunito = Nunito({
 export default function App({ Component, pageProps }) {
   return (
     <main className={nunito.className}>
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </main>
   )
 }

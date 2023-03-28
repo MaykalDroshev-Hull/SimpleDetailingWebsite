@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from 'framer-motion'
-import styles from '../styles/Transition.module.css'
 
 const variants = {
   out: {
@@ -24,7 +23,7 @@ const Transition = ({ children }) => {
   const { asPath } = useRouter();
 
   return (
-    <div className={styles.transition}>
+    <div>
       <AnimatePresence
         initial={false}
         mode='wait'

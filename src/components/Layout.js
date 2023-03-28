@@ -24,13 +24,17 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <NavBar isSticky={isSticky} />
-      <Transition>
-        <main>
-          {children}
-        </main>
-      </Transition>
-      <Footer />
+      <div className={styles.layout}>
+        <NavBar isSticky={isSticky} />
+        <Transition>
+          <main>
+            {children}
+          </main>
+        </Transition>
+      </div>
+      <div className={styles.footer}>
+        <Footer />
+      </div>
     </>
   )
 }
