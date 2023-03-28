@@ -4,6 +4,7 @@
 import { useEffect, useState } from 'react'
 import NavBar from './NavBar'
 import Footer from './Footer'
+import Transition from './Transition'
 import styles from '../styles/Layout.module.css'
 
 const Layout = ({ children }) => {
@@ -24,9 +25,11 @@ const Layout = ({ children }) => {
   return (
     <>
       <NavBar isSticky={isSticky} />
-      <main>
-        {children}
-      </main>
+      <Transition>
+        <main>
+          {children}
+        </main>
+      </Transition>
       <Footer />
     </>
   )

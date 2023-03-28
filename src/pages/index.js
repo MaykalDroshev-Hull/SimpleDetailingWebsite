@@ -8,6 +8,7 @@ export default function Home() {
       <br />
       <div className={styles.content}>
         <ImageCarousel />
+        <hr className={styles.divider}/>
         <div className={styles.container}>
           <h1>WELCOME!</h1>
           <p>

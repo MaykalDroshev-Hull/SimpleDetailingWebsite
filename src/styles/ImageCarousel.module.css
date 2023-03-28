@@ -1,4 +1,8 @@
-.background{
-  padding: 25px 25px 25px 50px;
+.container{
   width: 50%;
+}
+
+.image img{
+  height: 500px;
+  margin: 0 auto;
 }
