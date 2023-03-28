@@ -1,0 +1,21 @@
+.content {
+  display: flex;
+}
+
+.title{
+  width: 50%;
+  align-items: center;
+}
+
+.title h1{
+  text-align: center;
+}
+
+.title p{
+  margin-left: auto;
+  padding: 10px;
+}
+
+.title button{
+
+}

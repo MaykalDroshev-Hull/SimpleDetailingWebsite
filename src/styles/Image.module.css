@@ -1,10 +1,9 @@
 .images{
   display: flex;
   justify-content: center;
-  padding: 25px;
 }
 
 .images img{
-  height: 250px;
+  height: 500px;
   padding: 5px;
 }

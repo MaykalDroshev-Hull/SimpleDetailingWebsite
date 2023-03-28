@@ -1,15 +1,4 @@
 .background{
-  padding: 5px;
+  padding: 25px 25px 25px 50px;
   width: 50%;
-  height: auto;
-  justify-content: center;
-  position: relative;
-  margin: auto;
-  border-radius: 5px;
-  background-color: #bdbdbd;
-}
-
-.slider{
-  background-color: #ebedf3;
-  top: 50%;
 }
