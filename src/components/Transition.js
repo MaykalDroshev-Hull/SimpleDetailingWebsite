@@ -27,7 +27,7 @@ const Transition = ({ children }) => {
     <div className={styles.transition}>
       <AnimatePresence
         initial={false}
-        wait
+        mode='wait'
       >
         <motion.div
           key={asPath}
