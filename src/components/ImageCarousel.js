@@ -6,7 +6,8 @@ import styles from '../styles/ImageCarousel.module.css'
 
 const ImageCarousel = () => {
   const settings = {
-    dots: true,
+    dots: false,
+    arrows: false,
     infinite: true,
     speed: 700,
     slidesToShow: 1,

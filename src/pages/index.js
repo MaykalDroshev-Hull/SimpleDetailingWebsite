@@ -8,7 +8,7 @@ export default function Home() {
       <br />
       <div className={styles.content}>
         <ImageCarousel />
-        <div className={styles.title}>
+        <div className={styles.container}>
           <h1>WELCOME!</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -18,7 +18,7 @@ export default function Home() {
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.
           </p>
-          <button>Book Appointment Now!</button>
+          <button className={styles.button}>Book Appointment</button>
         </div>
       </div>
     </>
