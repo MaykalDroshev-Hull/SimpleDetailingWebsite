@@ -33,7 +33,6 @@ const Layout = ({ children }) => {
         </Transition>
       </div>
       <div className={styles.footer}>
-        <Footer />
       </div>
     </>
   )

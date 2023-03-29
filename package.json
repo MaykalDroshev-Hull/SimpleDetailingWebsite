@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "framer-motion": "^10.9.2",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
+    "react-modal": "^3.16.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1"
   }
