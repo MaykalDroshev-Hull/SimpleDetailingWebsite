@@ -1,5 +1,6 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import styles from '../styles/Form.module.css'
+import buttonStyles from '../styles/FlowButton.module.css'
 
 const Form = (props) => {
   const [formState, setFormState] = useState({
@@ -17,7 +18,7 @@ const Form = (props) => {
     const value = target.value
     const name = target.name
 
-    setFormState({...formState, [name]: value})
+    setFormState({ ...formState, [name]: value })
   }
 
   const handleSubmit = (e) => {
@@ -25,42 +26,42 @@ const Form = (props) => {
     props.onSubmit(formState)
     props.onClick()
   }
-  
+
   return (
     <div className={styles.modal}>
       <div className={styles.modalContent}>
         <span className="close" onClick={props.onClick}>&times;</span>
         <h1>Form</h1>
-        <form onSubmit={handleSubmit}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <label>
-            First Name: 
-            <input type='text' name='firstName' value={formState.firstName} onChange={handleInputChange}/>
+            Label
+            <input type='text' name='firstName' value={formState.firstName} onChange={handleInputChange} placeholder='First Name' required />
           </label>
           <label>
-            Last Name:
-            <input type='text' name='lastName' value={formState.lastName} onChange={handleInputChange}/>
+            Label
+            <input type='text' name='lastName' value={formState.lastName} onChange={handleInputChange} placeholder='Last Name' required />
           </label>
           <label>
-            Email:
-            <input type='email' name='email' value={formState.email} onChange={handleInputChange}/>
+            Label
+            <input type='email' name='email' value={formState.email} onChange={handleInputChange} placeholder='Email' required />
           </label>
           <label>
-            Phone Number:
-            <input type='tel' name='phoneNumber' value={formState.phoneNumber} onChange={handleInputChange}/>
+            Label
+            <input type='tel' name='phoneNumber' value={formState.phoneNumber} onChange={handleInputChange} placeholder='Phone Number' />
           </label>
           <label>
-            Car Make:
-            <input type='text' name='carMake' value={formState.carMake} onChange={handleInputChange}/>
+            Label
+            <input type='text' name='carMake' value={formState.carMake} onChange={handleInputChange} placeholder='Car Make' />
           </label>
           <label>
-            Car Model:
-            <input type='text' name='carModel' value={formState.carModel} onChange={handleInputChange}/>
+            Label
+            <input type='text' name='carModel' value={formState.carModel} onChange={handleInputChange} placeholder='Car Model' />
           </label>
           <label>
             Desired Date:
-            <input type='date' name='desiredDate' value={formState.desiredDate} onChange={handleInputChange}/>
+            <input type='date' name='desiredDate' value={formState.desiredDate} onChange={handleInputChange} />
           </label>
-          <button type='submit'>Request Appointment</button>
+          <button className={buttonStyles.button} type='submit'>Submit</button>
         </form>
       </div>
     </div>

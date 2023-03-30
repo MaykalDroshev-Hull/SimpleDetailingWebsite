@@ -25,62 +25,6 @@
   margin: 10px 30px 40px 30px;
 }
 
-.button {
-  display: block;
-  margin: auto;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  text-decoration: none;
-  font-family: sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  padding: 12px 16px;
-  color: #3586ff;
-  border: 3px solid #3586ff;
-  border-radius: calc(12px + 8px + 4px);
-  transition: 4s;
-  background: none;
-}
-
-.button:before,
-.button:after {
-  content: "";
-  position: absolute;
-  top: -24px;
-  z-index: -1;
-  width: 200%;
-  aspect-ratio: 1;
-  border: none;
-  border-radius: 40%;
-  background-color: #3586ff;
-  transition: 4s;
-}
-
-.button:before {
-  left: -80%;
-  transform: translate3d(0, 5em, 0) rotate(-340deg);
-}
-
-.button:after {
-  right: -80%;
-  transform: translate3d(0, 5em, 0) rotate(390deg);
-}
-
-.button:hover,
-.button:focus {
-  cursor: pointer;
-  color: white;
-}
-
-.button:hover:before,
-.button:hover:after,
-.button:focus:before,
-.button:focus:after {
-  transform: none;
-  background-color: #3586ff;
-}
-
 .overlay {
   position: fixed;
   top: 0;

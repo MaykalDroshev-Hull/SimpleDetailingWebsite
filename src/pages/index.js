@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Form from '@/components/Form'
 import ImageCarousel from "@/components/ImageCarousel"
 import styles from '../styles/Index.module.css'
+import buttonStyles from '../styles/FlowButton.module.css'
 
 export default function Home() {
   const [openForm, setOpenForm] = useState(false)
@@ -27,7 +28,7 @@ export default function Home() {
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.
           </p>
-          <button onClick={handleClick} className={styles.button}>Book Appointment</button>
+          <button onClick={handleClick} className={buttonStyles.button}>Book Appointment</button>
           {openForm && <Form
             onClick={handleClick}
             onSubmit={handleFormSubmit}
