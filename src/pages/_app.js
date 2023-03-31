@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout"
+import { ChakraProvider } from "@chakra-ui/react";
 import { Nunito } from 'next/font/google'
-import styles from '../styles/globals.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import '../styles/globals.css'
 
 
 const nunito = Nunito({
@@ -10,11 +10,13 @@ const nunito = Nunito({
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={nunito.className}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </main>
+    <ChakraProvider>
+      <main className={nunito.className}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </main>
+    </ChakraProvider>
   )
 }
 

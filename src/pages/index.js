@@ -9,10 +9,6 @@ export default function Home() {
 
   const handleClick = () => setOpenForm(prev => !prev)
 
-  const handleFormSubmit = (formData) => {
-    console.log(formData)
-  }
-
   return (
     <>
       <div className={styles.content}>
@@ -29,10 +25,7 @@ export default function Home() {
             anim id est laborum.
           </p>
           <button onClick={handleClick} className={buttonStyles.button}>Book Appointment</button>
-          {openForm && <Form
-            onClick={handleClick}
-            onSubmit={handleFormSubmit}
-          />}
+          {openForm && <Form onClick={handleClick} />}
         </div>
       </div>
     </>

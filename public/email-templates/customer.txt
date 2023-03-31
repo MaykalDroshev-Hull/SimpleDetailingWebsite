@@ -1,0 +1,9 @@
+Thank you for your request!
+
+Dear %FIRSTNAME% %LASTNAME:
+
+Thank you for appointment request! We have received your message and will get back to you shortly.
+
+Have a great day!
+
+- Gentry's Auto Detailing

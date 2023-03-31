@@ -1,0 +1,10 @@
+New Appointment Request
+
+The following information was submitted:
+
+Name: %FIRSTNAME% %LASTNAME%
+Email: %EMAIL%
+Phone Number: %PHONENUMBER%
+Car Make: %CARMAKE%
+Car Model: %CARMODEL%
+Desired Date: %DESIREDDATE%

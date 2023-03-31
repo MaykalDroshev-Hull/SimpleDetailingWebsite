@@ -1,59 +1,125 @@
 import { useState } from 'react'
-import { Input, Spacer } from '@nextui-org/react'
+import { useForm } from 'react-hook-form'
+import { FormControl, FormLabel, Input, Button } from '@chakra-ui/react'
 import styles from '../styles/Form.module.css'
 import buttonStyles from '../styles/FlowButton.module.css'
 
+const initValues = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  phoneNumber: '',
+  carMake: '',
+  carModel: '',
+  desiredDate: '',
+}
+
+const initState = { values: initValues }
+
 const Form = (props) => {
-  const [formState, setFormState] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    carMake: '',
-    carModel: '',
-    desiredDate: '',
-  })
+  const [formState, setFormState] = useState(initState)
+  const [touched, setTouched] = useState({})
 
-  const handleInputChange = (e) => {
-    const target = e.target
-    const value = target.value
-    const name = target.name
+  const { values, isLoading } = formState
 
-    setFormState({ ...formState, [name]: value })
-  }
+  const onBlur = ({ target }) => setTouched(prev => ({
+    ...prev,
+    [target.name]: true,
+  }))
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    props.onSubmit(formState)
-    props.onClick()
+  const handleInputChange = ({ target }) =>
+    setFormState(prev => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [target.name]: target.value,
+      },
+    }))
+
+  const onSubmit = async () => {
+    setFormState(prev => ({
+      ...prev,
+      isLoading: true,
+    }))
   }
 
   return (
     <div className={styles.modal}>
       <div className={styles.modalContent}>
-        <span className="close" onClick={props.onClick}>&times;</span>
+        <span className={styles.close} onClick={props.onClick}>&times;</span>
         <h1>Submit Request</h1>
-        <form className={styles.form} onSubmit={handleSubmit}>
-          <Spacer y={1.6} />
-          <Input type='text' name='firstName' value={formState.firstName} onChange={handleInputChange} labelPlaceholder='First Name' required clearable width='300px'/>
-          <Spacer y={1.6} />
-          <Input type='text' name='lastName' value={formState.lastName} onChange={handleInputChange} labelPlaceholder='Last Name' required clearable width='300px'/>
-          <Spacer y={1.6} />
-          <Input type='email' name='email' value={formState.email} onChange={handleInputChange} labelPlaceholder='Email' required clearable width='300px'/>
-          <Spacer y={1.6} />
-          <Input type='tel' name='phoneNumber' value={formState.phoneNumber} onChange={handleInputChange} labelPlaceholder='Phone Number' clearable width='300px'/>
-          <Spacer y={1.6} />
-          <Input type='text' name='carMake' value={formState.carMake} onChange={handleInputChange} labelPlaceholder='Car Make' clearable width='300px'/>
-          <Spacer y={1.6} />
-          <Input type='text' name='carModel' value={formState.carModel} onChange={handleInputChange} labelPlaceholder='Car Model' clearable width='300px'/>
-          <Spacer y={.75} />
-          <h4>Desired Date</h4>
-          <Input type='date' name='desiredDate' value={formState.desiredDate} onChange={handleInputChange} width='300px'/>
-          <Spacer y={1.6} />
-          <button className={buttonStyles.button} type='submit'>Submit</button>
+        <form className={styles.form}>
+          <FormControl isRequired isInvalid={touched.firstName && !values.firstName} mb={5}>
+            <FormLabel>First Name</FormLabel>
+            <Input
+              type='text'
+              value={values.firstName}
+              onChange={handleInputChange}
+              errorBorderColor='red.300'
+              onBlur={onBlur}
+              width='300px' />
+          </FormControl>
+          <FormControl isRequired isInvalid={touched.lastName && !values.lastName} mb={5}>
+            <FormLabel>Last Name</FormLabel>
+            <Input
+              type='text'
+              value={values.lastName}
+              onChange={handleInputChange}
+              errorBorderColor='red.300'
+              onBlur={onBlur}
+              width='300px' />
+          </FormControl>
+          <FormControl isRequired isInvalid={touched.email && !values.email} mb={5}>
+            <FormLabel>Email</FormLabel>
+            <Input
+              type='email'
+              value={values.email}
+              onChange={handleInputChange}
+              errorBorderColor='red.300'
+              onBlur={onBlur}
+              width='300px' />
+          </FormControl>
+          <FormControl mb={5}>
+            <FormLabel>Phone Number</FormLabel>
+            <Input
+              type='tel'
+              value={values.phoneNumber}
+              onChange={handleInputChange}
+              width='300px' />
+          </FormControl>
+          <FormControl mb={5}>
+            <FormLabel>Car Make</FormLabel>
+            <Input
+              type='text'
+              value={values.carMake}
+              onChange={handleInputChange}
+              width='300px' />
+          </FormControl>
+          <FormControl mb={5}>
+            <FormLabel>Car Model</FormLabel>
+            <Input
+              type='text'
+              value={values.carModel}
+              onChange={handleInputChange}
+              width='300px' />
+          </FormControl>
+          <FormControl mb={10}>
+            <FormLabel>Desired Date</FormLabel>
+            <Input
+              type='date'
+              value={values.desiredDate}
+              onChange={handleInputChange}
+              width='300px' />
+          </FormControl>
+          <Button mb={5}
+            className={buttonStyles.button}
+            disabled={!values.firstName || !values.lastName || !values.email}
+            onClick={onSubmit}
+            type='submit'>Submit
+          </Button>
         </form>
-      </div>
-    </div>
+      </div >
+    </div >
   )
 }
 
