@@ -3,11 +3,10 @@ import Form from '@/components/Form'
 import ImageCarousel from "@/components/ImageCarousel"
 import styles from '../styles/Index.module.css'
 import buttonStyles from '../styles/FlowButton.module.css'
+import { useDisclosure } from '@chakra-ui/react'
 
 export default function Home() {
-  const [openForm, setOpenForm] = useState(false)
-
-  const handleClick = () => setOpenForm(prev => !prev)
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
     <>
@@ -24,8 +23,8 @@ export default function Home() {
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.
           </p>
-          <button onClick={handleClick} className={buttonStyles.button}>Book Appointment</button>
-          {openForm && <Form onClick={handleClick} />}
+          <button onClick={onOpen} className={buttonStyles.button}>Book Appointment</button>
+          <Form isOpen={isOpen} onClose={onClose} />
         </div>
       </div>
     </>

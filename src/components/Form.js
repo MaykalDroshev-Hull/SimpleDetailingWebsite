@@ -1,7 +1,6 @@
+//Check Chakra UI to get a Modal to work properly. And watch more of this video: https://www.youtube.com/watch?v=t2LvPXHLrek&t=1s
 import { useState } from 'react'
-import { useForm } from 'react-hook-form'
-import { FormControl, FormLabel, Input, Button } from '@chakra-ui/react'
-import styles from '../styles/Form.module.css'
+import { FormControl, FormLabel, Input, Button, FormErrorMessage, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter } from '@chakra-ui/react'
 import buttonStyles from '../styles/FlowButton.module.css'
 
 const initValues = {
@@ -16,12 +15,13 @@ const initValues = {
 
 const initState = { values: initValues }
 
-const Form = (props) => {
+const Form = ({ isOpen, onClose }) => {
   const [formState, setFormState] = useState(initState)
   const [touched, setTouched] = useState({})
 
   const { values, isLoading } = formState
 
+  //This function ain't working, but whatever for now
   const onBlur = ({ target }) => setTouched(prev => ({
     ...prev,
     [target.name]: true,
@@ -41,14 +41,16 @@ const Form = (props) => {
       ...prev,
       isLoading: true,
     }))
+    console.log(formState)
   }
 
   return (
-    <div className={styles.modal}>
-      <div className={styles.modalContent}>
-        <span className={styles.close} onClick={props.onClick}>&times;</span>
-        <h1>Submit Request</h1>
-        <form className={styles.form}>
+    <Modal isOpen={isOpen} onClose={onClose}>
+      <ModalOverlay />
+      <ModalContent>
+        <ModalHeader></ModalHeader>
+        <ModalCloseButton />
+        <ModalBody>
           <FormControl isRequired isInvalid={touched.firstName && !values.firstName} mb={5}>
             <FormLabel>First Name</FormLabel>
             <Input
@@ -58,6 +60,7 @@ const Form = (props) => {
               errorBorderColor='red.300'
               onBlur={onBlur}
               width='300px' />
+            <FormErrorMessage>Required</FormErrorMessage>
           </FormControl>
           <FormControl isRequired isInvalid={touched.lastName && !values.lastName} mb={5}>
             <FormLabel>Last Name</FormLabel>
@@ -68,6 +71,7 @@ const Form = (props) => {
               errorBorderColor='red.300'
               onBlur={onBlur}
               width='300px' />
+            <FormErrorMessage>Required</FormErrorMessage>
           </FormControl>
           <FormControl isRequired isInvalid={touched.email && !values.email} mb={5}>
             <FormLabel>Email</FormLabel>
@@ -78,6 +82,7 @@ const Form = (props) => {
               errorBorderColor='red.300'
               onBlur={onBlur}
               width='300px' />
+            <FormErrorMessage>Required</FormErrorMessage>
           </FormControl>
           <FormControl mb={5}>
             <FormLabel>Phone Number</FormLabel>
@@ -111,15 +116,18 @@ const Form = (props) => {
               onChange={handleInputChange}
               width='300px' />
           </FormControl>
+        </ModalBody>
+        <ModalFooter>
           <Button mb={5}
             className={buttonStyles.button}
             disabled={!values.firstName || !values.lastName || !values.email}
-            onClick={onSubmit}
-            type='submit'>Submit
+            isLoading={isLoading}
+            onClick={onClose}
+          >Submit
           </Button>
-        </form>
-      </div >
-    </div >
+        </ModalFooter>
+      </ModalContent>
+    </Modal>
   )
 }
 
