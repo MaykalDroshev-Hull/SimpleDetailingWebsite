@@ -1,6 +1,6 @@
 //More of this video: https://www.youtube.com/watch?v=t2LvPXHLrek&t=1s
 import { useState } from 'react'
-import { FormControl, FormLabel, Input, Button, FormErrorMessage, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter } from '@chakra-ui/react'
+import { Text, FormControl, FormLabel, Input, Button, FormErrorMessage, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter } from '@chakra-ui/react'
 import buttonStyles from '../styles/FlowButton.module.css'
 import { sendContactForm } from '@/lib/api'
 
@@ -20,7 +20,7 @@ const Form = ({ isOpen, onClose }) => {
   const [formState, setFormState] = useState(initState)
   const [touched, setTouched] = useState({})
 
-  const { values, isLoading } = formState
+  const { values, isLoading, error } = formState
 
   const onBlur = ({ target }) => setTouched(prev => ({
     ...prev,
@@ -41,7 +41,18 @@ const Form = ({ isOpen, onClose }) => {
       ...prev,
       isLoading: true,
     }))
-    await sendContactForm(values)
+    try {
+      await sendContactForm(values)
+      setTouched({})
+      setFormState(initState)
+    } catch (error) {
+      setFormState(prev => ({
+        ...prev,
+        isLoading: false,
+        error: error.message,
+      }))
+    }
+
   }
 
   return (
@@ -50,81 +61,84 @@ const Form = ({ isOpen, onClose }) => {
       <ModalContent>
         <ModalHeader>Submit Request</ModalHeader>
         <ModalCloseButton />
+        {error && (
+          <Text color='red.300' my={4} fontSize='xl'>
+            {error}
+          </Text>
+        )}
         <ModalBody>
-          <form>
-            <FormControl isInvalid={touched.firstName && !values.firstName} mb={5}>
-              <FormLabel>First Name</FormLabel>
-              <Input
-                type='text'
-                name='firstName'
-                value={values.firstName}
-                onChange={handleInputChange}
-                errorBorderColor='red.300'
-                onBlur={onBlur}
-                width='300px' />
-              <FormErrorMessage>Required</FormErrorMessage>
-            </FormControl>
-            <FormControl isInvalid={touched.lastName && !values.lastName} mb={5}>
-              <FormLabel>Last Name</FormLabel>
-              <Input
-                type='text'
-                name='lastName'
-                value={values.lastName}
-                onChange={handleInputChange}
-                errorBorderColor='red.300'
-                onBlur={onBlur}
-                width='300px' />
-              <FormErrorMessage>Required</FormErrorMessage>
-            </FormControl>
-            <FormControl isInvalid={touched.email && !values.email} mb={5}>
-              <FormLabel>Email</FormLabel>
-              <Input
-                type='email'
-                name='email'
-                value={values.email}
-                onChange={handleInputChange}
-                errorBorderColor='red.300'
-                onBlur={onBlur}
-                width='300px' />
-              <FormErrorMessage>Required</FormErrorMessage>
-            </FormControl>
-            <FormControl mb={5}>
-              <FormLabel>Phone Number</FormLabel>
-              <Input
-                type='tel'
-                name='phoneNumber'
-                value={values.phoneNumber}
-                onChange={handleInputChange}
-                width='300px' />
-            </FormControl>
-            <FormControl mb={5}>
-              <FormLabel>Car Make</FormLabel>
-              <Input
-                type='text'
-                name='carMake'
-                value={values.carMake}
-                onChange={handleInputChange}
-                width='300px' />
-            </FormControl>
-            <FormControl mb={5}>
-              <FormLabel>Car Model</FormLabel>
-              <Input
-                type='text'
-                name='carModel'
-                value={values.carModel}
-                onChange={handleInputChange}
-                width='300px' />
-            </FormControl>
-            <FormControl mb={5}>
-              <FormLabel>Desired Date</FormLabel>
-              <Input
-                type='date'
-                name='desiredDate'
-                value={values.desiredDate}
-                onChange={handleInputChange}
-                width='300px' />
-            </FormControl>
-          </form>
+          <FormControl isInvalid={touched.firstName && !values.firstName} mb={5}>
+            <FormLabel>First Name</FormLabel>
+            <Input
+              type='text'
+              name='firstName'
+              value={values.firstName}
+              onChange={handleInputChange}
+              errorBorderColor='red.300'
+              onBlur={onBlur}
+              width='300px' />
+            <FormErrorMessage>Required</FormErrorMessage>
+          </FormControl>
+          <FormControl isInvalid={touched.lastName && !values.lastName} mb={5}>
+            <FormLabel>Last Name</FormLabel>
+            <Input
+              type='text'
+              name='lastName'
+              value={values.lastName}
+              onChange={handleInputChange}
+              errorBorderColor='red.300'
+              onBlur={onBlur}
+              width='300px' />
+            <FormErrorMessage>Required</FormErrorMessage>
+          </FormControl>
+          <FormControl isInvalid={touched.email && !values.email} mb={5}>
+            <FormLabel>Email</FormLabel>
+            <Input
+              type='email'
+              name='email'
+              value={values.email}
+              onChange={handleInputChange}
+              errorBorderColor='red.300'
+              onBlur={onBlur}
+              width='300px' />
+            <FormErrorMessage>Required</FormErrorMessage>
+          </FormControl>
+          <FormControl mb={5}>
+            <FormLabel>Phone Number</FormLabel>
+            <Input
+              type='tel'
+              name='phoneNumber'
+              value={values.phoneNumber}
+              onChange={handleInputChange}
+              width='300px' />
+          </FormControl>
+          <FormControl mb={5}>
+            <FormLabel>Car Make</FormLabel>
+            <Input
+              type='text'
+              name='carMake'
+              value={values.carMake}
+              onChange={handleInputChange}
+              width='300px' />
+          </FormControl>
+          <FormControl mb={5}>
+            <FormLabel>Car Model</FormLabel>
+            <Input
+              type='text'
+              name='carModel'
+              value={values.carModel}
+              onChange={handleInputChange}
+              width='300px' />
+          </FormControl>
+          <FormControl mb={5}>
+            <FormLabel>Desired Date</FormLabel>
+            <Input
+              type='date'
+              name='desiredDate'
+              value={values.desiredDate}
+              onChange={handleInputChange}
+              width='300px' />
+          </FormControl>
         </ModalBody>
         <ModalFooter>
           <Button
