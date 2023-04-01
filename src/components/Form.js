@@ -1,5 +1,4 @@
 //More of this video: https://www.youtube.com/watch?v=t2LvPXHLrek&t=1s
-//TODO: Confirmation email to sender
 //TODO: Styling for inside form
 
 import { useState } from 'react'
@@ -7,8 +6,9 @@ import {
   Text,
   Input,
   Button,
-  FormControl,
+  Flex,
   FormLabel,
+  FormControl,
   FormErrorMessage,
   Modal,
   ModalOverlay,
@@ -19,8 +19,10 @@ import {
   ModalFooter,
   useToast
 } from '@chakra-ui/react'
-import buttonStyles from '../styles/FlowButton.module.css'
 import { sendContactForm } from '@/lib/api'
+import buttonStyles from '../styles/FlowButton.module.css'
+import FormRequireEntry from './FormRequireEntry'
+
 
 const initValues = {
   firstName: '',
@@ -55,6 +57,7 @@ const Form = ({ isOpen, onClose }) => {
     }));
 
   const onSubmit = async () => {
+    console.log(values)
     setFormState(prev => ({
       ...prev,
       isLoading: true,
@@ -93,76 +96,90 @@ const Form = ({ isOpen, onClose }) => {
         )}
         <ModalBody>
           <FormControl isInvalid={touched.firstName && !values.firstName} mb={5}>
-            <FormLabel>First Name</FormLabel>
-            <Input
-              type='text'
-              name='firstName'
-              value={values.firstName}
-              onChange={handleInputChange}
-              errorBorderColor='red.300'
-              onBlur={onBlur}
-              width='300px' />
-            <FormErrorMessage>Required</FormErrorMessage>
+            <Flex flexDirection='column' justifyContent='center' alignItems='center'>
+              <FormLabel>First Name</FormLabel>
+              <Input
+                type='text'
+                name='firstName'
+                value={values.firstName}
+                onChange={handleInputChange}
+                errorBorderColor='red.300'
+                onBlur={onBlur}
+                width='300px' />
+              <FormErrorMessage>Required</FormErrorMessage>
+            </Flex>
           </FormControl>
           <FormControl isInvalid={touched.lastName && !values.lastName} mb={5}>
-            <FormLabel>Last Name</FormLabel>
-            <Input
-              type='text'
-              name='lastName'
-              value={values.lastName}
-              onChange={handleInputChange}
-              errorBorderColor='red.300'
-              onBlur={onBlur}
-              width='300px' />
-            <FormErrorMessage>Required</FormErrorMessage>
+            <Flex flexDirection='column' justifyContent='center' alignItems='center'>
+              <FormLabel>Last Name</FormLabel>
+              <Input
+                type='text'
+                name='lastName'
+                value={values.lastName}
+                onChange={handleInputChange}
+                errorBorderColor='red.300'
+                onBlur={onBlur}
+                width='300px' />
+              <FormErrorMessage>Required</FormErrorMessage>
+            </Flex>
           </FormControl>
           <FormControl isInvalid={touched.email && !values.email} mb={5}>
-            <FormLabel>Email</FormLabel>
-            <Input
-              type='email'
-              name='email'
-              value={values.email}
-              onChange={handleInputChange}
-              errorBorderColor='red.300'
-              onBlur={onBlur}
-              width='300px' />
-            <FormErrorMessage>Required</FormErrorMessage>
+            <Flex flexDirection='column' justifyContent='center' alignItems='center'>
+              <FormLabel>Email</FormLabel>
+              <Input
+                type='email'
+                name='email'
+                value={values.email}
+                onChange={handleInputChange}
+                errorBorderColor='red.300'
+                onBlur={onBlur}
+                width='300px' />
+              <FormErrorMessage>Required</FormErrorMessage>
+            </Flex>
           </FormControl>
           <FormControl mb={5}>
-            <FormLabel>Phone Number</FormLabel>
-            <Input
-              type='tel'
-              name='phoneNumber'
-              value={values.phoneNumber}
-              onChange={handleInputChange}
-              width='300px' />
+            <Flex flexDirection='column' justifyContent='center' alignItems='center'>
+              <FormLabel>Phone Number</FormLabel>
+              <Input
+                type='tel'
+                name='phoneNumber'
+                value={values.phoneNumber}
+                onChange={handleInputChange}
+                width='300px' />
+            </Flex>
           </FormControl>
           <FormControl mb={5}>
-            <FormLabel>Car Make</FormLabel>
-            <Input
-              type='text'
-              name='carMake'
-              value={values.carMake}
-              onChange={handleInputChange}
-              width='300px' />
+            <Flex flexDirection='column' justifyContent='center' alignItems='center'>
+              <FormLabel>Car Make</FormLabel>
+              <Input
+                type='text'
+                name='carMake'
+                value={values.carMake}
+                onChange={handleInputChange}
+                width='300px' />
+            </Flex>
           </FormControl>
           <FormControl mb={5}>
-            <FormLabel>Car Model</FormLabel>
-            <Input
-              type='text'
-              name='carModel'
-              value={values.carModel}
-              onChange={handleInputChange}
-              width='300px' />
+            <Flex flexDirection='column' justifyContent='center' alignItems='center'>
+              <FormLabel>Car Model</FormLabel>
+              <Input
+                type='text'
+                name='carModel'
+                value={values.carModel}
+                onChange={handleInputChange}
+                width='300px' />
+            </Flex>
           </FormControl>
           <FormControl mb={5}>
-            <FormLabel>Desired Date</FormLabel>
-            <Input
-              type='date'
-              name='desiredDate'
-              value={values.desiredDate}
-              onChange={handleInputChange}
-              width='300px' />
+            <Flex flexDirection='column' justifyContent='center' alignItems='center'>
+              <FormLabel>Desired Date</FormLabel>
+              <Input
+                type='date'
+                name='desiredDate'
+                value={values.desiredDate}
+                onChange={handleInputChange}
+                width='300px' />
+            </Flex>
           </FormControl>
         </ModalBody>
         <ModalFooter>

@@ -1,6 +1,6 @@
 import { mailOption, transporter } from '../../config/nodemailer.js'
 
-const CONTACT_MESSAGE_FIELDS = {
+const CONTACT_MESSAGE_FIELDS= {
   firstName: 'First Name',
   lastName: 'Last Name',
   email: 'Email',
