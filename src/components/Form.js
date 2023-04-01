@@ -1,6 +1,24 @@
 //More of this video: https://www.youtube.com/watch?v=t2LvPXHLrek&t=1s
+//TODO: Confirmation email to sender
+//TODO: Styling for inside form
+
 import { useState } from 'react'
-import { Text, FormControl, FormLabel, Input, Button, FormErrorMessage, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter } from '@chakra-ui/react'
+import {
+  Text,
+  Input,
+  Button,
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  useToast
+} from '@chakra-ui/react'
 import buttonStyles from '../styles/FlowButton.module.css'
 import { sendContactForm } from '@/lib/api'
 
@@ -19,7 +37,7 @@ const initState = { values: initValues }
 const Form = ({ isOpen, onClose }) => {
   const [formState, setFormState] = useState(initState)
   const [touched, setTouched] = useState({})
-
+  const toast = useToast()
   const { values, isLoading, error } = formState
 
   const onBlur = ({ target }) => setTouched(prev => ({
@@ -45,6 +63,13 @@ const Form = ({ isOpen, onClose }) => {
       await sendContactForm(values)
       setTouched({})
       setFormState(initState)
+      onClose()
+      toast({
+        title: 'Submission Succesful',
+        status: 'success',
+        duration: 2000,
+        position: 'top'
+      })
     } catch (error) {
       setFormState(prev => ({
         ...prev,
@@ -145,10 +170,7 @@ const Form = ({ isOpen, onClose }) => {
             className={buttonStyles.button}
             disabled={!values.firstName || !values.lastName || !values.email}
             isLoading={isLoading}
-            onClick={() => {
-              onClose()
-              onSubmit()
-            }}
+            onClick={() => onSubmit()}
           >Submit</Button>
         </ModalFooter>
       </ModalContent>
