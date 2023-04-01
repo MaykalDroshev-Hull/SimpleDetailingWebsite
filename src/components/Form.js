@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { FormControl, FormLabel, Input, Button, FormErrorMessage, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter } from '@chakra-ui/react'
 import buttonStyles from '../styles/FlowButton.module.css'
+import { sendContactForm } from '@/lib/api'
 
 const initValues = {
   firstName: '',
@@ -35,17 +36,13 @@ const Form = ({ isOpen, onClose }) => {
       },
     }));
 
-
-  const handleSubmit = () => {
-    console.log(values)
+  const onSubmit = async () => {
+    setFormState(prev => ({
+      ...prev,
+      isLoading: true,
+    }))
+    await sendContactForm(values)
   }
-
-  // const onSubmit = async () => {
-  //   setFormState(prev => ({
-  //     ...prev,
-  //     isLoading: true,
-  //   }))
-  // }
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
@@ -55,7 +52,7 @@ const Form = ({ isOpen, onClose }) => {
         <ModalCloseButton />
         <ModalBody>
           <form>
-            <FormControl isInvalid={!values.firstName} mb={5}>
+            <FormControl isInvalid={touched.firstName && !values.firstName} mb={5}>
               <FormLabel>First Name</FormLabel>
               <Input
                 type='text'
@@ -67,7 +64,7 @@ const Form = ({ isOpen, onClose }) => {
                 width='300px' />
               <FormErrorMessage>Required</FormErrorMessage>
             </FormControl>
-            <FormControl isInvalid={!values.lastName} mb={5}>
+            <FormControl isInvalid={touched.lastName && !values.lastName} mb={5}>
               <FormLabel>Last Name</FormLabel>
               <Input
                 type='text'
@@ -79,7 +76,7 @@ const Form = ({ isOpen, onClose }) => {
                 width='300px' />
               <FormErrorMessage>Required</FormErrorMessage>
             </FormControl>
-            <FormControl isInvalid={!values.email} mb={5}>
+            <FormControl isInvalid={touched.email && !values.email} mb={5}>
               <FormLabel>Email</FormLabel>
               <Input
                 type='email'
@@ -136,10 +133,9 @@ const Form = ({ isOpen, onClose }) => {
             isLoading={isLoading}
             onClick={() => {
               onClose()
-              handleSubmit()
+              onSubmit()
             }}
-          >Submit
-          </Button>
+          >Submit</Button>
         </ModalFooter>
       </ModalContent>
     </Modal>
