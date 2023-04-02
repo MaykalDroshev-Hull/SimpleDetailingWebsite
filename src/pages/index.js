@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Form from '@/components/Form'
+import Form from '@/components/QuickForm'
 import ImageCarousel from "@/components/ImageCarousel"
 import styles from '../styles/Index.module.css'
 import buttonStyles from '../styles/FlowButton.module.css'
@@ -12,7 +12,6 @@ export default function Home() {
     <>
       <div className={styles.content}>
         <ImageCarousel />
-        <hr className={styles.divider} />
         <div className={styles.container}>
           <h1>WELCOME!</h1>
           <p>

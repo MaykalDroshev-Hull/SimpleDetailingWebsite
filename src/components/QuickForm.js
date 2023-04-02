@@ -1,6 +1,3 @@
-//More of this video: https://www.youtube.com/watch?v=t2LvPXHLrek&t=1s
-//TODO: Styling for inside form
-
 import { useState } from 'react'
 import {
   Text,
@@ -21,7 +18,6 @@ import {
 } from '@chakra-ui/react'
 import { sendContactForm } from '@/lib/api'
 import buttonStyles from '../styles/FlowButton.module.css'
-import FormRequireEntry from './FormRequireEntry'
 
 
 const initValues = {
@@ -90,9 +86,11 @@ const Form = ({ isOpen, onClose }) => {
         <ModalHeader>Submit Request</ModalHeader>
         <ModalCloseButton />
         {error && (
-          <Text color='red.300' my={4} fontSize='xl'>
-            {error}
-          </Text>
+          <Flex justifyContent='center' alignItems='center'>
+            <Text color='red.300' my={4} fontSize='xl'>
+              {error}
+            </Text>
+          </Flex>
         )}
         <ModalBody>
           <FormControl isInvalid={touched.firstName && !values.firstName} mb={5}>
@@ -187,7 +185,7 @@ const Form = ({ isOpen, onClose }) => {
             className={buttonStyles.button}
             disabled={!values.firstName || !values.lastName || !values.email}
             isLoading={isLoading}
-            onClick={() => onSubmit()}
+            onClick={onSubmit}
           >Submit</Button>
         </ModalFooter>
       </ModalContent>

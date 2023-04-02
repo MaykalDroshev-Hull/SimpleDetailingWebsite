@@ -3,7 +3,6 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { Nunito } from 'next/font/google'
 import '../styles/globals.css'
 
-
 const nunito = Nunito({
   subsets: ['latin'],
 })
