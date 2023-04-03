@@ -1,9 +1,11 @@
 import { useState } from "react"
-import { Input, FormControl, FormLabel, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, ModalFooter, Button } from "@chakra-ui/react"
+import { Input, Flex, FormControl, FormLabel, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, ModalFooter, Button, FormErrorMessage, Textarea } from "@chakra-ui/react"
 import buttonStyles from '../styles/FlowButton.module.css'
 
 const initValues = {
-  someText: '',
+  firstName: '',
+  lastName: '',
+  reviewText: '',
 }
 
 const initState = { values: initValues }
@@ -11,7 +13,12 @@ const initState = { values: initValues }
 const ReviewForm = ({ isOpen, onClose }) => {
   const [formState, setFormState] = useState(initState)
   const [touched, setTouched] = useState({})
-  const {values, isLoading, error} = formState
+  const { values, isLoading, error } = formState
+
+  const onBlur = ({ target }) => setTouched(prev => ({
+    ...prev,
+    [target.name]: true,
+  }))
 
   const handleInputChange = ({ target }) =>
     setFormState((prev) => ({
@@ -21,10 +28,6 @@ const ReviewForm = ({ isOpen, onClose }) => {
         [target.name]: target.value,
       },
     }));
-  
-  const onSubmit = () =>{
-    console.table(values)
-  }
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
@@ -33,21 +36,54 @@ const ReviewForm = ({ isOpen, onClose }) => {
         <ModalHeader>Submit Review</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
-          <FormControl>
-            <FormLabel>Some Text</FormLabel>
-            <Input
-              type='text'
-              name='someText'
-              value={values.someText}
+          <Flex gap={3}>
+            <FormControl isInvalid={touched.firstName && !values.firstName}>
+              <Flex flexDirection='column' alignItems='center'>
+                <FormLabel>First Name</FormLabel>
+                <Input
+                  type='text'
+                  name='firstName'
+                  value={values.firstName}
+                  onChange={handleInputChange}
+                  errorBorderColor='red.300'
+                  onBlur={onBlur}
+                />
+                <FormErrorMessage>Required</FormErrorMessage>
+              </Flex>
+            </FormControl>
+            <FormControl isInvalid={touched.lastName && !values.lastName}>
+              <Flex flexDirection='column' alignItems='center'>
+                <FormLabel>Last Name</FormLabel>
+                <Input
+                  type="text"
+                  name='lastName'
+                  value={values.lastName}
+                  onChange={handleInputChange}
+                  errorBorderColor='red.300'
+                  onBlur={onBlur}
+                />
+                <FormErrorMessage>Required</FormErrorMessage>
+              </Flex>
+            </FormControl>
+          </Flex>
+          <Flex flexDirection='column' alignItems='center'>
+            <Textarea 
+              name='reviewText'
+              value={values.reviewText}
               onChange={handleInputChange}
-            />
-          </FormControl>
+              placeholder="Please enter your review here"
+              isInvalid={touched.reviewText && !values.reviewText}
+              errorBorderColor='red.300'
+              onBlur={onBlur}
+              mt={3}>
+            </Textarea>
+          </Flex>
         </ModalBody>
         <ModalFooter>
           <Button
             className={buttonStyles.button}
-            onClick={onSubmit}
-            >Submit</Button>
+            onClick={null}
+          >Submit</Button>
         </ModalFooter>
       </ModalContent>
     </Modal>

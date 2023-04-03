@@ -86,7 +86,7 @@ const Form = ({ isOpen, onClose }) => {
         <ModalHeader>Submit Request</ModalHeader>
         <ModalCloseButton />
         {error && (
-          <Flex justifyContent='center' alignItems='center'>
+          <Flex justifyContent='center'>
             <Text color='red.300' my={4} fontSize='xl'>
               {error}
             </Text>
@@ -94,7 +94,7 @@ const Form = ({ isOpen, onClose }) => {
         )}
         <ModalBody>
           <FormControl isInvalid={touched.firstName && !values.firstName} mb={5}>
-            <Flex flexDirection='column' justifyContent='center' alignItems='center'>
+            <Flex flexDirection='column' alignItems='center'>
               <FormLabel>First Name</FormLabel>
               <Input
                 type='text'
