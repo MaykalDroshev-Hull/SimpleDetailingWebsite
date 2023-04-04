@@ -1,3 +1,5 @@
+//Need to make it so that it becomes a different type of menu when the size is less than 768 px
+
 import Link from "next/link"
 import styles from '../styles/NavBar.module.css'
 
