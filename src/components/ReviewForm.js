@@ -1,25 +1,25 @@
 import { useState } from "react"
-import { 
+import { useRouter } from "next/router"
+import {
   Text,
   Textarea,
-  Input, 
+  Input,
   Button,
-  Flex, 
+  Flex,
   FormLabel,
-  FormControl, 
-  FormErrorMessage, 
-  Modal, 
+  FormControl,
+  FormErrorMessage,
+  Modal,
   ModalOverlay,
   ModalContent,
   ModalHeader,
   ModalCloseButton,
-  ModalBody, 
-  ModalFooter, 
-  useToast 
+  ModalBody,
+  ModalFooter,
+  useToast
 } from "@chakra-ui/react"
 import { sendReviewForm } from "@/lib/api.js"
 import buttonStyles from '../styles/FlowButton.module.css'
-
 
 const initValues = {
   firstName: '',
@@ -32,8 +32,10 @@ const initState = { values: initValues }
 const ReviewForm = ({ isOpen, onClose }) => {
   const [formState, setFormState] = useState(initState)
   const [touched, setTouched] = useState({})
-  const toast = useToast()
   const { values, isLoading, error } = formState
+  const router = useRouter()
+  const toast = useToast()
+
 
   const onBlur = ({ target }) => setTouched(prev => ({
     ...prev,
@@ -50,7 +52,6 @@ const ReviewForm = ({ isOpen, onClose }) => {
     }));
 
   const onSubmit = async () => {
-    console.log(values)
     setFormState(prev => ({
       ...prev,
       isLoading: true,
@@ -60,12 +61,15 @@ const ReviewForm = ({ isOpen, onClose }) => {
       setTouched({})
       setFormState(initState)
       onClose()
+      //Temporary solution to displaying new data on submission of review
+      router.reload()
       toast({
         title: 'Thank you for your review!',
         status: 'success',
         duration: 2000,
         position: 'top'
       })
+      readDB()
     } catch (error) {
       setFormState(prev => ({
         ...prev,
@@ -75,7 +79,6 @@ const ReviewForm = ({ isOpen, onClose }) => {
     }
   }
 
-
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
@@ -83,11 +86,11 @@ const ReviewForm = ({ isOpen, onClose }) => {
         <ModalHeader>Submit Review</ModalHeader>
         <ModalCloseButton />
         {error &&
-        <Flex justifyContent='center'>
-          <Text color='red.300' my={4} fontSize='x1'>
-            {error}
-          </Text>
-        </Flex>}
+          <Flex justifyContent='center'>
+            <Text color='red.300' my={4} fontSize='x1'>
+              {error}
+            </Text>
+          </Flex>}
         <ModalBody>
           <Flex gap={3}>
             <FormControl isInvalid={touched.firstName && !values.firstName}>
