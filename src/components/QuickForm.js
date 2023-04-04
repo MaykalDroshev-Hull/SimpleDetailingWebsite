@@ -19,7 +19,6 @@ import {
 import { sendContactForm } from '@/lib/api'
 import buttonStyles from '../styles/FlowButton.module.css'
 
-
 const initValues = {
   firstName: '',
   lastName: '',
@@ -53,7 +52,6 @@ const Form = ({ isOpen, onClose }) => {
     }));
 
   const onSubmit = async () => {
-    console.log(values)
     setFormState(prev => ({
       ...prev,
       isLoading: true,
