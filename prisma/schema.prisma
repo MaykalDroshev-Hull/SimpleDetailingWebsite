@@ -1,5 +1,5 @@
 // This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// To properly update db on PlanetScale if changes are made to the table: npx prisma db push
 
 generator client {
   provider = "prisma-client-js"

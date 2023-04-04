@@ -183,7 +183,6 @@ const Form = ({ isOpen, onClose }) => {
         <ModalFooter>
           <Button
             className={buttonStyles.button}
-            disabled={!values.firstName || !values.lastName || !values.email}
             isLoading={isLoading}
             onClick={onSubmit}
           >Submit</Button>
