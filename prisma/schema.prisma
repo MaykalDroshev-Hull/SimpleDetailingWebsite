@@ -1,5 +1,6 @@
 // This is your Prisma schema file,
-// To properly update db on PlanetScale if changes are made to the table: npx prisma db push
+// To properly update db on PlanetScale if changes are made to the table: npx prisma db push (can only be done if database is not in production)
+// To view database in browser: 'npx prisma studio'
 
 generator client {
   provider = "prisma-client-js"
