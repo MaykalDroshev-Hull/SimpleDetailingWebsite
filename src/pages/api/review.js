@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client"
 const handler = async (req, res) => {
   if (req.method === 'POST') {
     const data = req.body
-    if (!data.firstName || !data.lastName || !data.review) {
+    if (!data.firstName || !data.lastName || !data.reviewText) {
       return res.status(400).json({ message: 'Bad Request' })
     } else {
       return await addReview(req, res)
