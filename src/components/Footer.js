@@ -1,6 +1,7 @@
-import styles from '../styles/Footer.module.css'
+//TODO: Need to update the styling so it doesn't cover anything and stays at the bottom even when viewport changes
 import Link from 'next/link'
 import {FaFacebook} from 'react-icons/fa'
+import styles from '../styles/Footer.module.css'
 
 const Footer = () => {
   return (

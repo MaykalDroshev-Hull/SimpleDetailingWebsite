@@ -1,4 +1,4 @@
-//Background details about user and accompanying photo
+//Need info from Lily
 import Meta from "@/components/Meta"
 import PageTitle from "@/components/PageTitle"
 

@@ -36,7 +36,6 @@ const ReviewForm = ({ isOpen, onClose }) => {
   const router = useRouter()
   const toast = useToast()
 
-
   const onBlur = ({ target }) => setTouched(prev => ({
     ...prev,
     [target.name]: true,

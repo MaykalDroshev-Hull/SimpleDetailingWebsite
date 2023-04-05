@@ -1,6 +1,3 @@
-//TODO: The navbar jumps immediately when you start scrolling
-//I do not want this. Gotta fix that eventually
-
 import { useEffect, useState } from 'react'
 import NavBar from './NavBar'
 import Footer from './Footer'

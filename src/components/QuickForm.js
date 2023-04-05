@@ -74,7 +74,6 @@ const Form = ({ isOpen, onClose }) => {
         error: error.message,
       }))
     }
-
   }
 
   return (

@@ -1,4 +1,4 @@
-//List of services that user provides
+//Need info from Lily
 import Meta from "@/components/Meta"
 import PageTitle from "@/components/PageTitle"
 

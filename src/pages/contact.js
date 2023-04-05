@@ -1,4 +1,4 @@
-//Submission form that the sends user a text about requesting appointment
+//Need info from Lily. Will replicate same method as done previoulsy using the api 
 import Meta from "@/components/Meta"
 import PageTitle from "@/components/PageTitle"
 
