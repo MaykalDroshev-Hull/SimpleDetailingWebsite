@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useMediaQuery, useBreakpointValue, Card, CardBody, Flex, Heading, SimpleGrid, useDisclosure, Text } from '@chakra-ui/react'
 import { PrismaClient } from '@prisma/client'
+import Meta from '@/components/Meta'
 import PageTitle from '@/components/PageTitle'
 import ReviewForm from '@/components/ReviewForm'
 import buttonStyles from '../styles/FlowButton.module.css'
@@ -12,24 +13,25 @@ const reviews = ({ data }) => {
 
   return (
     <>
+      <Meta title='Reviews' description={`Discover what our satisfied customers have to say about Gentry's Auto Detailing's professional detailing services. Read our reviews and see why we're the go-to choice for car owners in the area. From interior and exterior detailing to paint correction and ceramic coating, we pride ourselves on providing the highest quality service. Contact us today to experience it for yourself.`}/>
       <PageTitle title='reviews' />
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <button onClick={onOpen} className={buttonStyles.button}> Submit a Review!</button>
         <ReviewForm isOpen={isOpen} onClose={onClose} />
       </div>
       <Flex justifyContent='center'>
-          <SimpleGrid spacing={4} gridTemplateColumns={`repeat(auto-fit, ${cardWidth})`}>
-            {data.map((review) => (
-              <Card key={review.id} padding={4} margin={4}>
-                <Heading size='lg'>{review.firstName} {review.lastName}</Heading>
-                <CardBody>
-                  <Text>
-                    {review.reviewText}
-                  </Text>
-                </CardBody>
-              </Card>
-            ))}
-          </SimpleGrid>
+        <SimpleGrid spacing={4} gridTemplateColumns={`repeat(auto-fit, ${cardWidth})`}>
+          {data.map((review) => (
+            <Card key={review.id} padding={4} margin={4}>
+              <Heading size='lg'>{review.firstName} {review.lastName}</Heading>
+              <CardBody>
+                <Text>
+                  {review.reviewText}
+                </Text>
+              </CardBody>
+            </Card>
+          ))}
+        </SimpleGrid>
       </Flex>
     </>
   )

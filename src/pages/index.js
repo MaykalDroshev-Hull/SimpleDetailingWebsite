@@ -1,15 +1,18 @@
 import { useState } from 'react'
+import { useDisclosure } from '@chakra-ui/react'
+import Meta from '@/components/Meta'
 import Form from '@/components/QuickForm'
 import ImageCarousel from "@/components/ImageCarousel"
 import styles from '../styles/Index.module.css'
 import buttonStyles from '../styles/FlowButton.module.css'
-import { useDisclosure } from '@chakra-ui/react'
+
 
 export default function Home() {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
     <>
+      <Meta />
       <div className={styles.content}>
         <ImageCarousel />
         <div className={styles.container}>
