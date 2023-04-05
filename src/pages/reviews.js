@@ -1,5 +1,14 @@
 import { useEffect, useState } from 'react'
-import { useMediaQuery, useBreakpointValue, Card, CardBody, Flex, Heading, SimpleGrid, useDisclosure, Text } from '@chakra-ui/react'
+import {
+  useBreakpointValue,
+  Card,
+  CardBody,
+  Flex,
+  Heading,
+  SimpleGrid,
+  useDisclosure,
+  Text
+} from '@chakra-ui/react'
 import { PrismaClient } from '@prisma/client'
 import Meta from '@/components/Meta'
 import PageTitle from '@/components/PageTitle'
@@ -13,7 +22,11 @@ const reviews = ({ data }) => {
 
   return (
     <>
-      <Meta title='Reviews' description={`Discover what our satisfied customers have to say about Gentry's Auto Detailing's professional detailing services. Read our reviews and see why we're the go-to choice for car owners in the area. From interior and exterior detailing to paint correction and ceramic coating, we pride ourselves on providing the highest quality service. Contact us today to experience it for yourself.`}/>
+      <Meta
+        title='Reviews'
+        description="Discover what our satisfied customers have to say about Gentry's Auto Detailing's professional detailing services. Read our reviews and see why we're the go-to choice for car owners in the area. From interior and exterior detailing to paint correction and ceramic coating, we pride ourselves on providing the highest quality service. Contact us today to experience it for yourself."
+        keywords="auto detailing reviews, car detailing reviews, customer testimonials, reviews, testimonials, satisfied customers, auto detailing service, car detailing service, paint correction, ceramic coating, interior detailing, exterior detailing, car care, auto appearance, auto restoration, ratings and reviews, review platform (e.g. Yelp, Google Reviews)"
+      />
       <PageTitle title='reviews' />
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <button onClick={onOpen} className={buttonStyles.button}> Submit a Review!</button>
