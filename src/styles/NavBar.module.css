@@ -62,18 +62,47 @@
 /* Styles for screens smaller than 768px (mobile) */
 @media (max-width: 767px) {
   .header {
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 
   .websiteTitle {
-    margin-left: 0;
-    padding: 15px 0;
+    display: none;
+  }
+  
+  .navBar a{
+    font-size: 14px;
+  }
+}
+
+
+@media(max-width: 375px){
+  .header {
+    justify-content: center;
+    align-items: center;
   }
 
-  .navBar {
-    grid-auto-flow: row;
-    grid-row-gap: 10px;
+  .websiteTitle {
+    display: none;
+  }
+  
+  .navBar a{
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 320px){
+  .header {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .websiteTitle {
+    display: none;
+  }
+  
+  .navBar a{
+    font-size: 9.5px;
   }
 }
 
