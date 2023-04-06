@@ -10,7 +10,7 @@ const NavBar = ({ isSticky }) => {
       <div className={styles.navBar}>
         <Link href='/'>Home</Link>
         <Link href='/about'>About</Link>
-        <Link href='/services'>Services Offered</Link>
+        <Link href='/services'>Services</Link>
         <Link href='/reviews'>Reviews</Link>
         <Link href='/contact'>Contact</Link>
       </div>
