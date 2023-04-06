@@ -69,14 +69,13 @@
   .websiteTitle {
     display: none;
   }
-  
-  .navBar a{
-    font-size: 14px;
+
+  .navBar a {
+    font-size: 18px;
   }
 }
 
-
-@media(max-width: 375px){
+@media(max-width: 375px) {
   .header {
     justify-content: center;
     align-items: center;
@@ -85,13 +84,13 @@
   .websiteTitle {
     display: none;
   }
-  
-  .navBar a{
-    font-size: 12px;
+
+  .navBar a {
+    font-size: 15px;
   }
 }
 
-@media(max-width: 320px){
+@media(max-width: 320px) {
   .header {
     justify-content: center;
     align-items: center;
@@ -100,9 +99,9 @@
   .websiteTitle {
     display: none;
   }
-  
-  .navBar a{
-    font-size: 9.5px;
+
+  .navBar a {
+    font-size: 13px;
   }
 }
 
