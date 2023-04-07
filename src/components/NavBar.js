@@ -3,9 +3,9 @@
 import Link from "next/link"
 import styles from '../styles/NavBar.module.css'
 
-const NavBar = ({ isSticky }) => {
+const NavBar = () => {
   return (
-    <div className={`${styles.header} ${isSticky ? styles.sticky : ''}`}>
+    <div className={styles.header}>
       <div className={styles.navBar}>
         <Link href='/'>Home</Link>
         <Link href='/about'>About</Link>
