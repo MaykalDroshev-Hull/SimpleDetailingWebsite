@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import NavBar from './NavBar'
 import Footer from './Footer'
 import Transition from './Transition'
@@ -10,13 +9,12 @@ const Layout = ({ children }) => {
       <div className={styles.layout}>
         <NavBar />
         <Transition>
-          <main>
+          <main className={styles.main}>
             {children}
           </main>
         </Transition>
         <div className={styles.footerWrapper}>
-          <footer className={styles.footer}>
-          </footer>
+          <Footer />
         </div>
       </div>
     </>
