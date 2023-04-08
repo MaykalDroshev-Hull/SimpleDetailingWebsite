@@ -11,6 +11,7 @@
 
 .footer p{
   color: white;
+  margin-bottom: 10px;
 }
 
 .socialIcon,
@@ -111,5 +112,11 @@
 
   100% {
     background-position-x: 0px;
+  }
+}
+
+@media (max-width: 320px) {
+  .menu a {
+    font-size: 14.92px;
   }
 }
