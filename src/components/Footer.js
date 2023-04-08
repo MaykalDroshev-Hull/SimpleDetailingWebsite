@@ -1,4 +1,3 @@
-//TODO: Need to update the styling so it doesn't cover anything and stays at the bottom even when viewport changes
 import Link from 'next/link'
 import { FaFacebook } from 'react-icons/fa'
 import styles from '../styles/Footer.module.css'
@@ -6,13 +5,11 @@ import styles from '../styles/Footer.module.css'
 const Footer = () => {
   return (
     <>
-      <div>
-        <div className={styles.waveContainer}>
-          <div className={`${styles.wave} ${styles.wave1}`} />
-          <div className={`${styles.wave} ${styles.wave2}`} />
-          <div className={`${styles.wave} ${styles.wave3}`} />
-          <div className={`${styles.wave} ${styles.wave4}`} />
-        </div>
+      <div className={styles.waveContainer}>
+        <div className={`${styles.wave} ${styles.wave1}`} />
+        <div className={`${styles.wave} ${styles.wave2}`} />
+        <div className={`${styles.wave} ${styles.wave3}`} />
+        <div className={`${styles.wave} ${styles.wave4}`} />
       </div>
       <div className={styles.footer}>
         <div className={styles.socialIcon}>
