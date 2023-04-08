@@ -1,4 +1,5 @@
 //Need info from Lily
+import Footer from "@/components/Footer"
 import Meta from "@/components/Meta"
 import PageTitle from "@/components/PageTitle"
 
