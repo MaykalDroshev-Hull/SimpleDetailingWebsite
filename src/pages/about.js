@@ -16,8 +16,8 @@ const about = () => {
         <img className={styles.lilyImage} src='/Images/lily.jpeg' alt='Lily Image' />
         <p>
           My name is Lily Gentry. I am a student at Douglas Southall Freeman High School
-          and am saving money for college. Cleaning has always been a passion of mine, so I began
-          this business. Family and friends are always asking for my services, so I decided it would 
+          and am saving money for college. Cleaning has always been a passion of mine, so I decided to start
+          this small business. Family and friends are always asking for my services, so I decided it would 
           be a great idea to spread the joy of a spotless car! Just wait until you see how much less
           stress a clean car can be!
         </p>
