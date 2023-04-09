@@ -47,6 +47,9 @@ const services = () => {
           height='350px'
         ></InfoCard>
       </div>
+      <div className={styles.disclaimer}>
+        <p>*Full Detail Includes all of the services listed above*</p>
+      </div>
     </>
   )
 }

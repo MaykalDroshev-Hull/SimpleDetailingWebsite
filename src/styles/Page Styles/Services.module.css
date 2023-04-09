@@ -4,8 +4,24 @@
   justify-content: center;
 }
 
-@media (max-width: 1024px){
-  .flexContainer{
+.disclaimer {
+  display: flex;
+  justify-content: center;
+}
+
+.disclaimer p {
+  color: gray;
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .flexContainer {
     flex-direction: column;
-  } 
+  }
+}
+
+@media (max-width: 375px){
+  .disclaimer p{
+    font-size: 13px;
+  }
 }
