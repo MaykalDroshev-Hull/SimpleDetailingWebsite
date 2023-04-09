@@ -90,7 +90,7 @@ const Form = ({ isOpen, onClose }) => {
           </Flex>
         )}
         <ModalBody>
-          <FormControl isInvalid={touched.firstName && !values.firstName} mb={5}>
+          <FormControl isRequired isInvalid={touched.firstName && !values.firstName} mb={5}>
             <Flex flexDirection='column' alignItems='center'>
               <FormLabel>First Name</FormLabel>
               <Input
@@ -104,7 +104,7 @@ const Form = ({ isOpen, onClose }) => {
               <FormErrorMessage>Required</FormErrorMessage>
             </Flex>
           </FormControl>
-          <FormControl isInvalid={touched.lastName && !values.lastName} mb={5}>
+          <FormControl isRequired isInvalid={touched.lastName && !values.lastName} mb={5}>
             <Flex flexDirection='column' justifyContent='center' alignItems='center'>
               <FormLabel>Last Name</FormLabel>
               <Input
@@ -118,7 +118,7 @@ const Form = ({ isOpen, onClose }) => {
               <FormErrorMessage>Required</FormErrorMessage>
             </Flex>
           </FormControl>
-          <FormControl isInvalid={touched.email && !values.email} mb={5}>
+          <FormControl isRequired isInvalid={touched.email && !values.email} mb={5}>
             <Flex flexDirection='column' justifyContent='center' alignItems='center'>
               <FormLabel>Email</FormLabel>
               <Input
