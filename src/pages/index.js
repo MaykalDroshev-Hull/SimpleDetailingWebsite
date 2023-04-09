@@ -20,12 +20,11 @@ export default function Home() {
         <div className={styles.container}>
           <h1>WELCOME!</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
+          Welcome to Gentry's Auto Detailing website! We are dedicated to providing you with the highest level of service and quality
+          when it comes to keeping your vehicle looking its best. Whether you're looking to improve the appearance of your daily 
+          driver or preparing your show car for competition, we have the skills and expertise to deliver the results you're looking for. 
+          From interior to exterior detailing, we offer a wide range of services designed to meet your specific needs. Contact us today to 
+          schedule an appointment and experience the difference that our auto detailing services can make for your vehicle
           </p>
           <button onClick={onOpen} className={buttonStyles.button}>Book Appointment</button>
           <Form isOpen={isOpen} onClose={onClose} />
