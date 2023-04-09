@@ -115,8 +115,20 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 425px) {
   .menu a {
     font-size: 14.92px;
+  }
+}
+
+@media (max-width: 375px) {
+  .menu a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 325px) {
+  .menu a {
+    font-size: 11px;
   }
 }
