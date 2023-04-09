@@ -69,3 +69,15 @@
     width: 45%;
   }
 }
+
+@media(max-width: 425px){
+  .container p{
+    font-size: 20px;
+  }
+}
+
+@media(max-width: 325px){
+  .container p{
+    font-size: 15px;
+  }
+}
