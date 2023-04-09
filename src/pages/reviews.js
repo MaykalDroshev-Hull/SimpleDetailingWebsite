@@ -15,6 +15,7 @@ import Meta from '@/components/Page Components/Meta'
 import PageTitle from '@/components/Page Components/PageTitle'
 import ReviewForm from '@/components/Form Components/ReviewForm'
 import buttonStyles from '../styles/Component Styles/FlowButton.module.css'
+import { color } from 'framer-motion'
 
 const reviews = ({ data }) => {
   const [entries, setEntries] = useState(data)
@@ -29,6 +30,18 @@ const reviews = ({ data }) => {
         keywords="auto detailing reviews, car detailing reviews, customer testimonials, reviews, testimonials, satisfied customers, auto detailing service, car detailing service, paint correction, ceramic coating, interior detailing, exterior detailing, car care, auto appearance, auto restoration, ratings and reviews, review platform (e.g. Yelp, Google Reviews)"
       />
       <PageTitle title='reviews' />
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        marginBottom: '15px',
+        fontSize: '18px',
+        fontWeight: '500',
+        color: 'gray'
+      }}>
+        <p>
+          Submit a review here or on <a style={{fontWeight: '900', textDecoration: 'underline'}} href='https://www.facebook.com/GentrysAutoDetailing'>Facebook</a>!
+        </p>
+      </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <button onClick={onOpen} className={buttonStyles.button}> Submit a Review!</button>
         <ReviewForm isOpen={isOpen} onClose={onClose} />
