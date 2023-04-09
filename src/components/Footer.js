@@ -21,6 +21,7 @@ const Footer = () => {
           <li><Link href="/">Home</Link></li>
           <li><Link href="/about">About</Link></li>
           <li><Link href="/services">Services Offered</Link></li>
+          <li><Link href="/reviews">Review</Link></li>
           <li><Link href="/contact">Contact</Link></li>
         </div>
         <p>Website Designed by Lofton Gentry</p>
