@@ -1,5 +1,3 @@
-//Need to update this once it's properly connected to a server
-import { useEffect, useState } from 'react'
 import {
   useBreakpointValue,
   Card,
@@ -15,10 +13,16 @@ import Meta from '@/components/Page Components/Meta'
 import PageTitle from '@/components/Page Components/PageTitle'
 import ReviewForm from '@/components/Form Components/ReviewForm'
 import buttonStyles from '../styles/Component Styles/FlowButton.module.css'
-import { color } from 'framer-motion'
 
+/**
+ * A React functional component that displays a list of reviews retrieved from the server-side props. It also includes a form for users to submit their own reviews.
+ * @function reviews
+ * @param {Object} props - The props object containing the review data as an array of objects.
+ * @param {Object[]} props.data - An array of objects containing review data, including the reviewer's first and last name, and the review text.
+ * @returns {JSX.Element} - A JSX element that renders the list of reviews as cards, along with a form for submitting new reviews.
+ */
 const reviews = ({ data }) => {
-  const [entries, setEntries] = useState(data)
+  //Sets cardwidth to 100% of the screen width based on the size of the viewport
   const cardWidth = useBreakpointValue({ base: '100%', md: 'minmax(700px, 1fr)' })
   const { isOpen, onOpen, onClose } = useDisclosure()
 
@@ -64,6 +68,12 @@ const reviews = ({ data }) => {
   )
 }
 
+/**
+ * Retrieves review data from the Prisma ORM and returns it as props for server-side rendering.
+ * @async
+ * @function getServerSideProps
+ * @returns {Promise<{props: {data: Object[]}}>} - A Promise that resolves to an object containing the review data as an array of objects.
+ */
 export async function getServerSideProps() {
   const prisma = new PrismaClient()
   const data = await prisma.review.findMany()

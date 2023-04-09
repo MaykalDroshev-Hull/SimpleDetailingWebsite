@@ -1,8 +1,14 @@
 import NavBar from './Layout Components/NavBar'
-import Footer from './Layout Components/Footer'
 import Transition from './Layout Components/Transition'
+import Footer from './Layout Components/Footer'
 import styles from '../styles/Component Styles/Layout.module.css'
 
+/**
+ * A layout component that defines the overall structure of the web page
+ * @param {object} props - The props object
+ * @param {ReactNode} children - The child components to be rendered within the layout
+ * @returns {JSX.Element} - The layout component
+*/
 const Layout = ({ children }) => {
   return (
     <>

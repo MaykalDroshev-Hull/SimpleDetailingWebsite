@@ -1,6 +1,10 @@
 import Link from "next/link"
 import styles from '../../styles/Component Styles/NavBar.module.css'
 
+/**
+ * A navigation bar component for Gentry's Auto Detailing website.
+ * @returns JSX element displaying navigation links and website title.
+ */
 const NavBar = () => {
   return (
     <div className={styles.header}>

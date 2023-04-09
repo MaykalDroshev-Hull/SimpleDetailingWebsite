@@ -1,5 +1,13 @@
 import Head from "next/head"
 
+/**
+ * Renders a <Head> component with meta tags for SEO.
+ * @param {object} props - The props object.
+ * @param {string} title - The title of the page.
+ * @param {string} keywords - The keywords for the page.
+ * @param {string} description - The description of the page.
+ * @returns {JSX.Element} A <Head> component with meta tags.
+ */
 const Meta = ({ title, keywords, description }) => {
   return (
     <Head>
@@ -13,6 +21,7 @@ const Meta = ({ title, keywords, description }) => {
   )
 }
 
+//The defualt properties of the Meta tag if nothing is supplied to it
 Meta.defaultProps = {
   title: `Gentry's Auto Detailing`,
   keywords: 'Car detailing, Auto detailing, Car cleaning, Car polishing, Paint correction, Ceramic coating, Car wash, Mobile detailing, Interior detailing, Exterior detailing, Waxing, Buffing, Upholstery Cleaning, Headlight Restoration, Detailing Packages, Detailing Services, Car Care Tips, Detailing Supplies, Detailing Equipment',

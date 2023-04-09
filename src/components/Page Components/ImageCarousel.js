@@ -3,7 +3,12 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import styles from '../../styles/Component Styles/ImageCarousel.module.css'
 
+/**
+ * A component that displays a carousel of images with autoplay and no navigation arrows or dots.
+ * @returns {JSX.Element} The ImageCarousel component.
+ */
 const ImageCarousel = () => {
+  //Settings for the image carousel 
   const settings = {
     dots: false,
     arrows: false,

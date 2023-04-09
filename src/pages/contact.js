@@ -6,6 +6,7 @@ import { sendLongContactForm } from "@/lib/api"
 import styles from '../styles/Page Styles/Contact.module.css'
 import buttonStyles from '../styles/Component Styles/FlowButton.module.css'
 
+//An object containing initial values for the form fields
 const initValues = {
   firstName: '',
   lastName: '',
@@ -18,18 +19,28 @@ const initValues = {
   desiredDate: '',
 }
 
+//An object containing the initial state for the form
 const initState = { values: initValues }
 
+/**
+ * A functional component that displays a contact form and allows the user to submit information for handling by the API
+ * @returns {JSX.Element} The Contact component
+ */
 const contact = () => {
+  //The state of the form
   const [formState, setFormState] = useState(initState)
+  //Object that is updated if an input has been touched or not
   const [touched, setTouched] = useState({})
   const { values, isLoading, error } = formState
-  const toast =  useToast()
+  const toast = useToast()
+
+  //A function that updates the state of the form when an input field is blurred
   const onBlur = ({ target }) => setTouched(prev => ({
     ...prev,
     [target.name]: true,
   }))
 
+  //A function that updates the state of the form when an input field value is changed
   const handleInputChange = ({ target }) =>
     setFormState((prev) => ({
       ...prev,
@@ -39,15 +50,22 @@ const contact = () => {
       },
     }));
 
+  //Function to submit the data to be handles by the API
   const onSubmit = async () => {
     setFormState(prev => ({
       ...prev,
       isLoading: true,
     }))
     try {
+      //Redirect to API where data is further handled
       await sendLongContactForm(values)
+      /**
+       * Setting form to it's initial state (effectively clears the form, sets 'isLoading' parameter to false, 
+       * 'error' parameter to empty, and sets form inputs to having not been touched)
+      */
       setTouched({})
       setFormState(initState)
+      //Toast message that message was sent succesfully
       toast({
         title: 'Submission Succesful',
         status: 'success',
@@ -55,6 +73,7 @@ const contact = () => {
         position: 'top'
       })
     } catch (error) {
+      //Does not clear form or close modal, sets 'isLoading' to false, and sets 'error' to the error message returned by the API
       setFormState(prev => ({
         ...prev,
         isLoading: false,
@@ -90,7 +109,16 @@ const contact = () => {
           )}
           <div className={styles.flexDisplay}>
             <Stack direction='row'>
-              <FormControl isRequired isInvalid={touched.firstName && !values.firstName} mb={5}>
+              <FormControl
+                isRequired
+                isInvalid={
+                  /**
+                   * If the input has been touched and there is no data inside of it, sets the error 
+                   * border color to red and displays form error message
+                   */
+                  touched.firstName && !values.firstName
+                }
+                mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
                   <FormLabel>First Name</FormLabel>
                   <Input
@@ -104,7 +132,16 @@ const contact = () => {
                   <FormErrorMessage>Required</FormErrorMessage>
                 </Flex>
               </FormControl>
-              <FormControl isRequired isInvalid={touched.lastName && !values.lastName} mb={5}>
+              <FormControl
+                isRequired
+                isInvalid={
+                  /**
+                   * If the input has been touched and there is no data inside of it, sets the error 
+                   * border color to red and displays form error message
+                   */
+                  touched.lastName && !values.lastName
+                }
+                mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
                   <FormLabel>Last Name</FormLabel>
                   <Input
@@ -122,7 +159,16 @@ const contact = () => {
           </div>
           <div className={styles.flexDisplay}>
             <Stack direction='row'>
-              <FormControl isRequired isInvalid={touched.email && !values.email} mb={5}>
+              <FormControl
+                isRequired
+                isInvalid={
+                  /**
+                   * If the input has been touched and there is no data inside of it, sets the error 
+                   * border color to red and displays form error message
+                   */
+                  touched.email && !values.email
+                }
+                mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
                   <FormLabel>Email</FormLabel>
                   <Input
@@ -136,7 +182,16 @@ const contact = () => {
                   <FormErrorMessage>Required</FormErrorMessage>
                 </Flex>
               </FormControl>
-              <FormControl isRequired isInvalid={touched.phoneNumber && !values.phoneNumber} mb={5}>
+              <FormControl
+                isRequired
+                isInvalid={
+                  /**
+                   * If the input has been touched and there is no data inside of it, sets the error 
+                   * border color to red and displays form error message
+                   */
+                  touched.phoneNumber && !values.phoneNumber
+                }
+                mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
                   <FormLabel> Phone Number</FormLabel>
                   <Input
@@ -154,7 +209,16 @@ const contact = () => {
           </div>
           <div className={styles.flexDisplay}>
             <Stack direction='row'>
-              <FormControl isRequired isInvalid={touched.carMake && !values.carMake} mb={5}>
+              <FormControl
+                isRequired
+                isInvalid={
+                  /**
+                   * If the input has been touched and there is no data inside of it, sets the error 
+                   * border color to red and displays form error message
+                   */
+                  touched.carMake && !values.carMake
+                }
+                mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
                   <FormLabel>Car Make</FormLabel>
                   <Input
@@ -168,7 +232,16 @@ const contact = () => {
                   <FormErrorMessage>Required</FormErrorMessage>
                 </Flex>
               </FormControl >
-              <FormControl isRequired isInvalid={touched.carModel && !values.carModel} mb={5}>
+              <FormControl
+                isRequired
+                isInvalid={
+                  /**
+                   * If the input has been touched and there is no data inside of it, sets the error 
+                   * border color to red and displays form error message
+                   */
+                  touched.carModel && !values.carModel
+                }
+                mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
                   <FormLabel> Car Model</FormLabel>
                   <Input

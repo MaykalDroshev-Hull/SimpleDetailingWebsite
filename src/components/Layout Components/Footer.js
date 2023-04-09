@@ -2,6 +2,10 @@ import Link from 'next/link'
 import { FaFacebook } from 'react-icons/fa'
 import styles from '../../styles/Component Styles/Footer.module.css'
 
+/**
+ * The Footer component displays the footer section of the website, including social icons, menu items, and a wave effect container.
+ * @returns {JSX.Element} The JSX code for the Footer component.
+ */
 const Footer = () => {
   return (
     <>

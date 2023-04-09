@@ -3,6 +3,10 @@ import PageTitle from "@/components/Page Components/PageTitle"
 import InfoCard from "@/components/Page Components/InfoCard"
 import styles from '../styles/Page Styles/Services.module.css'
 
+/**
+ * Services component that displays information about the auto detailing services offered.
+ * @returns {JSX.Element} The JSX element to be rendered.
+ */
 const services = () => {
   return (
     <>
