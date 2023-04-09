@@ -17,7 +17,7 @@ import {
   useToast
 } from '@chakra-ui/react'
 import { sendContactForm } from '@/lib/api'
-import buttonStyles from '../styles/FlowButton.module.css'
+import buttonStyles from '../../styles/Component Styles/FlowButton.module.css'
 
 const initValues = {
   firstName: '',

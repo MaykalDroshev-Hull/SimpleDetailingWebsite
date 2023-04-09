@@ -1,7 +1,5 @@
-//TODO: The navbar jumps immediately when you start scrolling
-
 import Link from "next/link"
-import styles from '../styles/NavBar.module.css'
+import styles from '../../styles/Component Styles/NavBar.module.css'
 
 const NavBar = () => {
   return (

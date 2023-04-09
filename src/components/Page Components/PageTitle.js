@@ -1,4 +1,4 @@
-import styles from '../styles/PageTitle.module.css'
+import styles from '../../styles/Component Styles/PageTitle.module.css'
 
 const PageTitle = ({ title }) => {
   return (

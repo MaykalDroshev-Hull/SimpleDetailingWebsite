@@ -1,9 +1,9 @@
 import { useDisclosure } from '@chakra-ui/react'
-import Meta from '@/components/Meta'
-import Form from '@/components/QuickForm'
-import ImageCarousel from "@/components/ImageCarousel"
-import styles from '../styles/Index.module.css'
-import buttonStyles from '../styles/FlowButton.module.css'
+import Meta from '@/components/Page Components/Meta'
+import Form from '@/components/Form Components/QuickForm'
+import ImageCarousel from "@/components/Page Components/ImageCarousel"
+import styles from '../styles/Page Styles/Index.module.css'
+import buttonStyles from '../styles/Component Styles/FlowButton.module.css'
 
 
 export default function Home() {

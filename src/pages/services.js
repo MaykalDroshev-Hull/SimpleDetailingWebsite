@@ -1,9 +1,7 @@
-//Need info from Lily
-import Meta from "@/components/Meta"
-import PageTitle from "@/components/PageTitle"
-import { Card, CardBody, CardHeader, Heading } from "@chakra-ui/react"
-import styles from '../styles/Services.module.css'
-import InfoCard from "@/components/InfoCard"
+import Meta from "@/components/Page Components/Meta"
+import PageTitle from "@/components/Page Components/PageTitle"
+import InfoCard from "@/components/Page Components/InfoCard"
+import styles from '../styles/Page Styles/Services.module.css'
 
 const services = () => {
   return (

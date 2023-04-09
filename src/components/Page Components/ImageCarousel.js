@@ -1,7 +1,7 @@
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import styles from '../styles/ImageCarousel.module.css'
+import styles from '../../styles/Component Styles/ImageCarousel.module.css'
 
 const ImageCarousel = () => {
   const settings = {

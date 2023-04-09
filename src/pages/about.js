@@ -1,7 +1,6 @@
-//Need info from Lily
-import Meta from "@/components/Meta"
-import PageTitle from "@/components/PageTitle"
-import styles from '../styles/About.module.css'
+import Meta from "@/components/Page Components/Meta"
+import PageTitle from "@/components/Page Components/PageTitle"
+import styles from '../styles/Page Styles/About.module.css'
 
 const about = () => {
   return (

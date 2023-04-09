@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { FaFacebook } from 'react-icons/fa'
-import styles from '../styles/Footer.module.css'
+import styles from '../../styles/Component Styles/Footer.module.css'
 
 const Footer = () => {
   return (

@@ -1,7 +1,7 @@
-import NavBar from './NavBar'
-import Footer from './Footer'
-import Transition from './Transition'
-import styles from '../styles/Layout.module.css'
+import NavBar from './Layout Components/NavBar'
+import Footer from './Layout Components/Footer'
+import Transition from './Layout Components/Transition'
+import styles from '../styles/Component Styles/Layout.module.css'
 
 const Layout = ({ children }) => {
   return (

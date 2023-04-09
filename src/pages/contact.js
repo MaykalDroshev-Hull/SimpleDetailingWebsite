@@ -1,6 +1,6 @@
 //Need info from Lily. Will replicate same method as done previoulsy using the api 
-import Meta from "@/components/Meta"
-import PageTitle from "@/components/PageTitle"
+import Meta from "@/components/Page Components/Meta"
+import PageTitle from "@/components/Page Components/PageTitle"
 
 const contact = () => {
   return (

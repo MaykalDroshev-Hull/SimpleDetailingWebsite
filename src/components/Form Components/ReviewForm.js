@@ -19,7 +19,7 @@ import {
   useToast
 } from "@chakra-ui/react"
 import { sendReviewForm } from "@/lib/api.js"
-import buttonStyles from '../styles/FlowButton.module.css'
+import buttonStyles from '../../styles/Component Styles/FlowButton.module.css'
 
 const initValues = {
   firstName: '',

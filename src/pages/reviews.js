@@ -11,10 +11,10 @@ import {
   Text
 } from '@chakra-ui/react'
 import { PrismaClient } from '@prisma/client'
-import Meta from '@/components/Meta'
-import PageTitle from '@/components/PageTitle'
-import ReviewForm from '@/components/ReviewForm'
-import buttonStyles from '../styles/FlowButton.module.css'
+import Meta from '@/components/Page Components/Meta'
+import PageTitle from '@/components/Page Components/PageTitle'
+import ReviewForm from '@/components/Form Components/ReviewForm'
+import buttonStyles from '../styles/Component Styles/FlowButton.module.css'
 
 const reviews = ({ data }) => {
   const [entries, setEntries] = useState(data)
