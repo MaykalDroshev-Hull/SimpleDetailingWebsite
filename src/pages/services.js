@@ -53,6 +53,7 @@ const services = () => {
       </div>
       <div className={styles.disclaimer}>
         <p>*Full Detail Includes all of the services listed above*</p>
+        <p>*Prices may vary depending on dirtiness of vehicle*</p>
       </div>
     </>
   )
