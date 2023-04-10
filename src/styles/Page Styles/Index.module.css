@@ -72,12 +72,12 @@
 
 @media(max-width: 425px){
   .container p{
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
 @media(max-width: 325px){
   .container p{
-    font-size: 15px;
+    font-size: 13px;
   }
 }
