@@ -8,15 +8,6 @@
   font-size: 25px;
   font-weight: 600;
   color: gray;
-  margin-left: 30px;
-}
-
-.contactDetails p {
- margin-bottom: 20px;
-}
-
-.contactDetails ul li {
-  list-style-type: none;
 }
 
 .formContainer {
@@ -37,13 +28,17 @@
   justify-content: center;
 }
 
-@media (max-width: 768px){
+@media (max-width: 1024px){
   .content{
     flex-direction: column;
   }
 
   .contactDetails{
-    margin-bottom: 10px;
+    margin: 0 5px 5px 5px;
+  }
+
+  .contactDetails p{
+    text-align: center;
   }
 }
 
