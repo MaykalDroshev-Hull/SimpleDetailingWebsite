@@ -92,12 +92,9 @@ const contact = () => {
       <PageTitle title='contact' />
       <div className={styles.content}>
         <div className={styles.contactDetails}>
-          <p>You can contact me through email, phone, <br />or submit an appointment request, and <br />I'll get back to you as soon as possible!</p>
-          <ul>
-            <li>Phone: (804)-998-3470</li>
-            <li>Email: lilygentry8914@gmail.com</li>
-            <li>Location: Available Upon Request</li>
-          </ul>
+          <p>
+            Please submit an appointment request and I will get back to you as soon as possible!
+          </p>
         </div>
         <div className={styles.formContainer}>
           {error && (
