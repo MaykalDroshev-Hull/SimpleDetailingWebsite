@@ -1,5 +1,5 @@
 import NavBar from './Layout Components/NavBar'
-import Transition from './Layout Components/Transition'
+//import Transition from './Layout Components/Transition'
 import Footer from './Layout Components/Footer'
 import styles from '../styles/Component Styles/Layout.module.css'
 
@@ -14,11 +14,11 @@ const Layout = ({ children }) => {
     <>
       <div className={styles.layout}>
         <NavBar />
-        <Transition>
+        {/* <Transition> */}
           <main className={styles.main}>
             {children}
           </main>
-        </Transition>
+        {/* </Transition> */}
         <div className={styles.footerWrapper}>
           <Footer />
         </div>
