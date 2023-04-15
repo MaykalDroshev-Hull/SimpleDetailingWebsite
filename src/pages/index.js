@@ -28,7 +28,7 @@ export default function Home() {
           </p>
           <button onClick={onOpen} className={buttonStyles.button}>Book Appointment</button>
           <Form isOpen={isOpen} onClose={onClose} />
-          <p className={styles.disclaimer}>*We are not a mobile auto detailing company*</p>
+          <p className={styles.disclaimer}>*We currently do not offer mobile detailing services*</p>
         </div>
       </div>
     </>
