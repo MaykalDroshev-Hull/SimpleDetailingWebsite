@@ -5,6 +5,10 @@
 
 .container {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container h1 {
@@ -13,7 +17,8 @@
   font-size: 50px;
 }
 
-.container p {
+.introduction,
+.disclaimer {
   color: gray;
   padding: 10px;
   font-size: 20px;
@@ -45,14 +50,16 @@
   padding: 20px;
 }
 
-
+.disclaimer {
+  font-style: italic;
+}
 
 /* Stack elements on mobile */
 @media only screen and (max-width: 768px) {
   .content {
     flex-direction: column;
   }
-  
+
   .container {
     width: 100%;
   }
@@ -64,20 +71,30 @@
     flex-direction: row;
     justify-content: space-between;
   }
-  
+
   .container {
     width: 45%;
   }
 }
 
-@media(max-width: 425px){
-  .container p{
+@media(max-width: 428px) {
+  .introduction, .disclaimer {
     font-size: 15px;
   }
 }
 
-@media(max-width: 325px){
-  .container p{
+@media(max-width: 375px) {
+  .disclaimer {
+    font-size: 12px;
+  }
+}
+
+@media(max-width: 325px) {
+  .introduction {
     font-size: 13px;
+  }
+
+  .disclaimer {
+    font-size: 11px;
   }
 }
