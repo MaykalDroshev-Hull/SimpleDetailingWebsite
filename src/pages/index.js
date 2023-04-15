@@ -19,7 +19,7 @@ export default function Home() {
         <ImageCarousel />
         <div className={styles.container}>
           <h1>WELCOME!</h1>
-          <p>
+          <p className={styles.introduction}>
           Welcome to Gentry's Auto Detailing website! We are dedicated to providing you with the highest level of service and quality
           when it comes to keeping your vehicle looking its best. Whether you're looking to improve the appearance of your daily 
           driver or preparing your show car for competition, we have the skills and expertise to deliver the results you're looking for. 
@@ -28,6 +28,7 @@ export default function Home() {
           </p>
           <button onClick={onOpen} className={buttonStyles.button}>Book Appointment</button>
           <Form isOpen={isOpen} onClose={onClose} />
+          <p className={styles.disclaimer}>*We are not a mobile auto detailing company*</p>
         </div>
       </div>
     </>
