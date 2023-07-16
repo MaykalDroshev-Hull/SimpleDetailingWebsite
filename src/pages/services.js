@@ -19,17 +19,17 @@ const services = () => {
       <div className={styles.flexContainer}>
         <InfoCard
           title='Interior Only'
-          itemArray={["$110 Regular SUV/Car", "$115 Large SUV/Truck"]}
+          itemArray={["$125 Small SUV/Car", "$135 Large SUV/Truck"]}
           width='400px'
         ></InfoCard>
         <InfoCard
           title='Exterior Only'
-          itemArray={['$105 Regular SUV/Car', '$110 Large SUV/Truck']}
+          itemArray={['$115 Small SUV/Car', '$125 Large SUV/Truck']}
           width='400px'
         ></InfoCard>
         <InfoCard
           title='Full Detailing'
-          itemArray={['$135 Regular SUV/Car', '$145 Large SUV/Truck']}
+          itemArray={['$160 Small SUV/Car', '$180 Large SUV/Truck']}
           width='400px'
         ></InfoCard>
       </div>
