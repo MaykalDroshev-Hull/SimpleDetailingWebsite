@@ -12,7 +12,7 @@ const NavBar = () => {
         <Link href='/'>Home</Link>
         <Link href='/about'>About</Link>
         <Link href='/services'>Services</Link>
-        <Link href='/reviews'>Reviews</Link>
+        {/* <Link href='/reviews'>Reviews</Link> */}
         <Link href='/contact'>Contact</Link>
       </div>
       <p className={styles.websiteTitle}>Gentry's Auto Detailing</p>
