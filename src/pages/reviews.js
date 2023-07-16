@@ -1,3 +1,4 @@
+//NOTE: This page is no longer viewable on the live website, however I wanted to keep it here to use as reference in the future -LG
 import {
   useBreakpointValue,
   Card,
