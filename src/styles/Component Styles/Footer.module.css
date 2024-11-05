@@ -1,7 +1,7 @@
 .footer {
   left: 0;
   width: 100%;
-  background-color: #3586FF;
+  background-color: #F5C501;
   min-height: 100px;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
 }
 
 .footer p{
-  color: white;
+  color: black;
   margin-bottom: 10px;
 }
 

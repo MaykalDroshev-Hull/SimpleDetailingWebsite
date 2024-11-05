@@ -10,8 +10,8 @@
   font-weight: 600;
   font-size: 20px;
   padding: 12px 16px;
-  color: #3586ff;
-  border: 3px solid #3586ff;
+  color: #F5C501;
+  border: 3px solid #F5C501;
   border-radius: calc(12px + 8px + 4px);
   transition: 4s;
   background: none;
@@ -27,7 +27,7 @@
   aspect-ratio: 1;
   border: none;
   border-radius: 40%;
-  background-color: #3586ff;
+  background-color: #F5C501;
   transition: 4s;
 }
 
@@ -44,7 +44,7 @@
 .button:hover,
 .button:focus {
   cursor: pointer;
-  color: white;
+  color: black;
 }
 
 .button:hover:before,
@@ -52,5 +52,5 @@
 .button:focus:before,
 .button:focus:after {
   transform: none;
-  background-color: #3586ff;
+  background-color: #F5C501;
 }

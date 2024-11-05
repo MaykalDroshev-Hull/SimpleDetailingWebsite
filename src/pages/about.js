@@ -18,7 +18,7 @@ const about = () => {
       />
       <PageTitle title='About Me' />
       <div className={styles.container}>
-        <img className={styles.lilyImage} src='/Images/lily.jpeg' alt='Lily Image' />
+        <img className={styles.lilyImage} src='/Images/aychin.jpg' alt='Lily Image' />
         <p>
           My name is Lily Gentry. I am a student at Douglas Southall Freeman High School
           and am saving money for college. Cleaning has always been a passion of mine, so I decided to start

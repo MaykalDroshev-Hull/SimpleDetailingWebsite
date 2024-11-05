@@ -8,10 +8,10 @@
 .lilyImage {
   height: 60vh;
   border-radius: 20px;
-  box-shadow: 0px 2px 4px #3586FF,
-    0px 4px 8px #3586FF,
-    0px 8px 16px #3586FF,
-    0px 16px 32px #3586FF;
+  box-shadow: 0px 2px 4px #F5C501,
+    0px 4px 8px #F5C501,
+    0px 8px 16px #F5C501,
+    0px 16px 32px #F5C501;
 }
 
 .container p {
