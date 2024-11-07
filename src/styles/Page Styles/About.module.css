@@ -1,4 +1,8 @@
 .container {
+  background-color: black;
+  color: white; /* This sets default text color */
+}
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,6 +19,7 @@
 }
 
 .container p {
+  white-space: pre-wrap;
   font-size: 35px;
   margin: 50px;
   width: 50vw;

@@ -1,10 +1,9 @@
 import { useState } from "react"
 import Meta from "@/components/Page Components/Meta"
 import PageTitle from "@/components/Page Components/PageTitle"
-import { Text, Button, Flex, FormControl, FormErrorMessage, FormLabel, Input, Select, Stack, Textarea, useToast } from "@chakra-ui/react"
+import { Text, Button, Flex, FormControl, FormErrorMessage, FormLabel, Input, Select, Stack, Textarea, useToast, background } from "@chakra-ui/react"
 import { sendLongContactForm } from "@/lib/api"
 import styles from '../styles/Page Styles/Contact.module.css'
-import buttonStyles from '../styles/Component Styles/FlowButton.module.css'
 
 //An object containing initial values for the form fields
 const initValues = {
@@ -85,16 +84,15 @@ const contact = () => {
   return (
     <>
       <Meta
-        title='Contact'
+        title='Контакти'
         description="Get in touch with Gentry's Auto Detailing and take the first step towards a cleaner, more polished car. Our experienced team is here to answer your questions and help you schedule an appointment for interior and exterior detailing, paint correction, ceramic coating, and more. Contact us today and experience the highest level of customer service and quality workmanship."
         keywords="auto detailing, car detailing, detailing services, paint correction, ceramic coating, interior detailing, exterior detailing, car care, auto appearance, auto restoration, contact us, schedule an appointment, get in touch, phone number, email address, location"
       />
-      <PageTitle title='contact' />
+      <PageTitle title='Контакти' />
       <div className={styles.content}>
         <div className={styles.contactDetails}>
           <p>
-            Please submit an appointment request and I will get back to you as soon as possible!
-          </p>
+          Моля, изпратете заявка за среща и ние ще се свържем с вас възможно най-скоро!          </p>
         </div>
         <div className={styles.formContainer}>
           {error && (
@@ -117,16 +115,17 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel>First Name</FormLabel>
+                  <FormLabel className={styles.Text}>Име</FormLabel>
                   <Input
                     type='text'
                     name='firstName'
+                    className={styles.Text}
                     value={values.firstName}
                     onChange={handleInputChange}
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage>Required</FormErrorMessage>
+                  <FormErrorMessage>Задължително</FormErrorMessage>
                 </Flex>
               </FormControl>
               <FormControl
@@ -140,16 +139,17 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel>Last Name</FormLabel>
+                  <FormLabel className={styles.Text}>Фамилия</FormLabel>
                   <Input
                     type='text'
                     name='lastName'
+                    className={styles.Text}
                     value={values.lastName}
                     onChange={handleInputChange}
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage>Required</FormErrorMessage>
+                  <FormErrorMessage>Задължително</FormErrorMessage>
                 </Flex>
               </FormControl>
             </Stack>
@@ -167,16 +167,17 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel className={styles.Text}>Email</FormLabel>
                   <Input
                     type='email'
                     name='email'
+                    className={styles.Text}
                     value={values.email}
                     onChange={handleInputChange}
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage>Required</FormErrorMessage>
+                  <FormErrorMessage >Задължително</FormErrorMessage>
                 </Flex>
               </FormControl>
               <FormControl
@@ -190,16 +191,17 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel> Phone Number</FormLabel>
+                  <FormLabel className={styles.Text}> Тел. Номерr</FormLabel>
                   <Input
                     type='tel'
                     name='phoneNumber'
                     value={values.phoneNumber}
+                    className={styles.Text}
                     onChange={handleInputChange}
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage>Required</FormErrorMessage>
+                  <FormErrorMessage>Задължително</FormErrorMessage>
                 </Flex>
               </FormControl>
             </Stack>
@@ -217,16 +219,17 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel>Car Make</FormLabel>
+                  <FormLabel className={styles.Text}>Марка</FormLabel>
                   <Input
                     type='text'
                     name='carMake'
+                    className={styles.Text}
                     value={values.carMake}
                     onChange={handleInputChange}
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage>Required</FormErrorMessage>
+                  <FormErrorMessage>Задължително</FormErrorMessage>
                 </Flex>
               </FormControl >
               <FormControl
@@ -240,43 +243,46 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel> Car Model</FormLabel>
+                  <FormLabel className={styles.Text}>Модел</FormLabel>
                   <Input
                     type='text'
                     name='carModel'
                     value={values.carModel}
+                    className={styles.Text}
                     onChange={handleInputChange}
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage>Required</FormErrorMessage>
+                  <FormErrorMessage>Задължително</FormErrorMessage>
                 </Flex>
               </FormControl>
             </Stack>
           </div>
           <FormControl isRequired>
             <Flex flexDirection='column' alignItems='center'>
-              <FormLabel>Type of Detailing</FormLabel>
+              <FormLabel className={styles.Text}>Вид Услуга</FormLabel>
               <Select
                 placeholder=" "
                 name='typeOfDetail'
                 value={values.typeOfDetail}
+                className={styles.selectControl}
                 onChange={handleInputChange}
                 onBlur={onBlur}
                 maxWidth='450px'
               >
-                <option>Interior Detail</option>
-                <option>Exterior Detail</option>
-                <option>Full Detail</option>
+                <option>Интериор</option>
+                <option>Екстериор</option>
+                <option>Пълен Пакет</option>
               </Select>
             </Flex>
           </FormControl>
           <FormControl mt={3} mb={5}>
             <Flex flexDirection='column' alignItems='center'>
-              <FormLabel>Additional Details (Optional)</FormLabel>
+              <FormLabel className={styles.Text}>Допълнителни Коментари (незадължително)</FormLabel>
               <Textarea
                 type='text'
                 name='additionalDetails'
+                className={styles.Text}
                 value={values.additionalDetails}
                 onChange={handleInputChange}
                 maxWidth='450px'
@@ -285,21 +291,22 @@ const contact = () => {
           </FormControl>
           <FormControl isRequired mb={5}>
             <Flex flexDirection='column' justifyContent='center' alignItems='center'>
-              <FormLabel>Desired Date</FormLabel>
+              <FormLabel className={styles.Text}>Желана Дата</FormLabel>
               <Input
                 type='date'
                 name='desiredDate'
                 value={values.desiredDate}
+                className={styles.Text}
                 onChange={handleInputChange}
                 maxWidth='450px' />
             </Flex>
           </FormControl>
           <Flex>
-            <Button
-              className={buttonStyles.button}
+            <Button style={{ backgroundColor: "black" }}
+              className={styles.SubmitButton}
               isLoading={isLoading}
               onClick={onSubmit}
-            >Submit</Button>
+            >Изпрати!</Button>
           </Flex>
         </div>
       </div>

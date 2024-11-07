@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FaFacebook } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaEnvelope, FaPhone } from 'react-icons/fa'
 import styles from '../../styles/Component Styles/Footer.module.css'
 
 /**
@@ -9,26 +9,34 @@ import styles from '../../styles/Component Styles/Footer.module.css'
 const Footer = () => {
   return (
     <>
-      <div className={styles.waveContainer}>
-        <div className={`${styles.wave} ${styles.wave1}`} />
-        <div className={`${styles.wave} ${styles.wave2}`} />
-        <div className={`${styles.wave} ${styles.wave3}`} />
-        <div className={`${styles.wave} ${styles.wave4}`} />
-      </div>
       <div className={styles.footer}>
+      <img className={styles.logo} src='/Images/logo.png' alt='logo' />
+
         <div className={styles.socialIcon}>
-          <Link href='https://www.facebook.com/GentrysAutoDetailing'>
+          <Link href='https://www.facebook.com/profile.php?id=100063618235937'>
             <FaFacebook />
           </Link>
+          <Link href='https://www.instagram.com/aychin_mehmed7/'>
+            <FaInstagram />
+          </Link>
+           {/* Phone Link */}
+      <Link href='tel:+359876423782'>
+        <FaPhone />
+      </Link>
+
+      {/* Email Link */}
+      <Link href='mailto:detailingaseam@gmail.com'>
+        <FaEnvelope/>
+      </Link>
         </div>
         <div className={styles.menu}>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/about">About</Link></li>
-          <li><Link href="/services">Services Offered</Link></li>
-          <li><Link href="/reviews">Review</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
+          <li><Link href="/">Начало</Link></li>
+          <li><Link href="/about">За Мен</Link></li>
+          <li><Link href="/services">Услуги</Link></li>
+          <li><Link href="/services">Продукти</Link></li>
+          <li><Link href="/contact">Контакти</Link></li>
         </div>
-        <p>Website Designed by Lofton Gentry</p>
+        <p className={styles.p} >Изработка от Майкъл Дрошев</p>
       </div>
     </>
   )

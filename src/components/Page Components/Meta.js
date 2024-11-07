@@ -23,7 +23,7 @@ const Meta = ({ title, keywords, description }) => {
 
 //The defualt properties of the Meta tag if nothing is supplied to it
 Meta.defaultProps = {
-  title: `Gentry's Auto Detailing`,
+  title: `Асеа-м Детайлинг`,
   keywords: 'Car detailing, Auto detailing, Car cleaning, Car polishing, Paint correction, Ceramic coating, Car wash, Mobile detailing, Interior detailing, Exterior detailing, Waxing, Buffing, Upholstery Cleaning, Headlight Restoration, Detailing Packages, Detailing Services, Car Care Tips, Detailing Supplies, Detailing Equipment',
   description: `Gentry's Auto Detailing provides professional auto detailing services to help keep your vehicle looking its best. We offer a range of packages to suit your needs, including interior and exterior detailing, paint correction, ceramic coating, and more. Contact us today to schedule an appointment.`
 }

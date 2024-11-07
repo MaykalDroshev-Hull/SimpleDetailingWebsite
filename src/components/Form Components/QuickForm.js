@@ -103,7 +103,7 @@ const Form = ({ isOpen, onClose }) => {
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>Submit Request</ModalHeader>
+        <ModalHeader>Изпратете Запитване</ModalHeader>
         <ModalCloseButton />
         { //If there is an error message, error message will be displayed above the form inputs
           error && (
@@ -125,7 +125,7 @@ const Form = ({ isOpen, onClose }) => {
             }
             mb={5}>
             <Flex flexDirection='column' alignItems='center'>
-              <FormLabel>First Name</FormLabel>
+              <FormLabel>Име</FormLabel>
               <Input
                 type='text'
                 name='firstName'
@@ -134,7 +134,7 @@ const Form = ({ isOpen, onClose }) => {
                 errorBorderColor='red.300'
                 onBlur={onBlur}
                 width='300px' />
-              <FormErrorMessage>Required</FormErrorMessage>
+              <FormErrorMessage>Задължително</FormErrorMessage>
             </Flex>
           </FormControl>
           <FormControl
@@ -148,7 +148,7 @@ const Form = ({ isOpen, onClose }) => {
             }
             mb={5}>
             <Flex flexDirection='column' justifyContent='center' alignItems='center'>
-              <FormLabel>Last Name</FormLabel>
+              <FormLabel>Фамилия</FormLabel>
               <Input
                 type='text'
                 name='lastName'
@@ -157,7 +157,7 @@ const Form = ({ isOpen, onClose }) => {
                 errorBorderColor='red.300'
                 onBlur={onBlur}
                 width='300px' />
-              <FormErrorMessage>Required</FormErrorMessage>
+              <FormErrorMessage>Задължително</FormErrorMessage>
             </Flex>
           </FormControl>
           <FormControl
@@ -180,12 +180,12 @@ const Form = ({ isOpen, onClose }) => {
                 errorBorderColor='red.300'
                 onBlur={onBlur}
                 width='300px' />
-              <FormErrorMessage>Required</FormErrorMessage>
+              <FormErrorMessage>Задължително</FormErrorMessage>
             </Flex>
           </FormControl>
           <FormControl mb={5}>
             <Flex flexDirection='column' justifyContent='center' alignItems='center'>
-              <FormLabel>Phone Number</FormLabel>
+              <FormLabel>Тел Номерr</FormLabel>
               <Input
                 type='tel'
                 name='phoneNumber'
@@ -196,7 +196,7 @@ const Form = ({ isOpen, onClose }) => {
           </FormControl>
           <FormControl mb={5}>
             <Flex flexDirection='column' justifyContent='center' alignItems='center'>
-              <FormLabel>Car Make</FormLabel>
+              <FormLabel>Марка</FormLabel>
               <Input
                 type='text'
                 name='carMake'
@@ -207,7 +207,7 @@ const Form = ({ isOpen, onClose }) => {
           </FormControl>
           <FormControl mb={5}>
             <Flex flexDirection='column' justifyContent='center' alignItems='center'>
-              <FormLabel>Car Model</FormLabel>
+              <FormLabel>Модел</FormLabel>
               <Input
                 type='text'
                 name='carModel'
@@ -218,7 +218,7 @@ const Form = ({ isOpen, onClose }) => {
           </FormControl>
           <FormControl mb={5}>
             <Flex flexDirection='column' justifyContent='center' alignItems='center'>
-              <FormLabel>Desired Date</FormLabel>
+              <FormLabel>Желана Дата</FormLabel>
               <Input
                 type='date'
                 name='desiredDate'
@@ -233,7 +233,7 @@ const Form = ({ isOpen, onClose }) => {
             className={buttonStyles.button}
             isLoading={isLoading}
             onClick={onSubmit}
-          >Submit</Button>
+          >Изпрати</Button>
         </ModalFooter>
       </ModalContent>
     </Modal>

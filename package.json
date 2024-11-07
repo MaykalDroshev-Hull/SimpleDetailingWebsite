@@ -1,9 +1,9 @@
 {
-  "name": "gentry-auto-detailing",
+  "name": "aseam-auto-detailing",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -H 0.0.0.0 -p 3000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -18,7 +18,9 @@
     "@hookform/resolvers": "^3.0.0",
     "@nextui-org/react": "^1.0.0-beta.12",
     "@prisma/client": "^4.12.0",
+    "css-loader": "^7.1.2",
     "framer-motion": "^10.10.0",
+    "html-webpack-plugin": "^5.6.3",
     "jquery": "^3.6.4",
     "next": "^13.5.7",
     "nodemailer": "^6.9.1",
@@ -28,7 +30,11 @@
     "react-icons": "^4.8.0",
     "react-modal": "^3.16.1",
     "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
+    "sass-loader": "^16.0.3",
+    "slick-carousel": "^1.8.1",
+    "style-loader": "^4.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack-cli": "^5.1.4"
   },
   "devDependencies": {
     "prisma": "^4.12.0"

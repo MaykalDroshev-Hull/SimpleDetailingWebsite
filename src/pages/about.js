@@ -1,6 +1,8 @@
 import Meta from "@/components/Page Components/Meta"
 import PageTitle from "@/components/Page Components/PageTitle"
 import styles from '../styles/Page Styles/About.module.css'
+import AboutCarousel from "@/components/Page Components/AboutCarousel"
+
 
 /**
  * Functional component for the About page of Gentry's Auto Detailing website.
@@ -12,20 +14,25 @@ const about = () => {
   return (
     <>
       <Meta
-        title='About'
-        description="Learn about our passion for auto detailing and commitment to quality service at Gentry's Auto Detailing. Our experienced team is dedicated to providing top-notch interior and exterior detailing, paint correction, ceramic coating, and more. Contact us today to schedule an appointment and experience the difference of working with a team that truly cares about your car's appearance and longevity."
+        title='За Мен'
+        description="Научете за нашата страст към автомобилните детайли и ангажимента за качествено обслужване в Gentry's Auto Detailing. Нашият опитен екип е посветен на предоставянето на първокласни интериорни и екстериорни детайли, корекция на боя, керамично покритие и др. Свържете се с нас днес, за да си уговорите среща и да изпитате разликата от работата с екип, който наистина се грижи за външния вид и дълготрайността на вашия автомобил"
         keywords="auto detailing, car detailing, paint correction, ceramic coating, interior detailing, exterior detailing, car care, auto appearance, auto restoration, professional detailing"
       />
-      <PageTitle title='About Me' />
+      <PageTitle title='За Мен' />
       <div className={styles.container}>
-        <img className={styles.lilyImage} src='/Images/aychin.jpg' alt='Lily Image' />
+        <AboutCarousel />
+        
         <p>
-          My name is Lily Gentry. I am a student at Douglas Southall Freeman High School
-          and am saving money for college. Cleaning has always been a passion of mine, so I decided to start
-          this small business. Family and friends are always asking for my services, so I decided it would 
-          be a great idea to spread the joy of a spotless car! Just wait until you see how much less
-          stress a clean car can be!
-        </p>
+        Здравейте! 
+Аз съм Айчин Мехмедов, детайлър с над 5 години опит в бранша. С гордост мога да споделя, че съм официално акредитиран от световноизвестната марка Gtechniq чрез нейния представител за България – Кушев детайлинг. Преминал съм и през редица курсове и обучения от най-добрите в бранша през годините.
+За мен професионализмът не е просто дума, а ангажимент, който изпълнявам до последния детайл.
+
+Ценя доверието на своите клиенти и се стремя да предложа услуги с най-високо качество, където всеки аспект е важен. Подхождам към всяко превозно средство с отговорност и грижа, като гарантирам, че докато е при мен, то е на сигурно и надеждно място. Убедени можете да бъдете, че във всеки етап на работа, от почистването до най-фините завършващи щрихи, влагам усилия и искреност. Моята цел е не просто да предоставя услуга, а да изградя доверие, базирано на честност и отдаденост.
+
+Детайлингът не само подобрява външния вид на автомобила, но също така допринася за запазването на неговата стойност и дълготрайността му. Чистото и добре поддържано превозно средство е важно не само за комфорта, но и за здравето на своите собственици. 
+
+За мен най-голямата награда е доволният клиент – усмивката му ми показва, че съм постигнал най-важното.        
+</p>
       </div>
     </>
   )

@@ -1,37 +1,82 @@
 .header {
   display: flex;
   background-color: black;
+  color: white;
   width: 100%;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15),
-    0px 4px 8px rgba(0, 0, 0, 0.15),
-    0px 8px 16px rgba(0, 0, 0, 0.15),
-    0px 16px 32px rgba(0, 0, 0, 0.15);
-  border-radius: 0 0 20px 20px;
+              0px 4px 8px rgba(0, 0, 0, 0.15),
+              0px 8px 16px rgba(0, 0, 0, 0.15),
+              0px 16px 32px rgba(0, 0, 0, 0.15);
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-direction: column;
 }
 
-.sticky {
-  position: fixed;
-  z-index: 9999;
+
+
+.contactName {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.websiteTitle {
-  margin-left: auto;
-  padding: 15px 15px 0 0;
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;  /* Aligns items to the right within the container */
+  color: yellow;
+  width: 100%;            /* Ensures the container takes the full width of its parent */
+  font-size: 1rem;
+  box-sizing: border-box; /* Ensures padding is included in the width */
 }
+
+.contactDetails div {
+  /* display: flex;          Use flex for individual items */
+  align-items: center;    /* Align icon and text vertically */
+  white-space: nowrap;    /* Prevent wrapping of text within the div */
+}
+
+.contactDetails a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  /* Removed flex-wrap here since it's not needed */
+}
+
+.contactItem {
+  display: flex;
+  align-items: center; /* Ensures icon and text are aligned horizontally */
+  gap: 8px; /* Adjusts spacing between the icon and the text */
+}
+
+.contactDetails a:hover {
+  text-decoration: underline;
+}
+
+/* Icon size */
+.icon {
+  width: 20px;  /* Increase to 1rem for better visibility */
+  margin-right: 8px;  /* Adjust spacing if necessary */
+  color: white;
+}
+
+
+/* Navigation Bar Styling */
+.navBar {
+  display: flex;                  /* Aligns items in a row */
+  align-items: flex-end;          /* Aligns items to the bottom of the container */
+  flex-wrap: wrap;                /* Allows wrapping if needed */
+  gap: 20px;                      /* Space between navigation items */
+  width: 100%;                    /* Takes full width of the parent */
+  justify-content: space-between; /* Distributes items evenly across the width */
+}
+
 
 .navBar a,
 .websiteTitle {
   font-weight: 800;
-  color: black;
+  color: white;
   text-decoration: none;
-  position: relative;
-}
-
-.navBar {
-  padding: 15px;
-  display: grid;
-  grid-auto-flow: column;
-  grid-column-gap: 20px;
   position: relative;
 }
 
@@ -59,53 +104,38 @@
   opacity: 1;
 }
 
+.sticky {
+  position: fixed;
+  z-index: 9999;
+}
+
+.websiteTitle {
+  background-color: black;
+  margin-left: auto;
+  padding: 15px 15px 0 0;
+}
+
+/* Mobile View - Stack Contact Info on Top, Nav on Bottom in Single Row */
 @media (max-width: 767px) {
   .header {
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;  /* Stack header contents vertically */
+    align-items: stretch;     /* Allow children to stretch to full width */
   }
 
-  .websiteTitle {
-    display: none;
+  .contactInfo {
+    align-content: end;    /* Align contact info to the right */
+    width: 100%;              /* Ensure it takes full width */
   }
 
-  .navBar a {
-    font-size: 18px;
-  }
-}
-
-@media(max-width: 390px) {
-  .header {
-    justify-content: center;
-    align-items: center;
-  }
-
-  .websiteTitle {
-    display: none;
-  }
-
-  .navBar a {
-    font-size: 15px;
-  }
-}
-
-@media(max-width: 320px) {
-  .header {
-    justify-content: center;
-    align-items: center;
-  }
-
-  .websiteTitle {
-    display: none;
-  }
-
-  .navBar a {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 768px) {
   .navBar {
-    justify-self: end;
+    flex-wrap: nowrap;        /* Forces nav items to stay in one line */
+    overflow-x: auto;         /* Allows scrolling if nav items overflow */
+    justify-content: center;   /* Center navigation items */
+    gap: 15px;                /* Space between nav items */
+  }
+
+  .websiteTitle{
+    display: none;
   }
 }
+

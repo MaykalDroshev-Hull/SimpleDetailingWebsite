@@ -1,16 +1,17 @@
 .footer {
   left: 0;
   width: 100%;
-  background-color: #F5C501;
+  background-color: black;
   min-height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white; /* This sets default text color */
 }
 
 .footer p{
-  color: black;
+  color: white;
   margin-bottom: 10px;
 }
 
@@ -44,6 +45,7 @@
 .menu a {
   font-size: 1.2rem;
   color: #fff;
+  background-color: black;
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
@@ -69,30 +71,17 @@
   height: 100px;
   background: url("https://i.ibb.co/wQZVxxk/wave.png");
   background-size: 1000px 100px;
+  background-color: black;
+  color: white;
+  filter: hue-rotate(180deg) brightness(1.5)
+
 }
 
-.wave1 {
-  opacity: 1;
-  animation: animateWaves 4s linear infinite;
-  z-index: 4;
-}
-
-.wave2 {
-  opacity: 0.5;
-  animation: animate 4s linear infinite !important;
-  z-index: 3;
-}
-
-.wave3 {
-  opacity: 0.2;
-  animation: animateWaves 3s linear infinite;
-  z-index: 2;
-}
-
-.wave4 {
-  opacity: 0.7;
-  animation: animate 3s linear infinite;
-  z-index: 1;
+.logo{
+  display: block;            /* Ensures it's treated as a block element for centering */
+  margin: 0 auto;            /* Centers the logo horizontally */
+  width: 300px;               /* Adjust to make the logo smaller (adjust as needed) */
+  height: auto;              /* Maintains aspect ratio */
 }
 
 @keyframes animateWaves {

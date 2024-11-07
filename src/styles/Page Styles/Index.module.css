@@ -1,4 +1,5 @@
 .content {
+  background-color: black;
   display: flex;
   margin-top: 60px;
 }
