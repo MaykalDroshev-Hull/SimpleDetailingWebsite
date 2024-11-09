@@ -30,7 +30,7 @@ The website design is simple, comprising 4 total pages. The pages are:
         ngrok config add-authtoken $YOUR_AUTHTOKEN
      5. Run the following command<br>
          ngrok.exe http 3000
-3. <b> How to setup appointments going into your inbox</b> <br>
+3. <b> How to setup appointment requests going into your inbox</b> <br>
 I made it work only on yahoo, gmail are closing a feature which allows other apps to use the email box<br>
 The way it works is that the website uses an email to send one to itself with all the data the customer used.
     1. Go to yahoo account settings (create an account if you don't have one) and go to account info -> Security -> App password -> Generate and manage app passoword.
