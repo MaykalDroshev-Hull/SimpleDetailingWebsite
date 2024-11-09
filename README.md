@@ -33,10 +33,10 @@ The website design is simple, comprising 4 total pages. The pages are:
 3. <b> How to setup appointments going into your inbox</b> <br>
 I made it work only on yahoo, gmail are closing a feature which allows other apps to use the email box<br>
 The way it works is that the website uses an email to send one to itself with all the data the customer used.
-  1. Go to yahoo account settings (create an account if you don't have one) and go to account info -> Security -> App password -> Generate and manage app passoword.
-  2. Create an app password
-  3. Create a file called `.env.local` and check `.gitignore` that contains that file as we don't want to share credentials on github.
-  4. The file should look like: <br>
-  `NEXT_PUBLIC_EMAIL=email@yahoo.com`<br>
-   `NEXT_PUBLIC_EMAIL_PASS=passowrd`
-  5. Try to use the form and check the Terminal for errors if occured
+    1. Go to yahoo account settings (create an account if you don't have one) and go to account info -> Security -> App password -> Generate and manage app passoword.
+    2. Create an app password
+    3. Create a file called `.env.local` and check `.gitignore` that contains that file as we don't want to share credentials on github.
+    4. The file should look like: <br>
+    `NEXT_PUBLIC_EMAIL=email@yahoo.com`<br>
+     `NEXT_PUBLIC_EMAIL_PASS=passowrd`
+    5. Try to use the form and check the Terminal for errors if occured
