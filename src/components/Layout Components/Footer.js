@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FaFacebook, FaInstagram, FaEnvelope, FaPhone } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCalendarAlt, FaClock } from 'react-icons/fa'
 import styles from '../../styles/Component Styles/Footer.module.css'
 
 /**
@@ -11,7 +11,22 @@ const Footer = () => {
     <>
       <div className={styles.footer}>
       <img className={styles.logo} src='/Images/logo.png' alt='logo' />
-
+      <div className={styles.infoSection}>
+        <div className={styles.contactItem}>
+        <FaMapMarkerAlt className={styles.infoicon} />
+        <a href="https://maps.app.goo.gl/YsUPpgVaKgff7N816" target="_blank" rel="noopener noreferrer">
+          <span>Ловеч 5500, бул. “Освобождение” №3</span>
+        </a>
+        </div>
+        <div className={styles.contactItem}>
+        <FaCalendarAlt className={styles.infoicon} />
+        <span>Понеделник - Петък</span>
+        </div>
+        <div className={styles.contactItem}>
+          <FaClock className={styles.infoicon} />
+          <span>9:30 до 17:30</span>
+        </div>
+      </div>
         <div className={styles.socialIcon}>
           <Link href='https://www.facebook.com/profile.php?id=100063618235937'>
             <FaFacebook />

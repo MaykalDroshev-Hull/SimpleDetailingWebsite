@@ -17,12 +17,14 @@ const pass = process.env.NEXT_PUBLIC_EMAIL_PASS
  * @returns {Object} A transport object that can be used to send email.
  */
 export const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.mail.yahoo.com',
+  port: 465, // Use port 465 for secure connections
+  secure: true, // Use true for 465, false for other ports like 587
   auth: {
     user: email,
     pass,
   }
-})
+});
 
 /**
  * Email options of who the email is coming from, and who it is being sent to. In this case,

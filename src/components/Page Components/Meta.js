@@ -15,7 +15,18 @@ const Meta = ({ title, keywords, description }) => {
       <meta name='keywords' content={keywords} />
       <meta name='description' content={description} />
       <meta charSet='utf-8' />
-      <link rel='icon' href='/favicon.ico' />
+      <link rel='icon' href='/Logo-Square.png' />
+      <link rel="apple-touch-icon" href="/Logo-Square-180x180.png"/>
+      <link rel="icon" type="image/png" sizes="32x32" href="/Logo-Square-32x32.png"/> 
+
+      {/* For Android and Chrome use these sizes: */}
+      <link rel="icon" type="image/png" sizes="48x48" href="/Logo-Square-48x48.png"/>
+      <link rel="icon" type="image/png" sizes="96x96" href="/Logo-Square-96x96.png"/>  
+      <link rel="icon" type="image/png" sizes="192x192" href="/Logo-Square-192x192.png"/>
+
+      {/* For iPads and iPhones use these sizes: */}
+      <link rel="apple-touch-icon" type="image/png" sizes="167x167" href="/Logo-Square-167x167.png"/> 
+      <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/Logo-Square-180x180.png"/>
       <title>{title}</title>
     </Head>
   )

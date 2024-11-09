@@ -1,19 +1,19 @@
 import { mailOption, transporter } from '../../config/nodemailer.js'
 
 const CONTACT_MESSAGE_FIELDS = {
-  firstName: 'First Name',
-  lastName: 'Last Name',
+  firstName: 'Име',
+  lastName: 'Фамилия',
   email: 'Email',
-  phoneNumber: 'Phone Number',
-  carMake: 'Car Make',
-  carModel: 'Car Model',
-  typeOfDetail: 'Type of Detail',
-  additionalDetails: 'Additional Details (Optional)',
-  desiredDate: 'Desired Date'
+  phoneNumber: 'Номер',
+  carMake: 'Марка',
+  carModel: 'Модел',
+  typeOfDetail: 'Тип Услуга',
+  additionalDetails: 'Допълнителни Детаийли (Избирателно)',
+  desiredDate: 'Поискана Дата'
 }
 
 const handler = async (req, res) => {
-  if (req.method === 'POST') {
+   if (req.method === 'POST') {
     const data = req.body
     //Must have all the below input forms filled out in the form, or the form will not submit and instead return an error
     if (!data.firstName || !data.lastName || !data.email || !data.phoneNumber || !data.carMake || !data.carModel || !data.typeOfDetail || !data.desiredDate) {
@@ -26,7 +26,7 @@ const handler = async (req, res) => {
         ...mailOption,
         //Callback to function that converts all relevant data into proper text and html format for the email
         ...generateEmailContent(data),
-        subject: 'New Request Received',
+        subject: 'Нова Заявка',
       })
 
       return res.status(200).json({ success: true })

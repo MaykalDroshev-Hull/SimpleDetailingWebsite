@@ -121,3 +121,40 @@
     font-size: 11px;
   }
 }
+/* Logo styling */
+.infologo {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+/* Info Section styling */
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-left: 20px;
+}
+
+/* Individual info item styling - keeps icon and text on the same line */
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Spacing between icon and text */
+  color: white; /* Adjust color as needed */
+  font-size: 14px; /* Adjust text size as needed */
+}
+
+@media (max-width: 767px) {
+  /* Mobile-specific adjustments */
+  .infoSection {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
+.contactItem {
+  display: flex;
+  align-items: center; /* Ensures icon and text are aligned horizontally */
+  gap: 8px; /* Adjusts spacing between the icon and the text */
+}
