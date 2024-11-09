@@ -1,6 +1,6 @@
 # Background
 This repository comprises the entire code base of the 'Asea-M' website. 
-This repository was started from (gentry-auto-detailing)[https://github.com/loftongentry/gentry-auto-detailing] but with features and color theme mathcing the customer's needs.
+This repository was started from [gentry-auto-detailing](https://github.com/loftongentry/gentry-auto-detailing) but with features and color theme mathcing the customer's needs.
 
 The website is build with NodeJS and it contains all the general pages listed below
 
