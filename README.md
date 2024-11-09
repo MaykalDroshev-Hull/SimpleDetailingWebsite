@@ -16,12 +16,12 @@ The website design is simple, comprising 4 total pages. The pages are:
 
 
 # Useful instructions
-1. How to test the website on the local network (within the same router)
+1. <b>How to test the website on the local network (within the same router)</b>
    1. Check ipconfig on the command prompt
    2. Use this command on your laptop in Visual Studio Code Terminal (Ctrl + '):<br>
       npx next dev -H 0.0.0.0 -p 3000
    3. On your phone, type out the IPv4 Address followed by the port (3000)
-2. How to test the website from anywhere
+2. <b>How to test the website from anywhere</b>
      1. Download [ngrog]([url](https://download.ngrok.com/windows))
      2. Open the app (it should open in console)
      3. Use this command on your laptop in Visual Studio Code Terminal (Ctrl + '):<br>
