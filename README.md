@@ -37,6 +37,6 @@ The way it works is that the website uses an email to send one to itself with al
   2. Create an app password
   3. Create a file called `.env.local` and check `.gitignore` that contains that file as we don't want to share credentials on github.
   4. The file should look like: <br>
-  `NEXT_PUBLIC_EMAIL=email@yahoo.com<br>
-   NEXT_PUBLIC_EMAIL_PASS=passowrd`
+  `NEXT_PUBLIC_EMAIL=email@yahoo.com`<br>
+   `NEXT_PUBLIC_EMAIL_PASS=passowrd`
   5. Try to use the form and check the Terminal for errors if occured
