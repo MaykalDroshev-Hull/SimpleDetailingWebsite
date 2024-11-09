@@ -13,7 +13,7 @@ The website design is simple, comprising 4 total pages. The pages are:
   
 # Additional Details
   - The website has been optimized for mobile use
-
+  - The whole development was carried out in [Visual Studio Code](https://code.visualstudio.com/) with [Node JS](https://nodejs.org/en) installed
 
 # Useful instructions
 1. <b>How to test the website on the local network (within the same router)</b>
