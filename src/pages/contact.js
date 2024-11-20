@@ -4,6 +4,10 @@ import PageTitle from "@/components/Page Components/PageTitle"
 import { Text, Button, Flex, FormControl, FormErrorMessage, FormLabel, Input, Select, Stack, Textarea, useToast, background } from "@chakra-ui/react"
 import { sendLongContactForm } from "@/lib/api"
 import styles from '../styles/Page Styles/Contact.module.css'
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
+
 
 //An object containing initial values for the form fields
 const initValues = {
@@ -26,6 +30,7 @@ const initState = { values: initValues }
  * @returns {JSX.Element} The Contact component
  */
 const contact = () => {
+  const { t } = useTranslation("common");
   //The state of the form
   const [formState, setFormState] = useState(initState)
   //Object that is updated if an input has been touched or not
@@ -66,7 +71,7 @@ const contact = () => {
       setFormState(initState)
       //Toast message that message was sent succesfully
       toast({
-        title: 'Submission Succesful',
+        title: t("SubmissionSuccesful"),
         status: 'success',
         duration: 2000,
         position: 'top'
@@ -84,15 +89,15 @@ const contact = () => {
   return (
     <>
       <Meta
-        title='Контакти'
-        description="Get in touch with Gentry's Auto Detailing and take the first step towards a cleaner, more polished car. Our experienced team is here to answer your questions and help you schedule an appointment for interior and exterior detailing, paint correction, ceramic coating, and more. Contact us today and experience the highest level of customer service and quality workmanship."
+        title={t("Contacts")}
+        description="Get in touch with Asea-M Auto Detailing and take the first step towards a cleaner, more polished car. Our experienced team is here to answer your questions and help you schedule an appointment for interior and exterior detailing, paint correction, ceramic coating, and more. Contact us today and experience the highest level of customer service and quality workmanship."
         keywords="auto detailing, car detailing, detailing services, paint correction, ceramic coating, interior detailing, exterior detailing, car care, auto appearance, auto restoration, contact us, schedule an appointment, get in touch, phone number, email address, location"
       />
-      <PageTitle title='Контакти' />
+      <PageTitle title={t("Contacts")} />
       <div className={styles.content}>
         <div className={styles.contactDetails}>
           <p>
-          Моля, изпратете заявка за среща и ние ще се свържем с вас възможно най-скоро!          </p>
+          {t("ContactsDescription")}          </p>
         </div>
         <div className={styles.formContainer}>
           {error && (
@@ -115,7 +120,7 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel className={styles.Text}>Име</FormLabel>
+                  <FormLabel className={styles.Text}>{t("FirstName")}</FormLabel>
                   <Input
                     type='text'
                     name='firstName'
@@ -125,7 +130,7 @@ const contact = () => {
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage>Задължително</FormErrorMessage>
+                  <FormErrorMessage>{t("Mandatory")}</FormErrorMessage>
                 </Flex>
               </FormControl>
               <FormControl
@@ -139,7 +144,7 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel className={styles.Text}>Фамилия</FormLabel>
+                  <FormLabel className={styles.Text}>{t("LastName")}</FormLabel>
                   <Input
                     type='text'
                     name='lastName'
@@ -149,7 +154,7 @@ const contact = () => {
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage>Задължително</FormErrorMessage>
+                  <FormErrorMessage>{t("Mandatory")}</FormErrorMessage>
                 </Flex>
               </FormControl>
             </Stack>
@@ -167,7 +172,7 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel className={styles.Text}>Email</FormLabel>
+                  <FormLabel className={styles.Text}>{t("Email")}</FormLabel>
                   <Input
                     type='email'
                     name='email'
@@ -177,7 +182,7 @@ const contact = () => {
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage >Задължително</FormErrorMessage>
+                  <FormErrorMessage >{t("Mandatory")}</FormErrorMessage>
                 </Flex>
               </FormControl>
               <FormControl
@@ -191,7 +196,7 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel className={styles.Text}> Тел. Номерr</FormLabel>
+                  <FormLabel className={styles.Text}>{t("TelephoneNumber")}</FormLabel>
                   <Input
                     type='tel'
                     name='phoneNumber'
@@ -201,7 +206,7 @@ const contact = () => {
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage>Задължително</FormErrorMessage>
+                  <FormErrorMessage>{t("Mandatory")}</FormErrorMessage>
                 </Flex>
               </FormControl>
             </Stack>
@@ -219,7 +224,7 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel className={styles.Text}>Марка</FormLabel>
+                  <FormLabel className={styles.Text}>{t("Brand")}</FormLabel>
                   <Input
                     type='text'
                     name='carMake'
@@ -229,7 +234,7 @@ const contact = () => {
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage>Задължително</FormErrorMessage>
+                  <FormErrorMessage>{t("Mandatory")}</FormErrorMessage>
                 </Flex>
               </FormControl >
               <FormControl
@@ -243,7 +248,7 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel className={styles.Text}>Модел</FormLabel>
+                  <FormLabel className={styles.Text}>{t("Model")}</FormLabel>
                   <Input
                     type='text'
                     name='carModel'
@@ -253,14 +258,14 @@ const contact = () => {
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage>Задължително</FormErrorMessage>
+                  <FormErrorMessage>{t("Mandatory")}</FormErrorMessage>
                 </Flex>
               </FormControl>
             </Stack>
           </div>
           <FormControl isRequired>
             <Flex flexDirection='column' alignItems='center'>
-              <FormLabel className={styles.Text}>Вид Услуга</FormLabel>
+              <FormLabel className={styles.Text}>{t("TypeService")}</FormLabel>
               <Select
                 placeholder=" "
                 name='typeOfDetail'
@@ -278,7 +283,7 @@ const contact = () => {
           </FormControl>
           <FormControl mt={3} mb={5}>
             <Flex flexDirection='column' alignItems='center'>
-              <FormLabel className={styles.Text}>Допълнителни Коментари (незадължително)</FormLabel>
+              <FormLabel className={styles.Text}>{t("AdditionalComments")}</FormLabel>
               <Textarea
                 type='text'
                 name='additionalDetails'
@@ -291,7 +296,7 @@ const contact = () => {
           </FormControl>
           <FormControl isRequired mb={5}>
             <Flex flexDirection='column' justifyContent='center' alignItems='center'>
-              <FormLabel className={styles.Text}>Желана Дата</FormLabel>
+              <FormLabel className={styles.Text}>{t("RequiredDate")}</FormLabel>
               <Input
                 type='date'
                 name='desiredDate'
@@ -306,12 +311,21 @@ const contact = () => {
               className={styles.SubmitButton}
               isLoading={isLoading}
               onClick={onSubmit}
-            >Изпрати!</Button>
+            >{t("Send")}</Button>
           </Flex>
         </div>
       </div>
     </>
   )
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+      // Will be passed to the page component as props
+    },
+  };
 }
 
 export default contact

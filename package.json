@@ -21,12 +21,15 @@
     "css-loader": "^7.1.2",
     "framer-motion": "^10.10.0",
     "html-webpack-plugin": "^5.6.3",
+    "i18next": "^23.16.5",
     "jquery": "^3.6.4",
     "next": "^13.5.7",
+    "next-i18next": "^15.3.1",
     "nodemailer": "^6.9.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.9",
+    "react-i18next": "^15.1.1",
     "react-icons": "^4.8.0",
     "react-modal": "^3.16.1",
     "react-slick": "^0.29.0",
@@ -38,5 +41,10 @@
   },
   "devDependencies": {
     "prisma": "^4.12.0"
-  }
+  },
+  "browser": {
+  "fs": false,
+  "path": false,
+  "os": false
+}
 }

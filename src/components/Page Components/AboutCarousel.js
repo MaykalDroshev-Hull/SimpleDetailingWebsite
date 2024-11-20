@@ -31,7 +31,10 @@ const AboutCarousel = () => {
             <img src='/Images/About Slider Images/Slider_Image_2.jpg' alt='Slider Image 2' />
           </div>
           <div className={styles.image}>
-            <img src='/Images/About Slider Images/Slider_Image_4.jpg' alt='Slider Image 3' />
+            <img src='/Images/About Slider Images/Slider_Image_4.jpg' alt='Slider Image 4' />
+          </div>
+          <div className={styles.image}>
+            <img src='/Images/About Slider Images/Slider_Image_3.jpg' alt='Slider Image 3' />
           </div>
         </Slider>
       </div>

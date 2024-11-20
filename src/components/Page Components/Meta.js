@@ -1,4 +1,6 @@
-import Head from "next/head"
+import Head from "next/head";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 /**
  * Renders a <Head> component with meta tags for SEO.
@@ -9,34 +11,38 @@ import Head from "next/head"
  * @returns {JSX.Element} A <Head> component with meta tags.
  */
 const Meta = ({ title, keywords, description }) => {
+  const { t } = useTranslation("common");
+
+  // Set default values if not provided
+  const defaultTitle = t("BusinessName");
+  const defaultKeywords = 'Car detailing, Auto detailing, Car cleaning, Car polishing, Paint correction, Ceramic coating, Car wash, Mobile detailing, Interior detailing, Exterior detailing, Waxing, Buffing, Upholstery Cleaning, Headlight Restoration, Detailing Packages, Detailing Services, Car Care Tips, Detailing Supplies, Detailing Equipment';
+  const defaultDescription = `Асеа-м Детайлинг предлага професионални услуги за автомобилно детайлинг, които ще помогнат на вашия автомобил да изглежда на най-високото си ниво. Ние предлагаме различни пакети, които отговарят на вашите нужди, включително вътрешно и външно почистване, корекция на боята, керамично покритие и още. Свържете се с нас днес, за да насрочите час.`;
+
   return (
     <Head>
       <meta name='viewport' content='width=device-width, initial-scale=1' />
-      <meta name='keywords' content={keywords} />
-      <meta name='description' content={description} />
+      <meta name='keywords' content={keywords || defaultKeywords} />
+      <meta name='description' content={description || defaultDescription} />
       <meta charSet='utf-8' />
       <link rel='icon' href='/Logo-Square.png' />
       <link rel="apple-touch-icon" href="/Logo-Square-180x180.png"/>
       <link rel="icon" type="image/png" sizes="32x32" href="/Logo-Square-32x32.png"/> 
-
-      {/* For Android and Chrome use these sizes: */}
       <link rel="icon" type="image/png" sizes="48x48" href="/Logo-Square-48x48.png"/>
       <link rel="icon" type="image/png" sizes="96x96" href="/Logo-Square-96x96.png"/>  
       <link rel="icon" type="image/png" sizes="192x192" href="/Logo-Square-192x192.png"/>
-
-      {/* For iPads and iPhones use these sizes: */}
       <link rel="apple-touch-icon" type="image/png" sizes="167x167" href="/Logo-Square-167x167.png"/> 
       <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/Logo-Square-180x180.png"/>
-      <title>{title}</title>
+      <title>{title || defaultTitle}</title>
     </Head>
-  )
+  );
+};
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }
 
-//The defualt properties of the Meta tag if nothing is supplied to it
-Meta.defaultProps = {
-  title: `Асеа-м Детайлинг`,
-  keywords: 'Car detailing, Auto detailing, Car cleaning, Car polishing, Paint correction, Ceramic coating, Car wash, Mobile detailing, Interior detailing, Exterior detailing, Waxing, Buffing, Upholstery Cleaning, Headlight Restoration, Detailing Packages, Detailing Services, Car Care Tips, Detailing Supplies, Detailing Equipment',
-  description: `Gentry's Auto Detailing provides professional auto detailing services to help keep your vehicle looking its best. We offer a range of packages to suit your needs, including interior and exterior detailing, paint correction, ceramic coating, and more. Contact us today to schedule an appointment.`
-}
-
-export default Meta
+export default Meta;

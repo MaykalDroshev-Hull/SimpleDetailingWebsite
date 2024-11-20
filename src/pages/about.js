@@ -2,6 +2,8 @@ import Meta from "@/components/Page Components/Meta"
 import PageTitle from "@/components/Page Components/PageTitle"
 import styles from '../styles/Page Styles/About.module.css'
 import AboutCarousel from "@/components/Page Components/AboutCarousel"
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 
 /**
@@ -11,31 +13,31 @@ import AboutCarousel from "@/components/Page Components/AboutCarousel"
  * @returns {JSX.Element} The About page JSX component.
  */
 const about = () => {
+  const { t } = useTranslation("common");
   return (
     <>
       <Meta
-        title='За Мен'
+        title={t("About")}
         description="Научете за нашата страст към автомобилните детайли и ангажимента за качествено обслужване в Gentry's Auto Detailing. Нашият опитен екип е посветен на предоставянето на първокласни интериорни и екстериорни детайли, корекция на боя, керамично покритие и др. Свържете се с нас днес, за да си уговорите среща и да изпитате разликата от работата с екип, който наистина се грижи за външния вид и дълготрайността на вашия автомобил"
         keywords="auto detailing, car detailing, paint correction, ceramic coating, interior detailing, exterior detailing, car care, auto appearance, auto restoration, professional detailing"
       />
-      <PageTitle title='За Мен' />
+      <PageTitle title={t("About")} />
       <div className={styles.container}>
-        <AboutCarousel />
-        
+        <AboutCarousel />  
         <p>
-        Здравейте! 
-Аз съм Айчин Мехмедов, детайлър с над 5 години опит в бранша. С гордост мога да споделя, че съм официално акредитиран от световноизвестната марка Gtechniq чрез нейния представител за България – Кушев детайлинг. Преминал съм и през редица курсове и обучения от най-добрите в бранша през годините.
-За мен професионализмът не е просто дума, а ангажимент, който изпълнявам до последния детайл.
-<br/><br/>
-Ценя доверието на своите клиенти и се стремя да предложа услуги с най-високо качество, където всеки аспект е важен. Подхождам към всяко превозно средство с отговорност и грижа, като гарантирам, че докато е при мен, то е на сигурно и надеждно място. Убедени можете да бъдете, че във всеки етап на работа, от почистването до най-фините завършващи щрихи, влагам усилия и искреност. Моята цел е не просто да предоставя услуга, а да изградя доверие, базирано на честност и отдаденост.
-<br/><br/>
-Детайлингът не само подобрява външния вид на автомобила, но също така допринася за запазването на неговата стойност и дълготрайността му. Чистото и добре поддържано превозно средство е важно не само за комфорта, но и за здравето на своите собственици. 
-<br/><br/>
-За мен най-голямата награда е доволният клиент – усмивката му ми показва, че съм постигнал най-важното.        
-</p>
+        {t("ForMe")}        
+        </p>
       </div>
     </>
-  )
-}
+  );
+};
 
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+      // Will be passed to the page component as props
+    },
+  };
+}
 export default about
