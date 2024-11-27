@@ -5,16 +5,12 @@ import ImageCarousel from "@/components/Page Components/ImageCarousel"
 import styles from '../styles/Page Styles/Index.module.css'
 import buttonStyles from '../styles/Component Styles/FlowButton.module.css'
 
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "next-i18next";
-
 /**
  * Home component that renders the homepage of the website.
  * @returns {JSX.Element} The JSX element to be rendered.
  */
 const Home = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { t } = useTranslation("common");
 
   return (
     <>
@@ -34,7 +30,7 @@ const Home = () => {
                  нашите услуги за авто детайлинг могат да направят за вашия автомобил!
           </p>
 
-          <p>{t("BusinessName")}</p>
+          <p>Асае-М Детайлинг</p>
           <button onClick={onOpen} className={buttonStyles.button}>Запазете Час</button>
           <Form isOpen={isOpen} onClose={onClose} />
         </div>
@@ -42,15 +38,5 @@ const Home = () => {
     </>
   );
 };
-
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common"])),
-      // Will be passed to the page component as props
-    },
-  };
-}
-
 
 export default Home;

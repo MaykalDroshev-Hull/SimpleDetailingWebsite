@@ -1,6 +1,4 @@
 import Head from "next/head";
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 /**
  * Renders a <Head> component with meta tags for SEO.
@@ -11,10 +9,9 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
  * @returns {JSX.Element} A <Head> component with meta tags.
  */
 const Meta = ({ title, keywords, description }) => {
-  const { t } = useTranslation("common");
 
   // Set default values if not provided
-  const defaultTitle = t("BusinessName");
+  const defaultTitle = "Асеа-м Детайлинг";
   const defaultKeywords = 'Car detailing, Auto detailing, Car cleaning, Car polishing, Paint correction, Ceramic coating, Car wash, Mobile detailing, Interior detailing, Exterior detailing, Waxing, Buffing, Upholstery Cleaning, Headlight Restoration, Detailing Packages, Detailing Services, Car Care Tips, Detailing Supplies, Detailing Equipment';
   const defaultDescription = `Асеа-м Детайлинг предлага професионални услуги за автомобилно детайлинг, които ще помогнат на вашия автомобил да изглежда на най-високото си ниво. Ние предлагаме различни пакети, които отговарят на вашите нужди, включително вътрешно и външно почистване, корекция на боята, керамично покритие и още. Свържете се с нас днес, за да насрочите час.`;
 
@@ -36,13 +33,5 @@ const Meta = ({ title, keywords, description }) => {
     </Head>
   );
 };
-
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common"])),
-    },
-  };
-}
 
 export default Meta;

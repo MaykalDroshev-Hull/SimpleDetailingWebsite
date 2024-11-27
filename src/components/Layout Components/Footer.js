@@ -1,15 +1,12 @@
 import Link from 'next/link'
 import { FaFacebook, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCalendarAlt, FaClock } from 'react-icons/fa'
 import styles from '../../styles/Component Styles/Footer.module.css'
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 /**
  * The Footer component displays the footer section of the website, including social icons, menu items, and a wave effect container.
  * @returns {JSX.Element} The JSX code for the Footer component.
  */
 const Footer = () => {
-  const { t } = useTranslation("common");
   return (
     <>
       <div className={styles.footer}>
@@ -18,16 +15,16 @@ const Footer = () => {
         <div className={styles.contactItem}>
         <FaMapMarkerAlt className={styles.infoicon} />
         <a href="https://maps.app.goo.gl/YsUPpgVaKgff7N816" target="_blank" rel="noopener noreferrer">
-          <span>{t("Address")}</span>
+          <span>Ловеч 5500, бул. “Освобождение” №3</span>
         </a>
         </div>
         <div className={styles.contactItem}>
         <FaCalendarAlt className={styles.infoicon} />
-        <span>{t("WorkingDays")}</span>
+        <span>Понеделник - Петък</span>
         </div>
         <div className={styles.contactItem}>
           <FaClock className={styles.infoicon} />
-          <span>{t("WorkingHours")}</span>
+          <span>9:30 до 17:30</span>
         </div>
       </div>
         <div className={styles.socialIcon}>
@@ -48,23 +45,16 @@ const Footer = () => {
       </Link>
         </div>
         <div className={styles.menu}>
-          <li><Link href="/">{t("Home")}</Link></li>
-          <li><Link href="/about">{t("About")}</Link></li>
-          <li><Link href="/services">{t("Services")}</Link></li>
-          <li><Link href="/contact">{t("Contacts")}</Link></li>
+          <li><Link href="/">Начало</Link></li>
+          <li><Link href="/about">За Нас</Link></li>
+          <li><Link href="/services">Услуги</Link></li>
+          <li><Link href="/contact">Контакти</Link></li>
         </div>
-        <p className={styles.p} >{t("Creator")}</p>
+        <p className={styles.p} >Изработка от Майкъл Дрошев</p>
       </div>
     </>
   )
 }
 
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common"])),
-      // Will be passed to the page component as props
-    },
-  };
-}
+
 export default Footer

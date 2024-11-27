@@ -85,6 +85,10 @@
   position: relative;
 }
 
+.navBar a{
+  margin-right: 20px;
+}
+
 .navBar a::after {
   content: '';
   display: block;
@@ -120,27 +124,63 @@
   padding: 15px 15px 0 0;
 }
 
-/* Mobile View - Stack Contact Info on Top, Nav on Bottom in Single Row */
+/* Contact Section (Mobile Center Alignment) */
 @media (max-width: 767px) {
-  .header {
-    flex-direction: column;  /* Stack header contents vertically */
-    align-items: stretch;     /* Allow children to stretch to full width */
+  .contactSection {
+    display: flex;
+    justify-content: center; /* Center the contact section horizontally */
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
   }
 
-  .contactInfo {
-    align-content: end;    /* Align contact info to the right */
-    width: 100%;              /* Ensure it takes full width */
+  .contactDetails {
+    align-items: center; /* Center icons and text vertically */
+    text-align: center; /* Center align text */
   }
 
-  .navBar {
-    flex-wrap: nowrap;        /* Forces nav items to stay in one line */
-    overflow-x: auto;         /* Allows scrolling if nav items overflow */
-    justify-content: center;   /* Center navigation items */
-    gap: 15px;                /* Space between nav items */
+   .navBar {
+    flex-direction: column; 
+  }
+ 
+  .websiteTitle {
+    display: none; /* Hide title on mobile */
   }
 
-  .websiteTitle{
-    display: none;
+.logo{
+  width: 200px;
+  margin-right: auto;
+}
+
+  .hamburgerMenu {
+    display: flex;
+    width: 10%;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    margin-left: auto;
+    padding: 10px;
+  }
+
+  .navLinks {
+    display: none; /* Hide links by default */
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .navLinks.showMenu {
+    display: flex; /* Show links when the menu is open */
+
+  }
+
+  .navLinks a {
+    font-size: 18px; /* Adjust link size */
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
   }
 }
+
 

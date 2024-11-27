@@ -38,12 +38,12 @@
 }
 
 .imagePlaceholder {
-width: 40%;
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  margin-bottom: 20px ;
+  margin-bottom: 20px;
 }
 
 .imagePlaceholder img {
@@ -60,4 +60,30 @@ width: 40%;
 
 .imageLeft {
   flex-direction: row-reverse; /* Text on the right, image on the left */
+}
+
+/* Mobile Version */
+@media only screen and (max-width: 768px) {
+  .serviceSection {
+    flex-direction: column; /* Stack image and text vertically */
+  }
+
+  .imagePlaceholder {
+    width: 100%; /* Image takes up most of the screen width */
+    margin: 0 auto 20px auto; /* Center the image with margin below */
+  }
+
+  .text {
+    width: 90%; /* Text takes up most of the screen width */
+    margin: 0 auto; /* Center the text block */
+    padding: 10px; /* Reduce padding for better fit */
+  }
+
+  .text h2 {
+    font-size: 1.5rem; /* Adjust title size for smaller screens */
+  }
+
+  .text p {
+    font-size: 1rem; /* Adjust text size for smaller screens */
+  }
 }

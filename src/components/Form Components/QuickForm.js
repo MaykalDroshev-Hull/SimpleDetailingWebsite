@@ -18,8 +18,6 @@ import {
 } from '@chakra-ui/react'
 import { sendContactForm } from '@/lib/api'
 import buttonStyles from '../../styles/Component Styles/FlowButton.module.css'
-import { useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 
 //An object containing initial values for the form fields
@@ -45,7 +43,6 @@ const initState = { values: initValues }
  * @returns {JSX.Element} - Returns a JSX.Element containing the form fields
  */
 const Form = ({ isOpen, onClose }) => {
-  const { t } = useTranslation("common");
   //The state of the form
   const [formState, setFormState] = useState(initState)
   //Object that is updated if an input has been touched or not
@@ -107,7 +104,7 @@ const Form = ({ isOpen, onClose }) => {
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>{t("SendRequest")}</ModalHeader>
+        <ModalHeader>Изпрати Заявка</ModalHeader>
         <ModalCloseButton />
         { //If there is an error message, error message will be displayed above the form inputs
           error && (
@@ -129,7 +126,7 @@ const Form = ({ isOpen, onClose }) => {
             }
             mb={5}>
             <Flex flexDirection='column' alignItems='center'>
-              <FormLabel>{t("FirstName")}</FormLabel>
+              <FormLabel>Име</FormLabel>
               <Input
                 type='text'
                 name='firstName'
@@ -138,7 +135,7 @@ const Form = ({ isOpen, onClose }) => {
                 errorBorderColor='red.300'
                 onBlur={onBlur}
                 width='300px' />
-              <FormErrorMessage>{t("Mandatory")}</FormErrorMessage>
+              <FormErrorMessage>Задължително</FormErrorMessage>
             </Flex>
           </FormControl>
           <FormControl
@@ -152,7 +149,7 @@ const Form = ({ isOpen, onClose }) => {
             }
             mb={5}>
             <Flex flexDirection='column' justifyContent='center' alignItems='center'>
-              <FormLabel>{t("LastName")}</FormLabel>
+              <FormLabel>Фамилия</FormLabel>
               <Input
                 type='text'
                 name='lastName'
@@ -161,7 +158,7 @@ const Form = ({ isOpen, onClose }) => {
                 errorBorderColor='red.300'
                 onBlur={onBlur}
                 width='300px' />
-              <FormErrorMessage>{t("Mandatory")}</FormErrorMessage>
+              <FormErrorMessage>Задължително</FormErrorMessage>
             </Flex>
           </FormControl>
           <FormControl
@@ -175,7 +172,7 @@ const Form = ({ isOpen, onClose }) => {
             }
             mb={5}>
             <Flex flexDirection='column' justifyContent='center' alignItems='center'>
-              <FormLabel>{t("Email")}</FormLabel>
+              <FormLabel>Имейл</FormLabel>
               <Input
                 type='email'
                 name='email'
@@ -184,12 +181,12 @@ const Form = ({ isOpen, onClose }) => {
                 errorBorderColor='red.300'
                 onBlur={onBlur}
                 width='300px' />
-              <FormErrorMessage>{t("Mandatory")}</FormErrorMessage>
+              <FormErrorMessage>Задължително</FormErrorMessage>
             </Flex>
           </FormControl>
           <FormControl mb={5}>
             <Flex flexDirection='column' justifyContent='center' alignItems='center'>
-              <FormLabel>{t("TelephoneNumber")}</FormLabel>
+              <FormLabel>Тел. Номер</FormLabel>
               <Input
                 type='tel'
                 name='phoneNumber'
@@ -200,7 +197,7 @@ const Form = ({ isOpen, onClose }) => {
           </FormControl>
           <FormControl mb={5}>
             <Flex flexDirection='column' justifyContent='center' alignItems='center'>
-              <FormLabel>{t("Brand")}</FormLabel>
+              <FormLabel>Марка</FormLabel>
               <Input
                 type='text'
                 name='carMake'
@@ -211,7 +208,7 @@ const Form = ({ isOpen, onClose }) => {
           </FormControl>
           <FormControl mb={5}>
             <Flex flexDirection='column' justifyContent='center' alignItems='center'>
-              <FormLabel>{t("Model")}</FormLabel>
+              <FormLabel>Модел</FormLabel>
               <Input
                 type='text'
                 name='carModel'
@@ -222,7 +219,7 @@ const Form = ({ isOpen, onClose }) => {
           </FormControl>
           <FormControl mb={5}>
             <Flex flexDirection='column' justifyContent='center' alignItems='center'>
-              <FormLabel>{t("RequiredDate")}</FormLabel>
+              <FormLabel>Желана Дата</FormLabel>
               <Input
                 type='date'
                 name='desiredDate'
@@ -237,20 +234,13 @@ const Form = ({ isOpen, onClose }) => {
             className={buttonStyles.button}
             isLoading={isLoading}
             onClick={onSubmit}
-          >{t("Send")}</Button>
+          >Запази</Button>
         </ModalFooter>
       </ModalContent>
     </Modal>
   )
 }
 
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common"])),
-      // Will be passed to the page component as props
-    },
-  };
-}
+
 
 export default Form

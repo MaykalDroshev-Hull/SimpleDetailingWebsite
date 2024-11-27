@@ -1,22 +1,23 @@
+import React, { useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import styles from '../../styles/Component Styles/NavBar.module.css';
-import { useTranslation } from "next-i18next";
-import LanguageSwitch from "../LanguageSwitch";
+import { faPhone, faEnvelope, faBars } from "@fortawesome/free-solid-svg-icons";
+import styles from "../../styles/Component Styles/NavBar.module.css";
 
 /**
- * A navigation bar component for Gentry's Auto Detailing website.
- * @returns JSX element displaying navigation links and website title.
+ * A navigation bar component for the website.
+ * Includes responsive design with a hamburger menu on mobile.
  */
 const NavBar = () => {
-  const { t } = useTranslation("common");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Toggles the menu visibility
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
     <div className={styles.header}>
       {/* Contact Info Section */}
       <div className={styles.contactSection}>
-        <LanguageSwitch />
         <div className={styles.contactDetails}>
           <div className={styles.contactItem}>
             <FontAwesomeIcon icon={faPhone} className={styles.icon} />
@@ -28,17 +29,33 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      <br/>
+
       {/* Navigation Bar */}
       <div className={styles.navBar}>
-        <Link href='/'>{t("Home")}</Link>
-        <Link href='/about'>{t("About")}</Link>
-        <Link href='/services'>{t("Services")}</Link>
-        <Link href='/contact'>{t("Contacts")}</Link>
-        <p className={styles.websiteTitle}>{t("BusinessName")}</p>
+        <div className={styles.hamburgerMenu} onClick={toggleMenu}>
+          <FontAwesomeIcon icon={faBars} />
+        </div>
+        <div className={styles.logo}>
+          <img 
+            src="/Images/Logo.png" 
+            alt="Logo" 
+            className={styles.logoImage} 
+          />
+        </div>
+
+
+        {/* Navigation Links */}
+        <div
+          className={`${styles.navLinks} ${menuOpen ? styles.showMenu : ""}`}
+        >
+          <Link href="/">Начало</Link>
+          <Link href="/about">За Нас</Link>
+          <Link href="/services">Услуги</Link>
+          <Link href="/contact">Контакти</Link>
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default NavBar;
