@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
         <div className={styles.menu}>
           <li><Link href="/">Начало</Link></li>
-          <li><Link href="/about">За Нас</Link></li>
+          <li><Link href="/about">За Мен</Link></li>
           <li><Link href="/services">Услуги</Link></li>
           <li><Link href="/contact">Контакти</Link></li>
         </div>

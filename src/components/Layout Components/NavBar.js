@@ -6,12 +6,12 @@ import styles from "../../styles/Component Styles/NavBar.module.css";
 
 /**
  * A navigation bar component for the website.
- * Includes responsive design with a hamburger menu on mobile.
+ * Includes responsive design with separate menus for desktop and mobile.
  */
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Toggles the menu visibility
+  // Toggles the mobile menu visibility
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
@@ -32,26 +32,42 @@ const NavBar = () => {
 
       {/* Navigation Bar */}
       <div className={styles.navBar}>
-        <div className={styles.hamburgerMenu} onClick={toggleMenu}>
-          <FontAwesomeIcon icon={faBars} />
-        </div>
+        {/* Logo */}
         <div className={styles.logo}>
-          <img 
-            src="/Images/Logo.png" 
-            alt="Logo" 
-            className={styles.logoImage} 
-          />
+          <img src="/Images/Logo.png" alt="Logo" className={styles.logoImage} />
         </div>
 
-
-        {/* Navigation Links */}
-        <div
-          className={`${styles.navLinks} ${menuOpen ? styles.showMenu : ""}`}
-        >
+        {/* Desktop Menu */}
+        <div className={styles.desktopMenu}>
           <Link href="/">Начало</Link>
-          <Link href="/about">За Нас</Link>
+          <Link href="/about">За Мен</Link>
           <Link href="/services">Услуги</Link>
           <Link href="/contact">Контакти</Link>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className={styles.mobileMenu}>
+        <div className={styles.hamburgerMenu} onClick={toggleMenu}>
+            <FontAwesomeIcon icon={faBars} />
+          </div>
+          <div
+            className={`${styles.mobileNavLinks} ${
+              menuOpen ? styles.showMobileMenu : ""
+            }`}
+          >
+             <Link href="/" onClick={toggleMenu}>
+              Начало
+            </Link>
+            <Link href="/about" onClick={toggleMenu}>
+              За Нас
+            </Link>
+            <Link href="/services" onClick={toggleMenu}>
+              Услуги
+            </Link>
+            <Link href="/contact" onClick={toggleMenu}>
+              Контакти
+            </Link>
+          </div>
         </div>
       </div>
     </div>

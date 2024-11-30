@@ -80,7 +80,7 @@
 .logo{
   display: block;            /* Ensures it's treated as a block element for centering */
   margin: 0 auto;            /* Centers the logo horizontally */
-  width: 300px;               /* Adjust to make the logo smaller (adjust as needed) */
+  width: 200px;               /* Adjust to make the logo smaller (adjust as needed) */
   height: auto;              /* Maintains aspect ratio */
 }
 
