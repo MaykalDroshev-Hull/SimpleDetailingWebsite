@@ -34,7 +34,7 @@ const NavBar = () => {
       <div className={styles.navBar}>
         {/* Logo */}
         <div className={styles.logo}>
-          <img src="/Images/Logo.png" alt="Logo" className={styles.logoImage} />
+        <Link href="/"><img src="/Images/Logo.png" alt="Logo" className={styles.logoImage}/></Link>
         </div>
 
         {/* Desktop Menu */}
@@ -59,7 +59,7 @@ const NavBar = () => {
               Начало
             </Link>
             <Link href="/about" onClick={toggleMenu}>
-              За Нас
+              За Мен
             </Link>
             <Link href="/services" onClick={toggleMenu}>
               Услуги

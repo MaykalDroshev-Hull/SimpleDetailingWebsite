@@ -2,6 +2,7 @@ import { useDisclosure } from '@chakra-ui/react'
 import Meta from '@/components/Page Components/Meta'
 import styles from '../styles/Page Styles/Index.module.css'
 import buttonStyles from '../styles/Component Styles/FlowButton.module.css'
+import Link from "next/link";
 
 /**
  * Home component that renders the homepage of the website.
@@ -23,7 +24,7 @@ const Home = () => {
           <h1>Неповторимо почистване и защита за неповторими коли</h1>
           <p>Ще направим колата ви по-чиста от нова!</p>
           <br/>
-          <button onClick={onOpen} className={buttonStyles.button}>Запазете Час</button>
+          <Link href="/contact"><button className={buttonStyles.button}>Запазете Час</button></Link>
         </div>
       </div>
       <div class={styles.WhatWeDo}>
