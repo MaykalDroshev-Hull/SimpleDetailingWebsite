@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import React from 'react';
 import styles from '../../styles/Component Styles/BackToTop.module.css'; // Import the CSS for styling
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons"; // Import the up arrow icon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons"; // Import the up arrow icon
 
 
 const BackToTop = () => {
@@ -20,7 +20,7 @@ const BackToTop = () => {
           className={styles.backToTopButton}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          <FontAwesomeIcon icon={faArrowUp} style={{ fontSize: '20px', color: 'white' }} />
+          <FontAwesomeIcon icon={faArrowUp} className={styles.icon}/>
         </button>
       )
     );

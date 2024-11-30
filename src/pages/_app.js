@@ -2,6 +2,7 @@ import Layout from "@/components/Layout"
 import { ChakraProvider } from "@chakra-ui/react";
 import { Nunito } from 'next/font/google'
 import '../styles/globals.css'
+import BackToTop from "@/components/Page Components/BackToTop";
 
 
 //Changing subset of 'Nunito' font to latin and setting it to its own variable
@@ -14,6 +15,7 @@ const MyApp = ({ Component, pageProps }) => (
       <main className={nunito.className}>
         <Layout>
           <Component {...pageProps} />
+          <BackToTop/>
         </Layout>
       </main>
     </ChakraProvider>
