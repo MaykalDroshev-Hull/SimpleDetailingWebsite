@@ -44,7 +44,7 @@ const reviews = ({ data }) => {
         color: 'gray'
       }}>
         <p>
-          Submit a review here or on <a style={{fontWeight: '900', textDecoration: 'underline'}} href='https://www.facebook.com/GentrysAutoDetailing'>Facebook</a>!
+          Submit a review here or on <a style={{ fontWeight: '900', textDecoration: 'underline' }} href='https://www.facebook.com/GentrysAutoDetailing'>Facebook</a>!
         </p>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>

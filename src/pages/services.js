@@ -10,9 +10,8 @@ const Services = () => {
       {servicesData.map((service, index) => (
         <div
           key={service.id}
-          className={`${styles.serviceSection} ${
-            index % 2 === 0 ? styles.imageRight : styles.imageLeft
-          }`}
+          className={`${styles.serviceSection} ${index % 2 === 0 ? styles.imageRight : styles.imageLeft
+            }`}
         >
           <div className={styles.text}>
             <h2>{service.title}</h2>

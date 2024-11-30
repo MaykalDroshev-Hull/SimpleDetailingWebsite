@@ -10,23 +10,23 @@ const Footer = () => {
   return (
     <>
       <div className={styles.footer}>
-      <Link href="/"><img className={styles.logo} src='/Images/logo.png' alt='logo' /></Link>
-      <div className={styles.infoSection}>
-        <div className={styles.contactItem}>
-        <FaMapMarkerAlt className={styles.infoicon} />
-        <a href="https://maps.app.goo.gl/YsUPpgVaKgff7N816" target="_blank" rel="noopener noreferrer">
-          <span>Ловеч 5500, бул. “Освобождение” №3</span>
-        </a>
+        <Link href="/"><img className={styles.logo} src='/Images/logo.png' alt='logo' /></Link>
+        <div className={styles.infoSection}>
+          <div className={styles.contactItem}>
+            <FaMapMarkerAlt className={styles.infoicon} />
+            <a href="https://maps.app.goo.gl/YsUPpgVaKgff7N816" target="_blank" rel="noopener noreferrer">
+              <span>Ловеч 5500, бул. “Освобождение” №3</span>
+            </a>
+          </div>
+          <div className={styles.contactItem}>
+            <FaCalendarAlt className={styles.infoicon} />
+            <span>Понеделник - Петък</span>
+          </div>
+          <div className={styles.contactItem}>
+            <FaClock className={styles.infoicon} />
+            <span>9:30 до 17:30</span>
+          </div>
         </div>
-        <div className={styles.contactItem}>
-        <FaCalendarAlt className={styles.infoicon} />
-        <span>Понеделник - Петък</span>
-        </div>
-        <div className={styles.contactItem}>
-          <FaClock className={styles.infoicon} />
-          <span>9:30 до 17:30</span>
-        </div>
-      </div>
         <div className={styles.socialIcon}>
           <Link href='https://www.facebook.com/profile.php?id=100063618235937'>
             <FaFacebook />
@@ -34,15 +34,15 @@ const Footer = () => {
           <Link href='https://www.instagram.com/aychin_mehmed7/'>
             <FaInstagram />
           </Link>
-           {/* Phone Link */}
-      <Link href='tel:+359876423782'>
-        <FaPhone />
-      </Link>
+          {/* Phone Link */}
+          <Link href='tel:+359876423782'>
+            <FaPhone />
+          </Link>
 
-      {/* Email Link */}
-      <Link href='mailto:detailingaseam@gmail.com'>
-        <FaEnvelope/>
-      </Link>
+          {/* Email Link */}
+          <Link href='mailto:detailingaseam@gmail.com'>
+            <FaEnvelope />
+          </Link>
         </div>
         <div className={styles.menu}>
           <li><Link href="/">Начало</Link></li>

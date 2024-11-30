@@ -7,10 +7,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white; /* This sets default text color */
+  color: white;
+  /* This sets default text color */
 }
 
-.footer p{
+.footer p {
   color: white;
   margin-bottom: 10px;
 }
@@ -58,7 +59,7 @@
   opacity: 1;
 }
 
-.waveContainer{
+.waveContainer {
   overflow: visible;
   position: relative;
   bottom: 100px;
@@ -74,14 +75,17 @@
   background-color: black;
   color: white;
   filter: hue-rotate(180deg) brightness(1.5)
-
 }
 
-.logo{
-  display: block;            /* Ensures it's treated as a block element for centering */
-  margin: 0 auto;            /* Centers the logo horizontally */
-  width: 200px;               /* Adjust to make the logo smaller (adjust as needed) */
-  height: auto;              /* Maintains aspect ratio */
+.logo {
+  display: block;
+  /* Ensures it's treated as a block element for centering */
+  margin: 0 auto;
+  /* Centers the logo horizontally */
+  width: 200px;
+  /* Adjust to make the logo smaller (adjust as needed) */
+  height: auto;
+  /* Maintains aspect ratio */
 }
 
 @keyframes animateWaves {
@@ -121,6 +125,7 @@
     font-size: 11px;
   }
 }
+
 /* Logo styling */
 .infologo {
   max-width: 100px;
@@ -140,12 +145,16 @@
 .infoItem {
   display: flex;
   align-items: center;
-  gap: 8px; /* Spacing between icon and text */
-  color: white; /* Adjust color as needed */
-  font-size: 14px; /* Adjust text size as needed */
+  gap: 8px;
+  /* Spacing between icon and text */
+  color: white;
+  /* Adjust color as needed */
+  font-size: 14px;
+  /* Adjust text size as needed */
 }
 
 @media (max-width: 767px) {
+
   /* Mobile-specific adjustments */
   .infoSection {
     flex-direction: column;
@@ -153,8 +162,11 @@
     gap: 10px;
   }
 }
+
 .contactItem {
   display: flex;
-  align-items: center; /* Ensures icon and text are aligned horizontally */
-  gap: 8px; /* Adjusts spacing between the icon and the text */
+  align-items: center;
+  /* Ensures icon and text are aligned horizontally */
+  gap: 8px;
+  /* Adjusts spacing between the icon and the text */
 }

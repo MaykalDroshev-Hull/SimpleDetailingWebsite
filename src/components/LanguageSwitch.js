@@ -10,12 +10,12 @@ const LanguageSwitch = () => {
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
   const isEnglish = currentLang === 'en';
-  
+
   const toggleLanguage = () => {
     const newLanguage = isEnglish ? 'bg' : 'en';
     const newPath = router.asPath.replace(`/${currentLang}`, `/${newLanguage}`);
     i18n.changeLanguage(newLanguage);
-  
+
     // Use router.push with reload option
     router.push(newPath, undefined, { scroll: false }).then(() => {
       router.reload(); // Reloads the page after navigating

@@ -92,7 +92,7 @@ const contact = () => {
       <div className={styles.content}>
         <div className={styles.contactDetails}>
           <p>
-          Моля, изпратете заявка за среща и ние ще се свържем с вас възможно най-скоро!          </p>
+            Моля, изпратете заявка за среща и ние ще се свържем с вас възможно най-скоро!          </p>
         </div>
         <div className={styles.formContainer}>
           {error && (

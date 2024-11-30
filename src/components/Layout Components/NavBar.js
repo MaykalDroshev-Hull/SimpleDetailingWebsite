@@ -34,7 +34,7 @@ const NavBar = () => {
       <div className={styles.navBar}>
         {/* Logo */}
         <div className={styles.logo}>
-        <Link href="/"><img src="/Images/Logo.png" alt="Logo" className={styles.logoImage}/></Link>
+          <Link href="/"><img src="/Images/Logo.png" alt="Logo" className={styles.logoImage} /></Link>
         </div>
 
         {/* Desktop Menu */}
@@ -47,15 +47,14 @@ const NavBar = () => {
 
         {/* Mobile Menu */}
         <div className={styles.mobileMenu}>
-        <div className={styles.hamburgerMenu} onClick={toggleMenu}>
+          <div className={styles.hamburgerMenu} onClick={toggleMenu}>
             <FontAwesomeIcon icon={faBars} />
           </div>
           <div
-            className={`${styles.mobileNavLinks} ${
-              menuOpen ? styles.showMobileMenu : ""
-            }`}
+            className={`${styles.mobileNavLinks} ${menuOpen ? styles.showMobileMenu : ""
+              }`}
           >
-             <Link href="/" onClick={toggleMenu}>
+            <Link href="/" onClick={toggleMenu}>
               Начало
             </Link>
             <Link href="/about" onClick={toggleMenu}>

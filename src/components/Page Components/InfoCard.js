@@ -1,4 +1,4 @@
-import { Card, CardBody, CardHeader, Heading} from "@chakra-ui/react"
+import { Card, CardBody, CardHeader, Heading } from "@chakra-ui/react"
 import styles from '../../styles/Component Styles/InfoCard.module.css'
 
 /**
@@ -12,7 +12,7 @@ import styles from '../../styles/Component Styles/InfoCard.module.css'
  */
 const InfoCard = (props) => {
   const itemArray = props.itemArray
-  
+
   return (
     <Card maxWidth={props.width} minHeight={props.height} margin={5} variant={"outline"}>
       <CardHeader>

@@ -21,7 +21,9 @@
 }
 
 .icon {
-  width: 15px;  /* Increase to 1rem for better visibility */
-  margin-right: 8px;  /* Adjust spacing if necessary */
+  width: 15px;
+  /* Increase to 1rem for better visibility */
+  margin-right: 8px;
+  /* Adjust spacing if necessary */
   color: white;
 }

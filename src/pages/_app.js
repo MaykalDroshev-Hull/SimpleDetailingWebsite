@@ -11,14 +11,14 @@ const nunito = Nunito({
 })
 
 const MyApp = ({ Component, pageProps }) => (
-<ChakraProvider>
-      <main className={nunito.className}>
-        <Layout>
-          <Component {...pageProps} />
-          <BackToTop/>
-        </Layout>
-      </main>
-    </ChakraProvider>
+  <ChakraProvider>
+    <main className={nunito.className}>
+      <Layout>
+        <Component {...pageProps} />
+        <BackToTop />
+      </Layout>
+    </main>
+  </ChakraProvider>
 )
 
 /**

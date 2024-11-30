@@ -15,9 +15,9 @@ const Layout = ({ children }) => {
       <div className={styles.layout}>
         <NavBar />
         {/* <Transition> */}
-          <main className={styles.main}>
-            {children}
-          </main>
+        <main className={styles.main}>
+          {children}
+        </main>
         {/* </Transition> */}
         <div className={styles.footerWrapper}>
           <Footer />
