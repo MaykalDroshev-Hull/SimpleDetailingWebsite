@@ -180,7 +180,7 @@
       {
         "id": 11,
         "title": "Почистване на двигателен отсек",
-        "description": "Цена: от 70 лева до 130 лева",
+        "description": "Цена: от 70 лева",
         "images": [
           {
             "src": "/Images/Service11/image1.jpg",
@@ -230,7 +230,7 @@
       {
         "id": 13,
         "title": "Освежаване на спирачни апарати",
-        "description": "Цена: от 120 до 250 лева",
+        "description": "Цена: от 120 лв",
         "images": [
           {
             "src": "/Images/Service13/image1.jpg",

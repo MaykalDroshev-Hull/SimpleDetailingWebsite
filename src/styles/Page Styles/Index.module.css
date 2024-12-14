@@ -81,6 +81,18 @@
   margin-bottom: 10px;
 }
 
+.textBlock h6 {
+  margin-top: -10px;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.WhatWeDo li{
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
 .textBlock p {
   font-size: 1rem;
   color: white;
@@ -152,6 +164,8 @@
   height: auto;
   object-fit: cover;
 }
+
+
 
 /* Responsive Styling */
 @media (max-width: 756px) {
