@@ -79,6 +79,8 @@
   font-size: 1.8rem;
   color: white;
   margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .textBlock h6 {
@@ -86,6 +88,8 @@
   margin-bottom: 5px;
   font-size: 1.1rem;
   color: white;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .WhatWeDo li{
@@ -97,7 +101,10 @@
   font-size: 1rem;
   color: white;
   line-height: 1.6;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+
 }
 
 .whyChooseImage {
