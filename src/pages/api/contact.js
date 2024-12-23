@@ -2,7 +2,7 @@
 NOTE TO SELF: Difference between review API and contact API is that the try/catch was inside the 'generateEmailContent' function in the 
 contact API whereas the try/catch was in the 'addReview' and 'readReview' functions
 */
-import { mailOption, transporter } from '../../config/nodemailer.js'
+import { mailOption, transporter } from './longContact.js'
 
 const CONTACT_MESSAGE_FIELDS = {
   firstName: 'First Name',
