@@ -134,7 +134,10 @@
   background-color: #F5C501;
 }
 
-
+.contactDetails p {
+  margin-left: 10px;
+  text-align: center;
+}
 @media (max-width: 1024px) {
   .content {
     flex-direction: column;

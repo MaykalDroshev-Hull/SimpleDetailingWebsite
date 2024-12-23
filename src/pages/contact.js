@@ -66,7 +66,7 @@ const contact = () => {
       setFormState(initState)
       //Toast message that message was sent succesfully
       toast({
-        title: "SubmissionSuccesful",
+        title: "Заявката е успешна!",
         status: 'success',
         duration: 2000,
         position: 'top'
@@ -270,9 +270,19 @@ const contact = () => {
                 onBlur={onBlur}
                 maxWidth='450px'
               >
-                <option>Интериор</option>
-                <option>Екстериор</option>
-                <option>Пълен Пакет</option>
+                <option>Корекция на лаковото покритие</option>
+                <option>Керамични покрития</option>
+                <option>Поддръжка на керамично покритие</option>
+                <option>One Step</option>
+                <option>Измиване</option>
+                <option>Корекция на фарове</option>
+                <option>Корекция на стопове</option>
+                <option>Детайлно почистване на интериор</option>
+                <option>Почистване на стъкла + покритие</option>
+                <option>Почистване на двигателен отсек</option>
+                <option>Почистване на джанти</option>
+                <option>Освежаване на спирачни апарати</option>
+                <option>Пастиране / Полиране / Почистване на мотори, костюми и предпазни каски</option>
               </Select>
             </Flex>
           </FormControl>

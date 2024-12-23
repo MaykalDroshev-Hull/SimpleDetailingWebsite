@@ -34,7 +34,7 @@ export const sendLongContactForm = async (data) =>
       Accept: 'application/JSON'
     },
   }).then(res => {
-    if (!res.ok) throw new Error('Failed to send message')
+    if (!res.ok) throw new Error('Неуспешно изпратена заявка, моля обадете се на посочения номер.')
     return res.json()
   })
 
