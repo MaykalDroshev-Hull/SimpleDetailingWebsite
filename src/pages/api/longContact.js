@@ -106,8 +106,8 @@ END:VCALENDAR`.trim();
   const encodedIcsContent = encodeURIComponent(icsFileContent);
 
   // Append encoded ICS content to the URL
-  // const appleCalendarDownloadLink = `https://aseam-detailing.vercel.app/api/download-ics?content=${encodedIcsContent}`;
-  const appleCalendarDownloadLink = `http://192.168.0.69:3000/api/download-ics?content=${encodedIcsContent}`;
+  const appleCalendarDownloadLink = `https://aseam-detailing.vercel.app/api/download-ics?content=${encodedIcsContent}`;
+  // const appleCalendarDownloadLink = `http://192.168.0.69:3000/api/download-ics?content=${encodedIcsContent}`;
 
   // Returns the generated 'stringData' and HTML for the email
   return {
