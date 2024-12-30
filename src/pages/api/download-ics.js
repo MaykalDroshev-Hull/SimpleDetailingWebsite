@@ -12,6 +12,6 @@ export default function handler(req, res) {
     res.setHeader('Content-Disposition', 'attachment; filename=appointment.ics');
   
     // Decode the content and send it as the response
-    res.send(decodeURIComponent(content));
+    res.send(decodeURIComponent(content).replaceAll("  ","\\n"));
   }
   

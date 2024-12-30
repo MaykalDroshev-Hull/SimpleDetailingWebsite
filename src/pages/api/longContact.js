@@ -1,18 +1,4 @@
-import nodemailer from 'nodemailer';
-
-// Local environment variables
-const email = process.env.NEXT_PUBLIC_EMAIL;
-const pass = process.env.NEXT_PUBLIC_EMAIL_PASS;
-
-const transporter = nodemailer.createTransport({
-  host: 'smtp.office365.com', // Outlook's SMTP server
-  port: 587, // Port for secure connections with STARTTLS
-  secure: false, // Use false because STARTTLS is used (not SSL)
-  auth: {
-    user: email, // Your Outlook email address
-    pass, // Your email password or app password (if 2FA is enabled)
-  },
-});
+import { transporter, mailOptionSelf, mailOption } from '../../../src/components/config/nodemailer'
 
 const CONTACT_MESSAGE_FIELDS = {
   firstName: 'Име',
@@ -47,10 +33,8 @@ const handler = async (req, res) => {
     try {
       // Attempt to send the email with accompanying data in the proper format and email subject
       await transporter.sendMail({
-        ...{
-          from: email,
-          to: email,
-        },
+        ...mailOptionSelf
+        ,
         // Callback to function that converts all relevant data into proper text and html format for the email
         ...generateEmailContent(data),
         subject: 'Нова Заявка',
@@ -58,10 +42,8 @@ const handler = async (req, res) => {
 
       // Attempt to send the email with accompanying data in the proper format and email subject
       await transporter.sendMail({
-        ...{
-          from: email,
-          to: data.email,
-        },
+        ...mailOption,
+        to: data.email,
         // Callback to function that converts all relevant data into proper text and html format for the email
         ...generateEmailContent(data),
         subject: 'Асеа-м Детайлинг Заявка',
@@ -89,7 +71,7 @@ const generateEmailContent = (data) => {
   // Generate a header and paragraph HTML element for each key-value pair
   const htmlData = Object.entries(data).reduce(
     (str, [key, value]) =>
-      (str += `<h3 class="form-heading" style="text-align: left;font-weight: bold">${CONTACT_MESSAGE_FIELDS[key]}</h3>
+    (str += `<h3 class="form-heading" style="text-align: left;font-weight: bold">${CONTACT_MESSAGE_FIELDS[key]}</h3>
 <p class="form-answer" style="text-align: left;">${value}</p>
 `),
     ''
@@ -104,9 +86,9 @@ const generateEmailContent = (data) => {
     eventTitle
   )}&dates=${startDate}/${endDate}&details=${encodeURIComponent(
     'Детайли: ' + stringData
-  )}&location=&trp=false`;
+  )}&location=${encodeURIComponent("43°09'28.5\"N 24°43'11.9\"E")}&trp=false`;
 
-  // Apple Calendar ICS Content
+  // Generate ICS file content
   const icsFileContent = `
 BEGIN:VCALENDAR
 VERSION:2.0
@@ -114,14 +96,19 @@ BEGIN:VEVENT
 SUMMARY:${eventTitle}
 DTSTART;VALUE=DATE:${startDate}
 DTEND;VALUE=DATE:${endDate}
-DESCRIPTION:Appointment details: ${stringData}
-LOCATION:
+DESCRIPTION:Детайли: ${stringData.replaceAll('\n',' ')}
+LOCATION:43°09'28.5"N 24°43'11.9"E
+GEO:43.157917;24.719972
 END:VEVENT
 END:VCALENDAR`.trim();
 
-  const appleCalendarDownloadLink = `https://aseam-detailing.vercel.app/api/download-ics?content=${encodeURIComponent(
-    icsFileContent
-  )}`;
+  // URL-encode the ICS content
+  const encodedIcsContent = encodeURIComponent(icsFileContent);
+
+  // Append encoded ICS content to the URL
+  // const appleCalendarDownloadLink = `https://aseam-detailing.vercel.app/api/download-ics?content=${encodedIcsContent}`;
+  const appleCalendarDownloadLink = `http://192.168.0.69:3000/api/download-ics?content=${encodedIcsContent}`;
+
   // Returns the generated 'stringData' and HTML for the email
   return {
     text: stringData,
