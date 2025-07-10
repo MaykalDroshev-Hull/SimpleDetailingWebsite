@@ -1,3 +1,5 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 import Meta from "@/components/Page Components/Meta"
 import PageTitle from "@/components/Page Components/PageTitle"
 import styles from '../styles/Page Styles/About.module.css'
@@ -7,11 +9,13 @@ import styles from '../styles/Page Styles/About.module.css'
  * @returns {JSX.Element} The About page JSX component.
  */
 const about = () => {
+  const { t } = useTranslation('common')
+  
   return (
     <>
       <Meta
-        title="За Мен - Aseam Auto Detailing"
-        description="Научете за нашата страст към автомобилните детайли и ангажимента за качествено обслужване. Нашият опитен екип е посветен на предоставянето на първокласни интериорни и екстериорни детайли, корекция на боя, керамично покритие и др."
+        title={`${t('About')} - ${t('BusinessName')}`}
+        description={t('ForMeIntro')}
         keywords="auto detailing, car detailing, paint correction, ceramic coating, interior detailing, exterior detailing, car care, auto appearance, auto restoration, professional detailing"
       />
       
@@ -20,9 +24,9 @@ const about = () => {
         <div className={styles.heroContent}>
           <div className={styles.container}>
             <div className={styles.heroText}>
-              <h1 className={styles.heroTitle}>За Мен</h1>
+              <h1 className={styles.heroTitle}>{t('AboutHeroTitle')}</h1>
               <p className={styles.heroSubtitle}>
-                Професионализъм, опит и страст към съвършенството
+                {t('AboutHeroSubtitle')}
               </p>
             </div>
           </div>
@@ -50,20 +54,16 @@ const about = () => {
             {/* About Text */}
             <div className={styles.textSection}>
               <div className={styles.aboutContent}>
-                <h2 className={styles.aboutTitle}>Айчин Мехмедов</h2>
-                <h3 className={styles.aboutSubtitle}>Професионален детайлър</h3>
+                <h2 className={styles.aboutTitle}>{t('AboutName')}</h2>
+                <h3 className={styles.aboutSubtitle}>{t('AboutProfession')}</h3>
                 
                 <div className={styles.aboutText}>
                   <p>
-                    Здравейте! Аз съм Айчин Мехмедов, детайлър с над 5 години опит в бранша. 
-                    С гордост мога да споделя, че съм официално акредитиран от световноизвестната 
-                    марка <strong>Gtechniq</strong> чрез нейния представител за България – 
-                    <strong> Кушев детайлинг</strong>.
+                    {t('ForMeIntro')}
                   </p>
                   
                   <p>
-                    Преминал съм и през редица курсове и обучения от най-добрите в бранша през годините. 
-                    За мен професионализмът не е просто дума, а ангажимент, който изпълнявам до последния детайл.
+                    {t('ForMeExperience')}
                   </p>
                 </div>
               </div>
@@ -72,24 +72,24 @@ const about = () => {
 
           {/* Values Section */}
           <div className={styles.valuesSection}>
-            <h2 className={styles.sectionTitle}>Нашите Ценности</h2>
+            <h2 className={styles.sectionTitle}>{t('AboutValuesTitle')}</h2>
             <div className={styles.valuesGrid}>
               <div className={styles.valueCard}>
                 <div className={styles.valueIcon}>🎯</div>
-                <h3>Професионализъм</h3>
-                <p>Ангажимент към най-високите стандарти в детайлинг индустрията</p>
+                <h3>{t('Value1Title')}</h3>
+                <p>{t('Value1Description')}</p>
               </div>
               
               <div className={styles.valueCard}>
                 <div className={styles.valueIcon}>🤝</div>
-                <h3>Доверие</h3>
-                <p>Ценя доверието на своите клиенти и се стремя да предложа услуги с най-високо качество</p>
+                <h3>{t('Value2Title')}</h3>
+                <p>{t('Value2Description')}</p>
               </div>
               
               <div className={styles.valueCard}>
                 <div className={styles.valueIcon}>✨</div>
-                <h3>Съвършенство</h3>
-                <p>Подхождам към всяко превозно средство с отговорност и грижа</p>
+                <h3>{t('Value3Title')}</h3>
+                <p>{t('Value3Description')}</p>
               </div>
             </div>
           </div>
@@ -108,31 +108,24 @@ const about = () => {
           {/* Detailed About Section */}
           <div className={styles.detailedSection}>
             <div className={styles.detailedContent}>
-              <h2>Защо избираме качеството</h2>
+              <h2>{t('AboutDetailedTitle')}</h2>
               <p>
-                Ценя доверието на своите клиенти и се стремя да предложа услуги с най-високо качество, 
-                където всеки аспект е важен. Подхождам към всяко превозно средство с отговорност и грижа, 
-                като гарантирам, че докато е при мен, то е на сигурно и надеждно място.
+                {t('ForMeTrust')}
               </p>
               
               <p>
-                Убедени можете да бъдете, че във всеки етап на работа, от почистването до най-фините 
-                завършващи щрихи, влагам усилия и искреност. Моята цел е не просто да предоставя услуга, 
-                а да изградя доверие, базирано на честност и отдаденост.
+                {t('ForMeCommitment')}
               </p>
               
               <p>
-                Детайлингът не само подобрява външния вид на автомобила, но също така допринася за 
-                запазването на неговата стойност и дълготрайността му. Чистото и добре поддържано 
-                превозно средство е важно не само за комфорта, но и за здравето на своите собственици.
+                {t('ForMeValue')}
               </p>
               
               <div className={styles.quote}>
                 <p>
-                  "За мен най-голямата награда е доволният клиент – усмивката му ми показва, 
-                  че съм постигнал най-важното."
+                  "{t('ForMeQuote')}"
                 </p>
-                <span className={styles.quoteAuthor}>— Айчин Мехмедов</span>
+                <span className={styles.quoteAuthor}>— {t('AboutName')}</span>
               </div>
             </div>
           </div>
@@ -153,5 +146,13 @@ const about = () => {
     </>
   );
 };
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  }
+}
 
 export default about

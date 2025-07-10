@@ -1,13 +1,24 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 import Meta from "@/components/Page Components/Meta"
 import ServiceCarousel from "@/components/Page Components/ServicesCarousel"
 import styles from '../styles/Page Styles/Services.module.css'
-import servicesData from "public/Data/services.json"
+import { useRouter } from 'next/router'
 
 const Services = () => {
+  const { t } = useTranslation('common')
+  const router = useRouter()
+  const { locale } = router
+  
+  // Dynamically import services data based on language
+  const servicesData = locale === 'en' 
+    ? require('public/Data/services-en.json')
+    : require('public/Data/services.json')
+  
   return (
     <>
       <Meta
-        title="Услуги - Aseam Auto Detailing"
+        title={`${t('Services')} - ${t('BusinessName')}`}
         description="Професионални автомобилни детайлинг услуги: корекция на лака, керамични покрития, интериорно почистване, корекция на фарове и стопове. Качествено обслужване с гаранция."
         keywords="auto detailing services, car detailing, paint correction, ceramic coating, interior detailing, headlight restoration, brake light restoration, car wash, professional detailing"
       />
@@ -17,9 +28,9 @@ const Services = () => {
         <div className={styles.heroContent}>
           <div className={styles.container}>
             <div className={styles.heroText}>
-              <h1 className={styles.heroTitle}>Нашите Услуги</h1>
+              <h1 className={styles.heroTitle}>{t('ServicesHeroTitle')}</h1>
               <p className={styles.heroSubtitle}>
-                Професионални детайлинг услуги с внимание към всеки детайл
+                {t('ServicesHeroSubtitle')}
               </p>
             </div>
           </div>
@@ -50,5 +61,13 @@ const Services = () => {
     </>
   );
 };
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  }
+}
 
 export default Services;

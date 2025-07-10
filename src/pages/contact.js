@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 import Meta from "@/components/Page Components/Meta"
 import { Text, Button, Flex, FormControl, FormErrorMessage, FormLabel, Input, Select, Stack, Textarea, useToast } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -33,6 +35,7 @@ const contact = () => {
   const [touched, setTouched] = useState({})
   const { values, isLoading, error } = formState
   const toast = useToast()
+  const { t } = useTranslation('common')
 
   //A function that updates the state of the form when an input field is blurred
   const onBlur = ({ target }) => setTouched(prev => ({
@@ -67,7 +70,7 @@ const contact = () => {
       setFormState(initState)
       //Toast message that message was sent succesfully
       toast({
-        title: "Заявката е успешна!",
+        title: t('SubmissionSuccesful'),
         status: 'success',
         duration: 2000,
         position: 'top'
@@ -85,7 +88,7 @@ const contact = () => {
   return (
     <>
       <Meta
-        title="Контакти - Aseam Auto Detailing"
+        title={`${t('Contacts')} - ${t('BusinessName')}`}
         description="Свържете се с нас за професионални автомобилни детайлинг услуги. Нашият екип е готов да отговори на вашите въпроси и да ви помогне да насрочите среща за интериорни и екстериорни детайли, корекция на боя, керамично покритие и други услуги."
         keywords="auto detailing contact, car detailing contact, detailing services, paint correction, ceramic coating, interior detailing, exterior detailing, car care, auto appearance, auto restoration, contact us, schedule an appointment, get in touch, phone number, email address, location"
       />
@@ -95,9 +98,9 @@ const contact = () => {
         <div className={styles.heroContent}>
           <div className={styles.container}>
             <div className={styles.heroText}>
-              <h1 className={styles.heroTitle}>Свържете се с нас</h1>
+              <h1 className={styles.heroTitle}>{t('ContactHeroTitle')}</h1>
               <p className={styles.heroSubtitle}>
-                Готови сме да превърнем вашия автомобил в перфектно състояние
+                {t('ContactHeroSubtitle')}
               </p>
             </div>
           </div>
@@ -112,10 +115,10 @@ const contact = () => {
               <div className={styles.contactIcon}>
                 <FontAwesomeIcon icon={faPhone} />
               </div>
-              <h3>Обадете ни се</h3>
+              <h3>{t('CallUs')}</h3>
               <p>+359 876 423 782</p>
               <a href="tel:+359876423782" className={styles.contactLink}>
-                Обадете се сега
+                {t('CallUsNow')}
               </a>
             </div>
             
@@ -123,10 +126,10 @@ const contact = () => {
               <div className={styles.contactIcon}>
                 <FontAwesomeIcon icon={faEnvelope} />
               </div>
-              <h3>Изпратете имейл</h3>
+              <h3>{t('SendEmail')}</h3>
               <p>detailingaseam@gmail.com</p>
               <a href="mailto:detailingaseam@gmail.com" className={styles.contactLink}>
-                Изпратете имейл
+                {t('SendEmailNow')}
               </a>
             </div>
             
@@ -134,10 +137,10 @@ const contact = () => {
               <div className={styles.contactIcon}>
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
               </div>
-              <h3>Намерете ни</h3>
-              <p>Ловеч, бул. "Освобождение" №3</p>
+              <h3>{t('FindUs')}</h3>
+              <p>{t('Address')}</p>
               <a href="https://maps.app.goo.gl/YsUPpgVaKgff7N816" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
-                Отворете в Google Maps
+                {t('OpenInMaps')}
               </a>
             </div>
           </div>
@@ -148,8 +151,8 @@ const contact = () => {
       <section className={styles.formSection}>
         <div className={styles.container}>
           <div className={styles.formHeader}>
-            <h2>Запазете час</h2>
-            <p>Моля, изпратете заявка за среща и ние ще се свържем с вас възможно най-скоро!</p>
+            <h2>{t('BookAppointmentTitle')}</h2>
+            <p>{t('BookAppointmentDescription')}</p>
           </div>
           <div className={styles.formContainer}>
           {error && (
@@ -172,7 +175,7 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel className={styles.Text}>Име</FormLabel>
+                  <FormLabel className={styles.Text}>{t('FirstName')}</FormLabel>
                   <Input
                     type='text'
                     name='firstName'
@@ -182,7 +185,7 @@ const contact = () => {
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage>Задължително</FormErrorMessage>
+                  <FormErrorMessage>{t('Mandatory')}</FormErrorMessage>
                 </Flex>
               </FormControl>
               <FormControl
@@ -196,7 +199,7 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel className={styles.Text}>Фамилия</FormLabel>
+                  <FormLabel className={styles.Text}>{t('LastName')}</FormLabel>
                   <Input
                     type='text'
                     name='lastName'
@@ -206,7 +209,7 @@ const contact = () => {
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage>Задължително</FormErrorMessage>
+                  <FormErrorMessage>{t('Mandatory')}</FormErrorMessage>
                 </Flex>
               </FormControl>
             </Stack>
@@ -224,7 +227,7 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel className={styles.Text}>Email</FormLabel>
+                  <FormLabel className={styles.Text}>{t('Email')}</FormLabel>
                   <Input
                     type='email'
                     name='email'
@@ -234,7 +237,7 @@ const contact = () => {
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage >Задължително</FormErrorMessage>
+                  <FormErrorMessage >{t('Mandatory')}</FormErrorMessage>
                 </Flex>
               </FormControl>
               <FormControl
@@ -248,7 +251,7 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel className={styles.Text}>Тел. Номер</FormLabel>
+                  <FormLabel className={styles.Text}>{t('TelephoneNumber')}</FormLabel>
                   <Input
                     type='tel'
                     name='phoneNumber'
@@ -258,7 +261,7 @@ const contact = () => {
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage>Задължително</FormErrorMessage>
+                  <FormErrorMessage>{t('Mandatory')}</FormErrorMessage>
                 </Flex>
               </FormControl>
             </Stack>
@@ -276,7 +279,7 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel className={styles.Text}>Марка</FormLabel>
+                  <FormLabel className={styles.Text}>{t('Brand')}</FormLabel>
                   <Input
                     type='text'
                     name='carMake'
@@ -286,7 +289,7 @@ const contact = () => {
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage>Задължително</FormErrorMessage>
+                  <FormErrorMessage>{t('Mandatory')}</FormErrorMessage>
                 </Flex>
               </FormControl >
               <FormControl
@@ -300,7 +303,7 @@ const contact = () => {
                 }
                 mb={5}>
                 <Flex flexDirection='column' alignItems='center'>
-                  <FormLabel className={styles.Text}>Модел</FormLabel>
+                  <FormLabel className={styles.Text}>{t('Model')}</FormLabel>
                   <Input
                     type='text'
                     name='carModel'
@@ -310,14 +313,14 @@ const contact = () => {
                     errorBorderColor="red.300"
                     onBlur={onBlur}
                   />
-                  <FormErrorMessage>Задължително</FormErrorMessage>
+                  <FormErrorMessage>{t('Mandatory')}</FormErrorMessage>
                 </Flex>
               </FormControl>
             </Stack>
           </div>
           <FormControl isRequired>
             <Flex flexDirection='column' alignItems='center'>
-              <FormLabel className={styles.Text}>Услуга</FormLabel>
+              <FormLabel className={styles.Text}>{t('TypeService')}</FormLabel>
               <Select
                 placeholder=" "
                 name='typeOfDetail'
@@ -327,25 +330,25 @@ const contact = () => {
                 onBlur={onBlur}
                 maxWidth='450px'
               >
-                <option>Корекция на лаковото покритие</option>
-                <option>Керамични покрития</option>
-                <option>Поддръжка на керамично покритие</option>
-                <option>One Step</option>
-                <option>Измиване</option>
-                <option>Корекция на фарове</option>
-                <option>Корекция на стопове</option>
-                <option>Детайлно почистване на интериор</option>
-                <option>Почистване на стъкла + покритие</option>
-                <option>Почистване на двигателен отсек</option>
-                <option>Почистване на джанти</option>
-                <option>Освежаване на спирачни апарати</option>
-                <option>Пастиране / Полиране / Почистване на мотори, костюми и предпазни каски</option>
+                <option>{t('Service1')}</option>
+                <option>{t('Service2')}</option>
+                <option>{t('Service3')}</option>
+                <option>{t('Service4')}</option>
+                <option>{t('Service5')}</option>
+                <option>{t('Service6')}</option>
+                <option>{t('Service7')}</option>
+                <option>{t('Service8')}</option>
+                <option>{t('Service9')}</option>
+                <option>{t('Service10')}</option>
+                <option>{t('Service11')}</option>
+                <option>{t('Service12')}</option>
+                <option>{t('Service13')}</option>
               </Select>
             </Flex>
           </FormControl>
           <FormControl mt={3} mb={5}>
             <Flex flexDirection='column' alignItems='center'>
-              <FormLabel className={styles.Text}>Доп. Коментари</FormLabel>
+              <FormLabel className={styles.Text}>{t('AdditionalComments')}</FormLabel>
               <Textarea
                 type='text'
                 name='additionalDetails'
@@ -358,7 +361,7 @@ const contact = () => {
           </FormControl>
           <FormControl isRequired mb={5}>
             <Flex flexDirection='column' justifyContent='center' alignItems='center'>
-              <FormLabel className={styles.Text}>Желана Дата</FormLabel>
+              <FormLabel className={styles.Text}>{t('RequiredDate')}</FormLabel>
               <Input
                 type='date'
                 name='desiredDate'
@@ -373,13 +376,21 @@ const contact = () => {
               className={styles.SubmitButton}
               isLoading={isLoading}
               onClick={onSubmit}
-            >Запази</Button>
+            >{t('Save')}</Button>
           </Flex>
         </div>
         </div>
       </section>
     </>
   )
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  }
 }
 
 export default contact

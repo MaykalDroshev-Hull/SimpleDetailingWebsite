@@ -1,33 +1,33 @@
 // components/LanguageSwitch.js
-import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-import styles from '../styles/Component Styles/LanguageSwitch.module.css';
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import styles from '../styles/Component Styles/LanguageSwitch.module.css'
 
 const LanguageSwitch = () => {
-  const router = useRouter();
-  const { i18n } = useTranslation();
-  const currentLang = i18n.language;
-  const isEnglish = currentLang === 'en';
+  const router = useRouter()
+  const { locale, pathname, asPath, query } = router
 
-  const toggleLanguage = () => {
-    const newLanguage = isEnglish ? 'bg' : 'en';
-    const newPath = router.asPath.replace(`/${currentLang}`, `/${newLanguage}`);
-    i18n.changeLanguage(newLanguage);
-
-    // Use router.push with reload option
-    router.push(newPath, undefined, { scroll: false }).then(() => {
-      router.reload(); // Reloads the page after navigating
-    });
-  };
+  const switchLanguage = (newLocale) => {
+    router.push({ pathname, query }, asPath, { locale: newLocale })
+  }
 
   return (
-    <button onClick={toggleLanguage} className={styles.switch}>
-      <FontAwesomeIcon icon={faGlobe} className={styles.icon} />
-      <span>{isEnglish ? 'EN' : 'BG'}</span>
-    </button>
-  );
-};
+    <div className={styles.languageSwitch}>
+      <button
+        className={`${styles.langButton} ${locale === 'bg' ? styles.active : ''}`}
+        onClick={() => switchLanguage('bg')}
+      >
+        BG
+      </button>
+      <span className={styles.separator}>|</span>
+      <button
+        className={`${styles.langButton} ${locale === 'en' ? styles.active : ''}`}
+        onClick={() => switchLanguage('en')}
+      >
+        EN
+      </button>
+    </div>
+  )
+}
 
-export default LanguageSwitch;
+export default LanguageSwitch

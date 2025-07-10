@@ -1,4 +1,6 @@
 import { useDisclosure } from '@chakra-ui/react'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 import Meta from '@/components/Page Components/Meta'
 import styles from '../styles/Page Styles/Index.module.css'
 import buttonStyles from '../styles/Component Styles/FlowButton.module.css'
@@ -9,11 +11,16 @@ import Link from "next/link";
  * @returns {JSX.Element} The JSX element to be rendered.
  */
 const Home = () => {
+  const { t } = useTranslation('common')
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
-      <Meta />
+      <Meta 
+        title={`${t('BusinessName')} - ${t('Home')}`}
+        description={t('AboutDescription')}
+        keywords="auto detailing, car detailing, paint correction, ceramic coating, interior detailing, exterior detailing, car care, auto appearance, auto restoration"
+      />
       
       {/* Hero Section */}
       <section className={styles.heroSection}>
@@ -29,21 +36,21 @@ const Home = () => {
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
             <h1 className={styles.heroTitle}>
-              Перфектна чистота и защита
-              <span className={styles.heroSubtitle}>защото Вашата кола е специална!</span>
+              {t('HeroTitle')}
+              <span className={styles.heroSubtitle}>{t('HeroSubtitle')}</span>
             </h1>
             <p className={styles.heroDescription}>
-              Вашето място - Вашият автомобил!
+              {t('HeroDescription')}
             </p>
             <div className={styles.heroButtons}>
               <Link href="/contact">
                 <button className={`${buttonStyles.button} ${styles.primaryButton}`}>
-                  Запазете Час
+                  {t('BookAppointment')}
                 </button>
               </Link>
               <Link href="/services">
                 <button className={styles.secondaryButton}>
-                  Нашите Услуги
+                  {t('Services')}
                 </button>
               </Link>
             </div>
@@ -56,9 +63,9 @@ const Home = () => {
         <div className={styles.container}>
           <div className={styles.aboutContent}>
             <div className={styles.aboutText}>
-              <h2 className={styles.sectionTitle}>Защо избираме съвършенството</h2>
+              <h2 className={styles.sectionTitle}>{t('AboutTitle')}</h2>
               <p className={styles.aboutDescription}>
-                Независимо дали търсите интериорен или екстериорен детайлинг, ние сме посветени на предоставянето на услуги от най-висок клас, съобразени с нуждите на вашия автомобил. С внимание към всеки детайл, ние гарантираме безупречни резултати, които възвръщат блясъка и придават стойност на вашето превозно средство.
+                {t('AboutDescription')}
               </p>
             </div>
           </div>
@@ -71,20 +78,20 @@ const Home = () => {
           <div className={styles.servicesGrid}>
             <div className={styles.serviceCard}>
               <div className={styles.serviceIcon}>🚗</div>
-              <h3>Екстериорен детайлинг</h3>
-              <p>Защита и блясък без компромиси! Премахваме драскотини, следи от окисляване и други дефекти, за да възвърнем перфектния външен вид на вашия автомобил.</p>
+              <h3>{t('ExteriorDetailing')}</h3>
+              <p>{t('ExteriorDescription')}</p>
             </div>
             
             <div className={styles.serviceCard}>
               <div className={styles.serviceIcon}>🛋️</div>
-              <h3>Интериорен детайлинг</h3>
-              <p>Чистота, защита и комфорт в перфектна хармония! Превърнете интериора на вашия автомобил в оазис на свежест и стил.</p>
+              <h3>{t('InteriorDetailing')}</h3>
+              <p>{t('InteriorDescription')}</p>
             </div>
             
             <div className={styles.serviceCard}>
               <div className={styles.serviceIcon}>✨</div>
-              <h3>Керамични покрития</h3>
-              <p>Дълготрайна защита с керамични покрития за кожен салон и пластмаси – защита от износване, замърсявания и UV лъчи.</p>
+              <h3>{t('CeramicCoatings')}</h3>
+              <p>{t('CeramicDescription')}</p>
             </div>
           </div>
         </div>
@@ -95,12 +102,12 @@ const Home = () => {
         <div className={styles.container}>
           <div className={styles.featuresContent}>
             <div className={styles.featuresList}>
-              <h3>Нашите предимства</h3>
+              <h3>{t('OurAdvantages')}</h3>
               <ul>
-                <li>Прецизно почистване и кондициониране на кожени и текстилни материали</li>
-                <li>Импрегниране и защита на текстилни салони</li>
-                <li>Дезинфекция с озон – премахване на бактерии и алергени</li>
-                <li>Модерно оборудване и професионални продукти</li>
+                <li>{t('Advantage1')}</li>
+                <li>{t('Advantage2')}</li>
+                <li>{t('Advantage3')}</li>
+                <li>{t('Advantage4')}</li>
               </ul>
             </div>
             <div className={styles.featuresImage}>
@@ -113,17 +120,16 @@ const Home = () => {
       {/* Why Choose Us Section */}
       <section className={styles.whyChooseSection}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Защо нас?</h2>
+          <h2 className={styles.sectionTitle}>{t('WhyChooseUs')}</h2>
           <div className={styles.whyChooseGrid}>
             <div className={styles.whyChooseCard}>
               <div className={styles.cardImage}>
                 <img src="/Images/index/AMG-Interior.jpg" alt="Quality Service" />
               </div>
               <div className={styles.cardContent}>
-                <h3>Висококачествено обслужване</h3>
+                <h3>{t('QualityService')}</h3>
                 <p>
-                  Предлагаме първокласни детайлинг услуги, съобразени с нуждите на вашия автомобил.
-                  Нашият екип гарантира внимание към всеки детайл за постигане на изключителни резултати.
+                  {t('QualityDescription')}
                 </p>
               </div>
             </div>
@@ -133,10 +139,10 @@ const Home = () => {
                 <img src="/Images/index/MB-Garage.jpg" alt="Trusted Professionals" />
               </div>
               <div className={styles.cardContent}>
-                <h3>Потвърден професионализъм</h3>
-                <h4>Доверието говори вместо нас</h4>
+                <h3>{t('TrustedProfessionals')}</h3>
+                <h4>{t('TrustSubtitle')}</h4>
                 <p>
-                  С години усъвършенстване и внимание към детайла. Доверете се на екип, който комбинира опит, прецизност и страст към съвършенството. Вашият автомобил е в сигурни ръце!
+                  {t('TrustDescription')}
                 </p>
               </div>
             </div>
@@ -148,11 +154,11 @@ const Home = () => {
       <section className={styles.ctaSection}>
         <div className={styles.container}>
           <div className={styles.ctaContent}>
-            <h2>Готови сте да превърнем вашия автомобил?</h2>
-            <p>Свържете се с нас днес за безплатна консултация</p>
+            <h2>{t('CTATitle')}</h2>
+            <p>{t('CTADescription')}</p>
             <Link href="/contact">
               <button className={`${buttonStyles.button} ${styles.ctaButton}`}>
-                Свържете се сега
+                {t('ContactUsNow')}
               </button>
             </Link>
           </div>
@@ -161,5 +167,13 @@ const Home = () => {
     </>
   );
 };
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  }
+}
 
 export default Home;

@@ -1,29 +1,62 @@
-/* LanguageSwitch.module.css */
-.switch {
+.languageSwitch {
   display: flex;
   align-items: center;
-  gap: 10px;
-  justify-content: center;
-  padding: 8px 16px;
-  background-color: #f5c501;
+  gap: 8px;
+  margin-left: 20px;
+}
+
+.langButton {
+  background: transparent;
   border: none;
-  border-radius: 60px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
   cursor: pointer;
-  font-family: 'Helvetica', Arial, sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  color: #fff;
-  transition: background-color 0.2s;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.switch:hover {
-  background-color: #e0b501;
+.langButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffd700;
 }
 
-.icon {
-  width: 15px;
-  /* Increase to 1rem for better visibility */
-  margin-right: 8px;
-  /* Adjust spacing if necessary */
-  color: white;
+.langButton.active {
+  background: #ffd700;
+  color: #000000;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+}
+
+.separator {
+  color: #666666;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .languageSwitch {
+    margin-left: 15px;
+    gap: 6px;
+  }
+  
+  .langButton {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .languageSwitch {
+    margin-left: 10px;
+    gap: 4px;
+  }
+  
+  .langButton {
+    font-size: 0.75rem;
+    padding: 5px 8px;
+  }
 }

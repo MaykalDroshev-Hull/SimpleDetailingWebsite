@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useTranslation } from 'next-i18next'
 import { FaFacebook, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCalendarAlt, FaClock } from 'react-icons/fa'
 import styles from '../../styles/Component Styles/Footer.module.css'
 
@@ -7,6 +8,7 @@ import styles from '../../styles/Component Styles/Footer.module.css'
  * @returns {JSX.Element} The JSX code for the Footer component.
  */
 const Footer = () => {
+  const { t } = useTranslation('common')
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
@@ -22,14 +24,14 @@ const Footer = () => {
                   <img className={styles.logo} src='/Images/Logo.png' alt='Aseam Auto Detailing' />
                 </Link>
                 <p className={styles.companyDescription}>
-                  Перфектна чистота и защита за вашия автомобил. Професионални детайлинг услуги в Ловеч.
+                  {t('FooterDescription')}
                 </p>
               </div>
             </div>
 
             {/* Contact Info Section */}
             <div className={styles.footerSection}>
-              <h3 className={styles.sectionTitle}>Контакти</h3>
+              <h3 className={styles.sectionTitle}>{t('FooterContacts')}</h3>
               <div className={styles.contactInfo}>
                 <div className={styles.contactItem}>
                   <FaMapMarkerAlt className={styles.contactIcon} />
@@ -39,7 +41,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className={styles.contactLink}
                   >
-                    Ловеч 5500, бул. "Освобождение" №3
+                    {t('FooterAddress')}
                   </a>
                 </div>
                 <div className={styles.contactItem}>
@@ -59,27 +61,27 @@ const Footer = () => {
 
             {/* Business Hours Section */}
             <div className={styles.footerSection}>
-              <h3 className={styles.sectionTitle}>Работно Време</h3>
+              <h3 className={styles.sectionTitle}>{t('FooterWorkingHours')}</h3>
               <div className={styles.businessHours}>
                 <div className={styles.hoursItem}>
                   <FaCalendarAlt className={styles.hoursIcon} />
-                  <span>Понеделник - Петък</span>
+                  <span>{t('WorkingDays')}</span>
                 </div>
                 <div className={styles.hoursItem}>
                   <FaClock className={styles.hoursIcon} />
-                  <span>9:30 до 17:30</span>
+                  <span>{t('WorkingHours')}</span>
                 </div>
               </div>
             </div>
 
             {/* Quick Links Section */}
             <div className={styles.footerSection}>
-              <h3 className={styles.sectionTitle}>Бързи Връзки</h3>
+              <h3 className={styles.sectionTitle}>{t('FooterQuickLinks')}</h3>
               <nav className={styles.footerNav}>
-                <Link href="/" className={styles.footerLink}>Начало</Link>
-                <Link href="/about" className={styles.footerLink}>За Мен</Link>
-                <Link href="/services" className={styles.footerLink}>Услуги</Link>
-                <Link href="/contact" className={styles.footerLink}>Контакти</Link>
+                <Link href="/" className={styles.footerLink}>{t('Home')}</Link>
+                <Link href="/about" className={styles.footerLink}>{t('About')}</Link>
+                <Link href="/services" className={styles.footerLink}>{t('Services')}</Link>
+                <Link href="/contact" className={styles.footerLink}>{t('Contacts')}</Link>
               </nav>
             </div>
 
@@ -87,7 +89,7 @@ const Footer = () => {
 
           {/* Social Media Section */}
           <div className={styles.socialSection}>
-            <h3 className={styles.socialTitle}>Последвайте ни</h3>
+            <h3 className={styles.socialTitle}>{t('FooterFollowUs')}</h3>
             <div className={styles.socialLinks}>
               <a 
                 href='https://www.facebook.com/profile.php?id=100063618235937'
@@ -118,10 +120,10 @@ const Footer = () => {
         <div className={styles.container}>
           <div className={styles.bottomContent}>
             <p className={styles.copyright}>
-              © 2024 Aseam Auto Detailing. Всички права запазени.
+              {t('FooterCopyright')}
             </p>
             <p className={styles.credits}>
-              Изработка от <a href="#" className={styles.creditLink}>Майкъл Дрошев</a>
+              {t('FooterCreatedBy')} <a href="#" className={styles.creditLink}>{t('Creator')}</a>
             </p>
           </div>
         </div>

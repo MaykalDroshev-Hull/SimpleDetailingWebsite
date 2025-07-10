@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { useTranslation } from 'next-i18next';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import LanguageSwitch from "../LanguageSwitch";
 import styles from "../../styles/Component Styles/NavBar.module.css";
 
 /**
@@ -9,8 +11,11 @@ import styles from "../../styles/Component Styles/NavBar.module.css";
  * Includes responsive design with smooth animations and improved UX.
  */
 const NavBar = () => {
+  const { t } = useTranslation('common');
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const mobileMenuRef = useRef(null);
+  const hamburgerRef = useRef(null);
 
   // Handle scroll effect for sticky navbar
   useEffect(() => {
@@ -22,10 +27,40 @@ const NavBar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Handle click outside to close mobile menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuOpen && 
+          mobileMenuRef.current && 
+          !mobileMenuRef.current.contains(event.target) &&
+          hamburgerRef.current &&
+          !hamburgerRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+
+    // Add event listener for clicks outside
+    document.addEventListener('mousedown', handleClickOutside);
+    
+    // Add event listener for escape key
+    const handleEscapeKey = (event) => {
+      if (event.key === 'Escape' && menuOpen) {
+        setMenuOpen(false);
+      }
+    };
+    
+    document.addEventListener('keydown', handleEscapeKey);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscapeKey);
+    };
+  }, [menuOpen]);
+
   // Toggles the mobile menu visibility
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  // Close mobile menu when clicking outside
+  // Close mobile menu
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -58,15 +93,17 @@ const NavBar = () => {
 
           {/* Desktop Menu */}
           <div className={styles.desktopMenu}>
-            <Link href="/" className={styles.navLink}>Начало</Link>
-            <Link href="/about" className={styles.navLink}>За Мен</Link>
-            <Link href="/services" className={styles.navLink}>Услуги</Link>
-            <Link href="/contact" className={styles.navLink}>Контакти</Link>
+            <Link href="/" className={styles.navLink}>{t('Home')}</Link>
+            <Link href="/about" className={styles.navLink}>{t('About')}</Link>
+            <Link href="/services" className={styles.navLink}>{t('Services')}</Link>
+            <Link href="/contact" className={styles.navLink}>{t('Contacts')}</Link>
+            <LanguageSwitch />
           </div>
 
           {/* Mobile Menu Toggle */}
           <div className={styles.mobileMenu}>
             <button 
+              ref={hamburgerRef}
               className={styles.hamburgerButton} 
               onClick={toggleMenu}
               aria-label="Toggle menu"
@@ -81,19 +118,22 @@ const NavBar = () => {
 
         {/* Mobile Menu Overlay */}
         <div className={`${styles.mobileOverlay} ${menuOpen ? styles.showOverlay : ''}`} onClick={closeMenu}>
-          <div className={styles.mobileNavLinks} onClick={(e) => e.stopPropagation()}>
+          <div ref={mobileMenuRef} className={styles.mobileNavLinks} onClick={(e) => e.stopPropagation()}>
             <Link href="/" className={styles.mobileNavLink} onClick={closeMenu}>
-              Начало
+              {t('Home')}
             </Link>
             <Link href="/about" className={styles.mobileNavLink} onClick={closeMenu}>
-              За Мен
+              {t('About')}
             </Link>
             <Link href="/services" className={styles.mobileNavLink} onClick={closeMenu}>
-              Услуги
+              {t('Services')}
             </Link>
             <Link href="/contact" className={styles.mobileNavLink} onClick={closeMenu}>
-              Контакти
+              {t('Contacts')}
             </Link>
+            <div className={styles.mobileLanguageSwitch}>
+              <LanguageSwitch />
+            </div>
           </div>
         </div>
       </nav>
