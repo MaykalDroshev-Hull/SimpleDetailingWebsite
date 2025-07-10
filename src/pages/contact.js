@@ -130,7 +130,7 @@ const contact = () => {
               </a>
             </div>
             
-            <div className={styles.contactCard}>
+            <div className={styles.contactCard}> 
               <div className={styles.contactIcon}>
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
               </div>
