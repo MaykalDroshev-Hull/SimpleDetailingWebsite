@@ -1,241 +1,399 @@
+/* Modern NavBar Styles */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.98);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Top Contact Bar */
+.topBar {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
-  width: 100%;
   justify-content: space-between;
-  align-items: flex-end;
-  padding: 10px 20px;
-  flex-direction: column;
-}
-
-.desktopMenu {
-  margin: auto 0;
-}
-
-.contactSection {
-  display: inline-block;
   align-items: center;
-  gap: 20px;
-  margin-left: auto;
 }
 
-.contactName {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.contactDetails {
+.contactInfo {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  /* Aligns items to the right within the container */
-  color: yellow;
-  width: 100%;
-  /* Ensures the container takes the full width of its parent */
-  font-size: 1rem;
-  box-sizing: border-box;
-  /* Ensures padding is included in the width */
-}
-
-.contactDetails div {
-  /* display: flex;          Use flex for individual items */
+  gap: 30px;
   align-items: center;
-  /* Align icon and text vertically */
-  white-space: nowrap;
-  /* Prevent wrapping of text within the div */
-}
-
-.contactDetails a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  /* Removed flex-wrap here since it's not needed */
 }
 
 .contactItem {
   display: flex;
   align-items: center;
-  /* Ensures icon and text are aligned horizontally */
   gap: 8px;
-  /* Adjusts spacing between the icon and the text */
-}
-
-.contactDetails a:hover {
-  text-decoration: underline;
-}
-
-/* Icon size */
-.icon {
-  width: 20px;
-  /* Increase to 1rem for better visibility */
-  margin-right: 8px;
-  /* Adjust spacing if necessary */
-  color: white;
-}
-
-
-/* Navigation Bar Styling */
-.navBar {
-  display: flex;
-  /* Aligns items in a row */
-  align-items: flex-end;
-  /* Aligns items to the bottom of the container */
-  flex-wrap: wrap;
-  /* Allows wrapping if needed */
-  gap: 20px;
-  /* Space between navigation items */
-  width: 100%;
-  /* Takes full width of the parent */
-  justify-content: space-between;
-  /* Distributes items evenly across the width */
-}
-
-
-.navBar a,
-.websiteTitle {
-  font-weight: 800;
-  color: white;
-  text-decoration: none;
-  position: relative;
-}
-
-.navBar a {
-  margin-right: 20px;
-}
-
-.navBar a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background-color: #b4b4b4;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
   transition: all 0.3s ease;
 }
 
-.navBar a:hover {
-  color: #b4b4b4;
+.contactItem:hover {
+  transform: translateY(-1px);
 }
 
-.navBar a:hover::after,
-.navBar a.active::after {
+.contactItem a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contactItem a:hover {
+  color: #ffd700;
+}
+
+.icon {
+  color: #ffd700;
+  font-size: 14px;
+  width: 16px;
+}
+
+/* Main Navigation Bar */
+.navBar {
+  padding: 15px 0;
+  position: relative;
+}
+
+.navBar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  flex-shrink: 0;
+}
+
+.logoImage {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logoImage {
+  transform: scale(1.05);
+}
+
+/* Desktop Menu */
+.desktopMenu {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.navLink {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ffd700, #ffed4e);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover {
+  color: #ffd700;
+}
+
+.navLink:hover::after {
   width: 100%;
-  opacity: 1;
 }
 
-.sticky {
-  position: fixed;
-  z-index: 9999;
-}
-
-.websiteTitle {
-  background-color: black;
-  margin-left: auto;
-  padding: 15px 15px 0 0;
-}
-
+/* Mobile Menu */
 .mobileMenu {
   display: none;
+  position: relative;
+  z-index: 1001;
 }
 
-.logo {
-  width: 20%;
-  max-width: 300px;
-  height: auto;
-  margin-right: auto;
+.hamburgerButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
 }
 
+.hamburgerButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 
+.hamburgerIcon {
+  color: #ffffff;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+  width: 20px;
+  height: 20px;
+}
 
-/* Contact Section (Mobile Center Alignment) */
-@media (max-width: 767px) {
-  .contactSection {
-    display: flex;
-    justify-content: center;
-    /* Center the contact section horizontally */
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-  }
+/* Mobile Overlay */
+.mobileOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  padding-top: 120px; /* Account for navbar height */
+}
 
-  .contactDetails {
-    align-items: center;
-    /* Center icons and text vertically */
-    text-align: center;
-    /* Center align text */
-  }
+.mobileOverlay.showOverlay {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 
-  .navBar {
-    flex-direction: row;
-    align-items: center;
-  }
+.mobileNavLinks {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 250px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
 
-  .websiteTitle {
-    display: none;
-    /* Hide title on mobile */
-  }
+.mobileNavLink {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
 
-  .logo {
-    width: 175px;
-    margin-right: auto;
-  }
+.mobileNavLink::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
+  transition: left 0.5s ease;
+}
 
-  .mobileMenu {
-    display: inline;
-    width: 10%;
-    height: 10%;
-  }
+.mobileNavLink:hover {
+  color: #ffd700;
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
 
-  .hamburgerMenu {
-    cursor: pointer;
-    color: white;
-    width: 10%;
-    display: inline;
-  }
+.mobileNavLink:hover::before {
+  left: 100%;
+}
 
-  .mobileNavLinks {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 150px;
-    /* Adjust to position below the navbar */
-    left: 0;
-    right: 0;
-    background-color: #2e2e2e;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .topBar {
     padding: 10px 0;
-    z-index: 1000;
-    opacity: 0;
-    width: 70%;
-    align-items: center;
-    margin: 0 auto;
-    border-radius: 10px;
-    /* Adds rounded corners */
-    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); Optional: Adds a subtle shadow */
-    transform: translateY(0px);
-    transition: opacity 0.3s ease;
-    /* Smooth transition */
   }
-
-  .mobileNavLinks.showMobileMenu {
-    display: flex;
-    /* Show links when menu is open */
-    opacity: 1;
-    transform: translateY(0);
+  
+  .contactInfo {
+    gap: 20px;
   }
-
-  .mobileNavLinks a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    margin: 10px 0;
-    text-align: center;
+  
+  .contactItem a {
+    font-size: 14px;
   }
-
+  
+  .icon {
+    font-size: 14px;
+    width: 16px;
+  }
+  
+  .navBar {
+    padding: 15px 0;
+  }
+  
+  .logoImage {
+    height: 50px;
+  }
+  
   .desktopMenu {
-    display: none;
+    display: none !important;
+  }
+  
+  .mobileMenu {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    padding: 0 25px;
+  }
+  
+  .hamburgerButton {
+    min-width: 44px;
+    min-height: 44px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .hamburgerIcon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+  }
+  
+  .mobileOverlay {
+    padding-top: 120px; /* Account for larger navbar height on mobile */
+  }
+  
+  .mobileNavLinks {
+    padding: 30px;
+    min-width: 200px;
+    top: 40%;
+  }
+  
+  .mobileNavLink {
+    font-size: 16px;
+    padding: 12px 16px;
   }
 }
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .contactInfo {
+    gap: 15px;
+  }
+  
+  .contactItem a {
+    font-size: 13px;
+  }
+  
+  .logoImage {
+    height: 45px;
+  }
+  
+  .topBar {
+    padding: 8px 0;
+  }
+  
+  .navBar {
+    padding: 12px 0;
+  }
+  
+  .hamburgerButton {
+    min-width: 40px;
+    min-height: 40px;
+  }
+  
+  .hamburgerIcon {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .mobileOverlay {
+    padding-top: 110px; /* Account for larger navbar height */
+  }
+  
+  .mobileNavLinks {
+    padding: 25px;
+    min-width: 180px;
+    top: 35%;
+  }
+  
+  .mobileNavLink {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}
+
+/* Animation for page load */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.header {
+  animation: slideDown 0.5s ease-out;
+}
+
+/* Hover effects for better interactivity */
+.navLink:active {
+  transform: scale(0.98);
+}
+
+.hamburgerButton:active {
+  transform: scale(0.95);
+}
+
+/* Focus states for accessibility */
+.navLink:focus,
+.hamburgerButton:focus,
+.contactItem a:focus {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling for better UX - moved to global CSS */

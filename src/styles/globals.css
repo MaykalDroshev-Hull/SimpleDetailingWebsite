@@ -4,6 +4,7 @@ body {
   color: white;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -41,13 +42,14 @@ body {
 
 .slick-slide .image {
   object-fit: cover;
-  border-radius: 2px;
-  min-width: 150px !important;
-  width: 80%;
+  border-radius: 8px;
+  width: 100% !important;
+  height: auto;
 }
 
 .slick-slide.slick-active:not(.slick-current) .image,
 .slick-slide.slick-active.slick-current .image,
 .slick-slide:not(.slick-active) .image {
   width: 100% !important;
+  height: auto;
 }

@@ -1,16 +1,21 @@
 .container {
-  width: 90%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   align-items: center;
+  overflow: hidden;
 }
 
 .image {
-  vertical-align: middle;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image img {
-  max-width: 80%;
+  width: 100%;
   height: auto;
-  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 8px;
 }

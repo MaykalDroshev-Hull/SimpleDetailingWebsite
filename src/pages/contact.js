@@ -1,7 +1,8 @@
 import { useState } from "react"
 import Meta from "@/components/Page Components/Meta"
-import PageTitle from "@/components/Page Components/PageTitle"
-import { Text, Button, Flex, FormControl, FormErrorMessage, FormLabel, Input, Select, Stack, Textarea, useToast, background } from "@chakra-ui/react"
+import { Text, Button, Flex, FormControl, FormErrorMessage, FormLabel, Input, Select, Stack, Textarea, useToast } from "@chakra-ui/react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faPhone, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"
 import { sendLongContactForm } from "@/lib/api"
 import styles from '../styles/Page Styles/Contact.module.css'
 
@@ -84,17 +85,73 @@ const contact = () => {
   return (
     <>
       <Meta
-        title="Контакти"
-        description="Get in touch with Asea-M Auto Detailing and take the first step towards a cleaner, more polished car. Our experienced team is here to answer your questions and help you schedule an appointment for interior and exterior detailing, paint correction, ceramic coating, and more. Contact us today and experience the highest level of customer service and quality workmanship."
-        keywords="auto detailing, car detailing, detailing services, paint correction, ceramic coating, interior detailing, exterior detailing, car care, auto appearance, auto restoration, contact us, schedule an appointment, get in touch, phone number, email address, location"
+        title="Контакти - Aseam Auto Detailing"
+        description="Свържете се с нас за професионални автомобилни детайлинг услуги. Нашият екип е готов да отговори на вашите въпроси и да ви помогне да насрочите среща за интериорни и екстериорни детайли, корекция на боя, керамично покритие и други услуги."
+        keywords="auto detailing contact, car detailing contact, detailing services, paint correction, ceramic coating, interior detailing, exterior detailing, car care, auto appearance, auto restoration, contact us, schedule an appointment, get in touch, phone number, email address, location"
       />
-      <PageTitle title="Контакти" />
-      <div className={styles.content}>
-        <div className={styles.contactDetails}>
-          <p>
-            Моля, изпратете заявка за среща и ние ще се свържем с вас възможно най-скоро!          </p>
+      
+      {/* Hero Section */}
+      <section className={styles.heroSection}>
+        <div className={styles.heroContent}>
+          <div className={styles.container}>
+            <div className={styles.heroText}>
+              <h1 className={styles.heroTitle}>Свържете се с нас</h1>
+              <p className={styles.heroSubtitle}>
+                Готови сме да превърнем вашия автомобил в перфектно състояние
+              </p>
+            </div>
+          </div>
         </div>
-        <div className={styles.formContainer}>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className={styles.contactInfoSection}>
+        <div className={styles.container}>
+          <div className={styles.contactGrid}>
+            <div className={styles.contactCard}>
+              <div className={styles.contactIcon}>
+                <FontAwesomeIcon icon={faPhone} />
+              </div>
+              <h3>Обадете ни се</h3>
+              <p>+359 876 423 782</p>
+              <a href="tel:+359876423782" className={styles.contactLink}>
+                Обадете се сега
+              </a>
+            </div>
+            
+            <div className={styles.contactCard}>
+              <div className={styles.contactIcon}>
+                <FontAwesomeIcon icon={faEnvelope} />
+              </div>
+              <h3>Изпратете имейл</h3>
+              <p>detailingaseam@gmail.com</p>
+              <a href="mailto:detailingaseam@gmail.com" className={styles.contactLink}>
+                Изпратете имейл
+              </a>
+            </div>
+            
+            <div className={styles.contactCard}>
+              <div className={styles.contactIcon}>
+                <FontAwesomeIcon icon={faMapMarkerAlt} />
+              </div>
+              <h3>Намерете ни</h3>
+              <p>Ловеч, бул. "Освобождение" №3</p>
+              <a href="https://maps.app.goo.gl/YsUPpgVaKgff7N816" target="_blank" rel="noopener noreferrer" className={styles.contactLink}>
+                Отворете в Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className={styles.formSection}>
+        <div className={styles.container}>
+          <div className={styles.formHeader}>
+            <h2>Запазете час</h2>
+            <p>Моля, изпратете заявка за среща и ние ще се свържем с вас възможно най-скоро!</p>
+          </div>
+          <div className={styles.formContainer}>
           {error && (
             <Flex justifyContent='center'>
               <Text color='red.300' my={4} fontSize='xl'>
@@ -319,7 +376,8 @@ const contact = () => {
             >Запази</Button>
           </Flex>
         </div>
-      </div>
+        </div>
+      </section>
     </>
   )
 }

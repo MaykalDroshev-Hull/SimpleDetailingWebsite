@@ -1,7 +1,15 @@
+/* Modern Index Page Styles */
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 /* Hero Section */
 .heroSection {
   position: relative;
-  width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -9,188 +17,442 @@
   overflow: hidden;
 }
 
-.heroImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Tinted overlay */
-.heroSection::before {
-  content: '';
+.heroBackground {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  /* Black tint with 50% opacity */
-  z-index: 1;
-  /* Ensures the overlay is above the image but below the text */
 }
 
-.slogan {
-  position: absolute;
-  text-align: center;
-  color: white;
-  z-index: 2;
-  max-width: 80%;
-}
-
-.slogan h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-}
-
-.slogan p {
-  font-size: 1.5rem;
-  font-weight: 400;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Why Choose Us Section */
-.whyChooseUs {
-  display: flex;
-  align-items: stretch;
-  margin: 50px auto;
-  padding: 20px;
-  width: 90%;
-}
-
-.whyChooseUsHeader h1 {
-  color: white;
-  margin: 20px auto;
-  font-size: xxx-large;
-  font-weight: bolder;
-  display: flex;
-  justify-content: center;
+.heroImage {
   width: 100%;
-}
-
-.textBlock {
-  display: flex;
-  flex-direction: column;
-  /* Ensures content is stacked vertically within each section */
-  text-align: left;
-}
-
-.textBlock h3 {
-  font-size: 1.8rem;
-  color: white;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-.textBlock h6 {
-  margin-top: -10px;
-  margin-bottom: 5px;
-  font-size: 1.1rem;
-  color: white;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-.WhatWeDo li{
-  margin-left: 20px;
-  margin-top: 5px;
-}
-
-.textBlock p {
-  font-size: 1rem;
-  color: white;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  margin-right: 10px;
-  margin-left: 10px;
-
-}
-
-.whyChooseImage {
-  width: 90%;
-  height: auto;
-  border-radius: 10px;
+  height: 100%;
   object-fit: cover;
-  margin-bottom: 30px;
+  animation: heroZoom 20s ease-in-out infinite alternate;
 }
 
-.WhatWeDo {
-  background-color: #2e2e2e;
-  /* Greyish background */
+@keyframes heroZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 20%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
   color: #ffffff;
-  /* White text for contrast */
-  padding: 10%;
-  /* Add padding around the content */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* Optional: Add a subtle shadow for depth */
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 1s ease-out;
 }
 
-.WhatWeDo h3 {
-  font-size: 1.8rem;
-  /* Adjust font size for the heading */
-  margin-bottom: 15px;
-  /* Space below the heading */
-  color: #f5f5f5;
-  /* Slightly lighter shade for headings */
+.heroSubtitle {
+  display: block;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 400;
+  color: #ffd700;
+  margin-top: 0.5rem;
 }
 
-.WhatWeDo p {
-  font-size: 1rem;
-  /* Font size for the paragraphs */
-  line-height: 1.6;
-  /* Improve readability */
-  margin-bottom: 15px;
-  /* Space between paragraphs */
+.heroDescription {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: #ffffff;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #ffd700, #ffed4e);
+  color: #000000 !important;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 13px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background: #ffffff;
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+/* About Section */
+.aboutSection {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.aboutContent {
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd700, #ffed4e);
+  border-radius: 2px;
+}
+
+.aboutDescription {
+  font-size: 1.2rem;
+  line-height: 1.8;
   color: #d9d9d9;
-  /* Softer white for paragraph text */
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Responsive Styling */
-@media (max-width: 756px) {
-  .whyChooseUs {
-    display: grid;
+/* Services Section */
+.servicesSection {
+  padding: 80px 0;
+  background: #000000;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.serviceCard {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 2.5rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: #ffd700;
+}
+
+.serviceCard:hover::before {
+  left: 100%;
+}
+
+.serviceIcon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.serviceCard h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.serviceCard p {
+  color: #d9d9d9;
+  line-height: 1.6;
+}
+
+/* Features Section */
+.featuresSection {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+}
+
+.featuresContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.featuresList h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.featuresList ul {
+  list-style: none;
+  padding: 0;
+}
+
+.featuresList li {
+  color: #d9d9d9;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.featuresList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #ffd700;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.featuresImage img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Why Choose Section */
+.whyChooseSection {
+  padding: 80px 0;
+  background: #000000;
+}
+
+.whyChooseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.whyChooseCard {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.whyChooseCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: #ffd700;
+}
+
+.cardImage {
+  height: 250px;
+  overflow: hidden;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.whyChooseCard:hover .cardImage img {
+  transform: scale(1.1);
+}
+
+.cardContent {
+  padding: 2rem;
+}
+
+.cardContent h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.cardContent h4 {
+  font-size: 1rem;
+  color: #ffd700;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.cardContent p {
+  color: #d9d9d9;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  text-align: center;
+}
+
+.ctaContent h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.ctaContent p {
+  font-size: 1.2rem;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroButtons {
+    flex-direction: column;
     align-items: center;
   }
-
-  .section {
-    margin-bottom: 30px;
-    /* Adds spacing between sections on mobile */
+  
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 300px;
   }
-}
-
-
-/* Full-Width Image Placeholder */
-.fullWidthImage {
-  width: 100%;
-  margin-top: 50px;
-}
-
-.fullWidthImage img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-
-
-/* Responsive Styling */
-@media (max-width: 756px) {
-  .whyChooseUs {
+  
+  .featuresContent {
     grid-template-columns: 1fr;
-    /* Stack content vertically */
+    gap: 2rem;
   }
+  
+  .whyChooseGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .featuresImage img {
+    height: 300px;
+  }
+}
 
-  .whyChooseImage {
-    margin-top: 20px;
-    /* Add spacing between stacked elements */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
   }
+  
+  .serviceCard,
+  .whyChooseCard {
+    padding: 1.5rem;
+  }
+  
+  .featuresImage img {
+    height: 250px;
+  }
+  
+  .heroContent {
+    padding: 0 15px;
+  }
+}
 
-  .slogan h1 {
-    font-size: 2rem;
-  }
+/* Smooth scrolling for anchor links - moved to global CSS */
 
-  .slogan p {
-    font-size: 1.2rem;
-  }
+/* Focus states for accessibility */
+.primaryButton:focus,
+.secondaryButton:focus,
+.ctaButton:focus {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
 }

@@ -7,8 +7,17 @@
 
 .main {
   margin-bottom: 125px;
+  padding-top: 120px; /* Account for fixed navbar height */
+  flex: 1;
 }
 
 .footerWrapper {
   margin-top: auto;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .main {
+    padding-top: 100px; /* Slightly less padding on mobile */
+  }
 }
