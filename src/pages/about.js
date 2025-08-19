@@ -44,7 +44,7 @@ const about = () => {
             <div className={styles.imageSection}>
               <div className={styles.imageWrapper}>
                 <img 
-                  src='/Images/About Slider Images/Slider_Image_1.jpg' 
+                  src='/Images/About Slider Images/ASEAM_AP-73.jpg' 
                   alt='Aseam Auto Detailing - Professional Car Detailing' 
                   className={styles.aboutImage}
                 />
@@ -98,7 +98,7 @@ const about = () => {
           <div className={styles.additionalImageSection}>
             <div className={styles.imageWrapper}>
               <img 
-                src='/Images/About Slider Images/Slider_Image_2.jpg' 
+                src='/Images/About Slider Images/ASEAM_AP-71.jpg' 
                 alt='Professional Car Detailing Process' 
                 className={styles.aboutImage}
               />
@@ -134,7 +134,7 @@ const about = () => {
           <div className={styles.additionalImageSection}>
             <div className={styles.imageWrapper}>
               <img 
-                src='/Images/About Slider Images/Slider_Image_3.jpg' 
+                src='/Images/About Slider Images/ASEAM_AP-70.jpg' 
                 alt='Car Detailing Results and Quality' 
                 className={styles.aboutImage}
               />
