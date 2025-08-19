@@ -309,7 +309,7 @@
 }
 
 .cardImage {
-  height: 250px;
+  height: 320px;
   overflow: hidden;
 }
 
@@ -318,10 +318,6 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
-}
-
-.whyChooseCard:hover .cardImage img {
-  transform: scale(1.1);
 }
 
 .cardContent {
@@ -399,6 +395,9 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .cardImage {
+  height: 250px;
+}
   .heroButtons {
     flex-direction: column;
     align-items: center;

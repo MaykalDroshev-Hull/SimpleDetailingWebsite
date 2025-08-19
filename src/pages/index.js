@@ -5,6 +5,7 @@ import Meta from '@/components/Page Components/Meta'
 import styles from '../styles/Page Styles/Index.module.css'
 import buttonStyles from '../styles/Component Styles/FlowButton.module.css'
 import Link from "next/link";
+import ServiceCarousel from "@/components/Page Components/ServicesCarousel"
 
 /**
  * Modern Home component that renders the homepage of the website.
@@ -16,12 +17,12 @@ const Home = () => {
 
   return (
     <>
-      <Meta 
+      <Meta
         title={`${t('BusinessName')} - ${t('Home')}`}
         description={t('AboutDescription')}
         keywords="auto detailing, car detailing, paint correction, ceramic coating, interior detailing, exterior detailing, car care, auto appearance, auto restoration"
       />
-      
+
       {/* Hero Section */}
       <section className={styles.heroSection}>
         <div className={styles.heroBackground}>
@@ -32,7 +33,7 @@ const Home = () => {
           />
           <div className={styles.heroOverlay}></div>
         </div>
-        
+
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
             <h1 className={styles.heroTitle}>
@@ -77,19 +78,19 @@ const Home = () => {
         <div className={styles.container}>
           <div className={styles.servicesGrid}>
             <div className={styles.serviceCard}>
-              <div className={styles.serviceIcon}>🚗</div>
+              <div className={styles.serviceIcon}></div>
               <h3>{t('ExteriorDetailing')}</h3>
               <p>{t('ExteriorDescription')}</p>
             </div>
-            
+
             <div className={styles.serviceCard}>
-              <div className={styles.serviceIcon}>🛋️</div>
+              <div className={styles.serviceIcon}></div>
               <h3>{t('InteriorDetailing')}</h3>
               <p>{t('InteriorDescription')}</p>
             </div>
-            
+
             <div className={styles.serviceCard}>
-              <div className={styles.serviceIcon}>✨</div>
+              <div className={styles.serviceIcon}></div>
               <h3>{t('CeramicCoatings')}</h3>
               <p>{t('CeramicDescription')}</p>
             </div>
@@ -108,10 +109,11 @@ const Home = () => {
                 <li>{t('Advantage2')}</li>
                 <li>{t('Advantage3')}</li>
                 <li>{t('Advantage4')}</li>
+                <li>{t('Advantage5')}</li>
               </ul>
             </div>
             <div className={styles.featuresImage}>
-              <img src="/Images/index/AMG-Interior.jpg" alt="Interior Detailing" />
+              <img src="/Images/index/ASEAM_AP-18.jpg" alt="Interior Detailing" />
             </div>
           </div>
         </div>
@@ -124,26 +126,41 @@ const Home = () => {
           <div className={styles.whyChooseGrid}>
             <div className={styles.whyChooseCard}>
               <div className={styles.cardImage}>
-                <img src="/Images/index/AMG-Interior.jpg" alt="Quality Service" />
+                <ServiceCarousel images={[{
+                  "src": "/Images/index/ASEAM_AP-16.jpg",
+                  "alt": "Why Choose Us Image 1"
+                },
+                {
+                  "src": "/Images/index/ASEAM_AP-17.jpg",
+                  "alt": "Why Choose Us Image 2"
+                },
+                {
+                  "src": "/Images/index/ASEAM_AP-67.jpg",
+                  "alt": "Why Choose Us Image 3"
+                }]} />
               </div>
               <div className={styles.cardContent}>
                 <h3>{t('QualityService')}</h3>
-                <p>
-                  {t('QualityDescription')}
-                </p>
               </div>
             </div>
-            
+
             <div className={styles.whyChooseCard}>
               <div className={styles.cardImage}>
-                <img src="/Images/index/MB-Garage.jpg" alt="Trusted Professionals" />
+                <ServiceCarousel images={[{
+                  "src": "/Images/index/ASEAM_AP-126.jpg",
+                  "alt": "Why Choose Us Image 1"
+                },
+                {
+                  "src": "/Images/index/ASEAM_AP-130.jpg",
+                  "alt": "Why Choose Us Image 2"
+                },
+                {
+                  "src": "/Images/index/ASEAM_AP-139.jpg",
+                  "alt": "Why Choose Us Image 3"
+                }]} />
               </div>
               <div className={styles.cardContent}>
                 <h3>{t('TrustedProfessionals')}</h3>
-                <h4>{t('TrustSubtitle')}</h4>
-                <p>
-                  {t('TrustDescription')}
-                </p>
               </div>
             </div>
           </div>
