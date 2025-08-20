@@ -96,11 +96,16 @@
   {
     "id": 7,
     "title": "PPF Films & Color Change",
-    "description": "Protection and transformation in one – protect your car from scratches, stone chips, and UV rays, or give it a completely new look with high-quality wrap films.<br>- Invisible protection against scratches and impacts<br>- Resistance to UV rays and chemicals<br>- Perfect appearance and individual style<br>- Option for full or partial color change<br><span style=\"color:#ffd700;\">* we work with the best in the business and there is no room for compromise</span>",
+    "description": "Protection and transformation in one – protect your car from scratches, stone chips, and UV rays, or give it a completely new look with high-quality wrap films.<br>- Invisible protection against scratches and impacts<br>- Resistance to UV rays and chemicals<br>- Perfect appearance and individual style<br>- Option for full or partial color change<br><span style=\"color:#ffd700;\">* we work with the best in the business and there is no room for compromise</span> <br><br>Price: upon agreement",
+    "isNew": true,
     "images": [
       {
-        "src": "/Images/Service7/image1.jpg",
+        "src": "/Images/Service16/PPF1.jpg",
         "alt": "Service 7 Image 1"
+      },
+      {
+        "src": "/Images/Service16/PPF2.jpg",
+        "alt": "Service 7 Image 2"
       }
     ]
   },

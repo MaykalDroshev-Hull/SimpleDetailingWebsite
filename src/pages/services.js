@@ -43,6 +43,11 @@ const Services = () => {
           <div className={styles.servicesGrid}>
             {servicesData.map((service, index) => (
               <div key={service.id} className={styles.serviceCard}>
+                {service.isNew && (
+                  <div className={styles.newSticker}>
+                    {locale === 'en' ? 'NEW' : 'НОВО'}
+                  </div>
+                )}
                 <div className={styles.cardImage}>
                   <ServiceCarousel images={service.images} />
                 </div>
