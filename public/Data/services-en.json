@@ -107,10 +107,18 @@
   {
     "id": 8,
     "title": "Washing",
-    "description": "Detailed exterior car washing<br>Price: 120 BGN (61 EUR)",
+    "description": "Detailed exterior car washing<br>Price: 120 BGN / 61 EUR",
     "images": [
       {
-        "src": "/Images/Service7/image1.jpg",
+        "src": "/Images/Service7/ASEAM_AP-88.jpg",
+        "alt": "Service 7 Image 1"
+      },
+      {
+        "src": "/Images/Service7/ASEAM_AP-89.jpg",
+        "alt": "Service 7 Image 1"
+      },
+      {
+        "src": "/Images/Service7/ASEAM_AP-92.jpg",
         "alt": "Service 7 Image 1"
       }
     ]
@@ -118,7 +126,7 @@
   {
     "id": 9,
     "title": "Headlight Correction",
-    "description": "- Compounding and polishing - Price: 80 BGN (41 EUR)<br><br>- Sanding (dry and wet): 600/800/1000/1200/1500/2000/3000/6000 + compounding and polishing<br>Price: 150 BGN (77 EUR)<br><br>Ceramic protection: 70 BGN (36 EUR)<br>PPF film protection: from 150 BGN (77 EUR)<br><br><b>Note</b>: The prices of protective coatings are separate!<br><b>Note</b>: Prices are for a set!",
+    "description": "- Compounding and polishing - Price: 80 BGN / 41 EUR<br><br>- Sanding (dry and wet): 600/800/1000/1200/1500/2000/3000/6000 + compounding and polishing<br>Price: 150 BGN / 77 EUR<br><br>Ceramic protection: 70 BGN / 36 EUR<br>PPF film protection: from 150 BGN / 77 EUR<br><br><b>Note</b>: The prices of protective coatings are separate!<br><b>Note</b>: Prices are for a set!",
     "images": [
       {
         "src": "/Images/Service8/image1.jpg",
@@ -133,22 +141,18 @@
   {
     "id": 10,
     "title": "Taillight Correction",
-    "description": "- Compounding and polishing - Price: 60 BGN (31 EUR)<br><br>- Protection with ceramic coating - Price: 25 BGN (13 EUR)<br><br>- PPF film protection - Price: from 100 BGN (51 EUR)<br><br><b>Note</b>: The prices of protective coatings are separate!<br><b>Note</b>: Prices are for a set!",
+    "description": "- Compounding and polishing - Price: 60 BGN / 31 EUR<br><br>- Protection with ceramic coating - Price: 30 BGN / 15 EUR<br><br>- PPF film protection - Price: from 100 BGN / 51 EUR<br><br><b>Note</b>: The prices of protective coatings are separate!<br><b>Note</b>: Prices are for a set!",
     "images": [
       {
-        "src": "/Images/Service9/image1.jpg",
+        "src": "/Images/Service9/ASEAM_AP-101.jpg",
         "alt": "Service 9 Image 1"
-      },
-      {
-        "src": "/Images/Service9/image2.jpg",
-        "alt": "Service 9 Image 2"
       }
     ]
   },
   {
     "id": 11,
     "title": "Detailed Interior Cleaning",
-    "description": "- Interior cleaning - Price: from 280 BGN (143 EUR)<br><br>- Ceramic coating for leather - Price: from 200 BGN (102 EUR)<br><br>- Textile impregnation - Price: 200 BGN (102 EUR)",
+    "description": "- Interior cleaning - Price: from 300 BGN / 153 EUR<br><br>- Ceramic coating for leather - Price: from 200 BGN / 102 EUR<br><br>- Textile impregnation - Price: 200 BGN / 102 EUR",
     "images": [
       {
         "src": "/Images/Service10/image1.jpg",
@@ -195,7 +199,7 @@
   {
     "id": 12,
     "title": "Glass Cleaning + Coating",
-    "description": "- Application of ceramic coating on the front glass - Price: 120 BGN (61 EUR)<br><br>- Application of ceramic coating on all vehicle glass - Price: 305 BGN (156 EUR)<br><br>Benefits:<br>• Better visibility in rainy and snowy conditions<br>• Enhanced visibility in fog<br>• Reduced glare from wet pavement in bad weather conditions<br>• Prevention of glass freezing in winter<br><br>Durability: 12 months.<br><br>- Application of G5 Water Repellent coating (protective hydrophobic layer). After treatment, the glass is easily cleaned from dirt, insects and dust.<br><br>Price for front glass: 70 BGN (36 EUR)<br><br>Price for all glass: 150 BGN (77 EUR)<br><br>Durability: 3-5 months.",
+    "description": "- Application of ceramic coating on the front glass - Price: 120 BGN / 61 EUR<br><br>- Application of ceramic coating on all vehicle glass - Price: 305 BGN / 156 EUR<br><br>Benefits:<br>• Better visibility in rainy and snowy conditions<br>• Enhanced visibility in fog<br>• Reduced glare from wet pavement in bad weather conditions<br>• Prevention of glass freezing in winter<br><br>Durability: 12 months.<br><br>- Application of G5 Water Repellent coating (protective hydrophobic layer). After treatment, the glass is easily cleaned from dirt, insects and dust.<br><br>Price for front glass: 70 BGN / 36 EUR<br><br>Price for all glass: 150 BGN / 77 EUR<br><br>Durability: 3-5 months.",
     "images": [
       {
         "src": "/Images/Service15/video1.gif",
@@ -206,7 +210,7 @@
   {
     "id": 13,
     "title": "Engine Bay Cleaning",
-    "description": "Price: from 70 BGN (36 EUR)",
+    "description": "Price: from 100 BGN / 51 EUR",
     "images": [
       {
         "src": "/Images/Service11/image1.jpg",
@@ -225,7 +229,7 @@
   {
     "id": 14,
     "title": "Wheel Cleaning",
-    "description": "- Detailed wheel washing - Price: 300 BGN (153 EUR)<br><br>- Protection with ceramic sealant - Price: 60 BGN (31 EUR)<br><br>Protection with GTECHNIQ C5 ceramic coating (specially developed coating for wheels) <br>- Price: 120 BGN (61 EUR)<br><br><b>Note</b>: The price is for 4 wheels.",
+    "description": "- Detailed wheel washing - Price: 300 BGN / 153 EUR<br><br>- Protection with ceramic sealant - Price: 60 BGN / 31 EUR<br><br>Protection with GTECHNIQ C5 ceramic coating (specially developed coating for wheels) <br>- Price: 120 BGN / 61 EUR<br><br><b>Note</b>: The price is for 4 wheels.",
     "images": [
       {
         "src": "/Images/Service12/image1.jpg",
@@ -256,7 +260,7 @@
   {
     "id": 15,
     "title": "Brake System Refresh",
-    "description": "Price: from 120 BGN (61 EUR)",
+    "description": "Price: from 150 BGN / 77 EUR",
     "images": [
       {
         "src": "/Images/Service13/image1.jpg",
@@ -278,14 +282,6 @@
     "description": "Price: upon agreement",
     "images": [
       {
-        "src": "/Images/Service14/image1.jpg",
-        "alt": "Service 14 Image 1"
-      },
-      {
-        "src": "/Images/Service14/image2.jpg",
-        "alt": "Service 14 Image 2"
-      },
-      {
         "src": "/Images/Service14/image3.jpg",
         "alt": "Service 14 Image 3"
       },
@@ -294,20 +290,16 @@
         "alt": "Service 14 Image 4"
       },
       {
-        "src": "/Images/Service14/image5.jpg",
+        "src": "/Images/Service14/ASEAM_AP-56.jpg",
         "alt": "Service 14 Image 5"
       },
       {
-        "src": "/Images/Service14/image6.jpg",
+        "src": "/Images/Service14/ASEAM_AP-61.jpg",
         "alt": "Service 14 Image 6"
       },
       {
-        "src": "/Images/Service14/image7.jpg",
+        "src": "/Images/Service14/ASEAM_AP-112.jpg",
         "alt": "Service 14 Image 7"
-      },
-      {
-        "src": "/Images/Service14/image8.jpg",
-        "alt": "Service 14 Image 8"
       }
     ]
   }
