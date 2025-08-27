@@ -81,6 +81,7 @@ const Footer = () => {
                 <Link href="/" className={styles.footerLink}>{t('Home')}</Link>
                 <Link href="/about" className={styles.footerLink}>{t('About')}</Link>
                 <Link href="/services" className={styles.footerLink}>{t('Services')}</Link>
+                <Link href="/reviews" className={styles.footerLink}>{t('Reviews')}</Link>
                 <Link href="/contact" className={styles.footerLink}>{t('Contacts')}</Link>
               </nav>
             </div>
