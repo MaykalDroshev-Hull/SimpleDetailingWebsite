@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
 import { FaFacebook, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaCalendarAlt, FaClock, FaTiktok} from 'react-icons/fa'
 import styles from '../../styles/Component Styles/Footer.module.css'
 
@@ -9,6 +10,8 @@ import styles from '../../styles/Component Styles/Footer.module.css'
  */
 const Footer = () => {
   const { t } = useTranslation('common')
+  const router = useRouter()
+  const currentLocale = router.locale || 'bg'
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
@@ -133,7 +136,7 @@ const Footer = () => {
               {t('FooterCopyright')}
             </p>
             <p className={styles.credits}>
-              {t('FooterCreatedBy')} <a href="#" className={styles.creditLink}>{t('Creator')}</a>
+              {t('FooterCreatedBy')} <a href={`https://hm-wspro.vercel.app/${currentLocale}`} className={styles.creditLink}>{t('Creator')}</a> | <a href={`https://hm-wspro.vercel.app/${currentLocale}`} target="_blank" rel="noopener noreferrer" className={styles.creditLink}>H&M WS Pro</a>
             </p>
           </div>
         </div>
