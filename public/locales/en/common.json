@@ -98,5 +98,12 @@
   "Service11": "Engine Bay Cleaning",
   "Service12": "Wheel Cleaning",
   "Service13": "Brake System Refresh",
-  "Service14": "Pasting / Polishing / Cleaning of Motors, Suits and Safety Helmets"
+  "Service14": "Pasting / Polishing / Cleaning of Motors, Suits and Safety Helmets",
+  "Reviews": "Reviews",
+  "ReviewsHeroTitle": "Google Reviews",
+  "ReviewsHeroSubtitle": "See what our customers say about us on Google",
+  "reviews.moreText": "And many more...",
+  "reviews.readMore": "Read More Reviews",
+  "reviews.leaveReview": "Leave a Review",
+  "reviews.noReviews": "No Google reviews found. Be the first to leave a review!"
 }

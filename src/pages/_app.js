@@ -4,6 +4,7 @@ import { Nunito } from 'next/font/google'
 import { appWithTranslation } from 'next-i18next'
 import '../styles/globals.css'
 import BackToTop from "@/components/Page Components/BackToTop";
+import { Analytics } from '@vercel/analytics/react';
 
 
 //Changing subset of 'Nunito' font to latin and setting it to its own variable
@@ -19,6 +20,7 @@ const MyApp = ({ Component, pageProps }) => (
         <BackToTop />
       </Layout>
     </main>
+    <Analytics />
   </ChakraProvider>
 )
 
