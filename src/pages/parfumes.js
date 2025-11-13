@@ -271,6 +271,59 @@ const Parfumes = () => {
         <div className={styles.container}>
           <div className={styles.noteBox}>
             <p className={styles.noteText}>{t('ParfumesNote')}</p>
+            <p className={styles.noteText}>{t('ParfumesNote2')}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Usage Information Section */}
+      <section className={styles.usageSection}>
+        <div className={styles.container}>
+          <div className={styles.usageContent}>
+            {/* What it's used for */}
+            <div className={styles.usageBlock}>
+              <h3 className={styles.usageTitle}>{t('ParfumesUsedFor')}</h3>
+              <ul className={styles.usageList}>
+                <li>{t('ParfumesUsedFor1')}</li>
+                <li>{t('ParfumesUsedFor2')}</li>
+                <li>{t('ParfumesUsedFor3')}</li>
+                <li>{t('ParfumesUsedFor4')}</li>
+                <li>{t('ParfumesUsedFor5')}</li>
+                <li>{t('ParfumesUsedFor6')}</li>
+              </ul>
+            </div>
+
+            {/* Guidance for use */}
+            <div className={styles.usageBlock}>
+              <h3 className={styles.usageTitle}>{t('ParfumesGuidanceTitle')}</h3>
+              <p className={styles.usageText}>{t('ParfumesGuidance')}</p>
+            </div>
+
+            {/* Application areas */}
+            <div className={styles.usageBlock}>
+              <div className={styles.applicationArea}>
+                <h4 className={styles.applicationTitle}>{t('ParfumesVehiclesTitle')}</h4>
+                <p className={styles.applicationText}>{t('ParfumesVehicles')}</p>
+              </div>
+              <div className={styles.applicationArea}>
+                <h4 className={styles.applicationTitle}>{t('ParfumesRoomsTitle')}</h4>
+                <p className={styles.applicationText}>{t('ParfumesRooms')}</p>
+              </div>
+              <div className={styles.applicationArea}>
+                <h4 className={styles.applicationTitle}>{t('ParfumesSanitaryTitle')}</h4>
+                <p className={styles.applicationText}>{t('ParfumesSanitary')}</p>
+              </div>
+            </div>
+
+            {/* Safety warnings */}
+            <div className={styles.usageBlock}>
+              <h3 className={styles.usageTitle}>{t('ParfumesSafetyTitle')}</h3>
+              <ul className={styles.safetyList}>
+                <li>{t('ParfumesSafety1')}</li>
+                <li>{t('ParfumesSafety2')}</li>
+                <li>{t('ParfumesSafety3')}</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -282,23 +335,27 @@ const Parfumes = () => {
             <button className={styles.modalCloseButton} onClick={closeModal}>
               <FontAwesomeIcon icon={faTimes} />
             </button>
-            <div className={styles.modalImageContainer}>
-              <img 
-                src={selectedParfume.imgSource} 
-                alt={selectedParfume.name[locale] || selectedParfume.name.bg}
-                className={styles.modalImage}
-                onError={(e) => {
-                  e.target.src = '/Images/Logo.png';
-                }}
-              />
+            <div className={styles.modalHeader}>
+              <div className={styles.modalHeaderLeft}>
+                <h2 className={styles.modalTitle}>
+                  {selectedParfume.name[locale] || selectedParfume.name.bg}
+                </h2>
+                <div className={styles.modalCategory}>
+                  {selectedParfume.category[locale] || selectedParfume.category.bg}
+                </div>
+              </div>
+              <div className={styles.modalImageContainer}>
+                <img 
+                  src={selectedParfume.imgSource} 
+                  alt={selectedParfume.name[locale] || selectedParfume.name.bg}
+                  className={styles.modalImage}
+                  onError={(e) => {
+                    e.target.src = '/Images/Logo.png';
+                  }}
+                />
+              </div>
             </div>
             <div className={styles.modalBody}>
-              <h2 className={styles.modalTitle}>
-                {selectedParfume.name[locale] || selectedParfume.name.bg}
-              </h2>
-              <div className={styles.modalCategory}>
-                {selectedParfume.category[locale] || selectedParfume.category.bg}
-              </div>
               <p className={styles.modalDescription}>
                 {selectedParfume.description[locale] || selectedParfume.description.bg}
               </p>

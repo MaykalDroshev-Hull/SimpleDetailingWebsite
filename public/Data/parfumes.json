@@ -1,502 +1,502 @@
 [
-  {
-    "id": 1,
-    "name": {
-      "bg": "Adventure",
-      "en": "Adventure"
-    },
-    "category": {
-      "bg": "Сладки",
-      "en": "Sweet"
-    },
-    "imgSource": "/Images/foen/Adventure.jpg",
-    "description": {
-      "bg": "Усетете полъха на приключението, изследвайте нови места и гледайте любопитно в неизвестното. Интериорните парфюми Adventure са посветени на изследователите, които искат да открият хармоничната комбинация от съставки, включително  аромата Ylang-Ylang . Успокояващият ключ на ароматите мобилизира, изпълва с желание за завладяване на света и дава сила за действие!",
-      "en": "Feel the magic of adventure, explore new places and look curiously into the unknown. The Adventure interior perfumes are dedicated to the explorers who want to discover the harmonious combination of ingredients, including the Ylang-Ylang scent. The calming key of the perfumes mobilizes, fills with desire to conquer the world and gives strength to act!"
-    },
-    "shortDescription": {
-        "bg":"Необичайна ароматна композиция, идеална за ценителите на приключения.",
-        "en":"An unusual fragnance bouquet, perfect for adventure lovers."
-    },
-    "scentComposition": {
-      "bg": "Цветя иланг-иланг, Кедрово дърво и Ябълка.",
-      "en": "Flowers Ilang-Ilang, Cedar and Apple."
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 2,
-    "name": {
-      "bg": "Aqua",
-      "en": "Aqua"
-    },
-    "category": {
-      "bg": "Свежи",
-      "en": "Fresh"
-    },
-    "imgSource": "/Images/foen/Aqua.jpg",
-    "description": {
-      "bg": "Свежият цитрусов аромат разнася в пространството неповторима аура на домашно огнище, той е пречистващ и фин, а в същото време сладък и нежен. Благодарение на оптимално подбраните ароматни нотки, Foen Aqua добавя енергия, релаксира цялото тяло и позволява на ума ви да се отнесе в далечна страна на мечтите. Поддайте се на релаксацията, която ще почувствате, като впръскате  свеж цитрусов аромат , който нежно навлиза в ноздрите, успокоява нервите и подобрява благосъстоянието.",
-      "en": "The fresh citrus scent spreads the unique aura of a home fireplace in space, it is purifying and fine, yet sweet and gentle. Thanks to the optimally selected aromatic notes, Foen Aqua adds energy, relaxes the entire body and allows your mind to travel to a distant country of dreams. Submit to the relaxation you will feel when you spray the fresh citrus scent, which gently enters the nostrils, calms the nerves and improves well-being."
-    },
-    "shortDescription": {
-        "bg":"Интензивен и освежаващ аромат, който леко възбужда въздуха в интериора ви.",
-        "en":"An intensely refreshing fragrance that gently energizes the air of your interior."
-    },
-    "scentComposition": {
-      "bg": "Цитруси, леко подправени с ментов Пипер",
-      "en": "Citrus, lightly enhanced with Menthol Pepper"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 3,
-    "name": {
-      "bg": "Black",
-      "en": "Black"
-    },
-    "category": {
-      "bg": "Уникални",
-      "en": "Unique"
-    },
-    "imgSource": "/Images/foen/Black.jpg",
-    "description": {
-      "bg": "Почувствайте вълнението от състезанието, което ще ви отведе направо до стартовата линия. Black парфюм е  добър аромат за кола , който ще бъде идеален за ежедневна грижа за автомобила и повърхностите у дома. Комбинацията от подправки, плодове и растения създава балансирана аранжировка, която изпълва всички ъгли на пространството.",
-      "en": "Feel the excitement of the race that will take you straight to the starting line. Black perfume is a good car fragrance, which will be ideal for daily care of the car and surfaces at home. The combination of spices, fruits and plants creates a balanced arrangement that fills all corners of the space."
-    },
-    "shortDescription": {
-        "bg":"Дълбок аромат с интензивен и спортен характер.",
-        "en":"A deep scent of intensive and sporty character."
-    },
-    "scentComposition": {
-      "bg": "Розов пипер, Кумкуат, Кардамон, Индийско орехче, Кожа, Сандалово дърво",
-      "en": "Rose Pepper, Kumquat, Cinnamon, Indian Nut, Leather, Sandalwood"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 4,
-    "name": {
-      "bg": "Mr. Boss",
-      "en": "Mr.Boss"
-    },
-    "category": {
-      "bg": "Уникални",
-      "en": "Unique"
-    },
-    "imgSource": "/Images/foen/Boss.jpg",
-    "description": {
-      "bg": "Поемете дълбоко въздух, за да успокоите нервите си. Аромати за стая Mr. Boss е свеж мъжки аромат , който ще ви накара да въздъхнете с облекчение и да се унесете с аромата на плодови растения. Отправете се на чувствено пътешествие, което води през ароматна горичка, пълна с цъфтящи дървета, плодове и буйна растителност. Почувствайте силата на природата!",
-      "en": "Take a deep breath to calm your nerves. Mr. Boss room fragrances are a fresh masculine scent that will make you exhale with relief and carry the scent of fruit plants. Set off on a sensuous journey that leads through an aromatic grove, full of flowering trees, fruits and lush vegetation. Feel the power of nature!"
-    },
-    "shortDescription": {
-        "bg":"Свеж мъжки аромат, идеален за освежаване на стаи и превозни средства.",
-        "en":"A fresh fragnance with a male note, perfect for refreshing rooms and vehicles."
-    },
-    "scentComposition": {
-      "bg": "Бергамот, Сандалово дърво, Маслиново дърво, Кедрово дърво, Дъбов мъх, Ябълка, Ветивер",
-      "en": "Bergamot, Sandalwood, Olive, Cedar, Oak Moss, Apple, Vetiver"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 5,
-    "name": {
-      "bg": "Bubble-Gum",
-      "en": "Bubble Gum"
-    },
-    "category": {
-      "bg": "Сладки",
-      "en": "Sweet"
-    },
-    "imgSource": "/Images/foen/Bubble-Gum.jpg",
-    "description": {
-      "bg": "Пренесете се в света на фантазията, който всички деца и възрастни ще харесат. Плодове, цветя и подправки са чувствена и оригинална композиция. Миризмата на дъвка напомня за времето от детството и е чудесна за освежаване на колата, апартамента или къщата. Усетете освежаващия аромат, който ви напомня за хубави моменти.",
-      "en": "Take a trip to the world of fantasy that both children and adults will love. Fruits, flowers and spices are a sensitive and original composition. The scent of bubble gum reminds of the time of childhood and is perfect for refreshing the car, apartment or house. Feel the refreshing scent that reminds you of good moments."
-    },
-    "shortDescription": {
-        "bg":"Приятен и оригинален аромат, който ви отвежда в света на детските фантазии. Аромат на дъвка.",
-        "en":"Brings you to the world of children's fantasies. Bubble gum flavor."
-    },
-    "scentComposition": {
-      "bg": "Банан, Ягода, Череша, Лилия, Ванилия, Джинджифил",
-      "en": "Banana, Blackberry, Cherry, Lily, Vanilla, Jasmine"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 6,
-    "name": {
-      "bg": "Carbon",
-      "en": "Carbon"
-    },
-    "category": {
-      "bg": "Уникални",
-      "en": "Unique"
-    },
-    "imgSource": "/Images/foen/Carbon.jpg",
-    "description": {
-      "bg": "Парфюмът Carbon е изключително интензивно и чувствено предложение, което напълно ще промени атмосферата на интериора на всеки автомобил, апартамент и офис. Климатът на Близкия изток от бергамот и розов пипер се превръща в загрята от слънцето ванилия и ароматна кожа, а към всичко това се присъединява смес от опушено с въглища сандалово дърво. Този аромат ще ви постави в състояние на блажена релаксация, успокоявайки сетивата ви с топлина и завладяваща сладост.",
-      "en": "The Carbon perfume is an extremely intense and sensitive offer that will completely change the atmosphere of the interior of every car, apartment and office. The climate of the Middle East from bergamot and rose pepper turns into the sun-warmed vanilla and aromatic leather, and to all this is added a mixture of charred sandalwood. This scent will put you in a state of blessed relaxation, calming your senses with warmth and irresistible sweetness."
-    },
-    "shortDescription": {
-        "bg":"Изключителната смес от опушени екзотични сандалови дървета.",
-        "en":"The exceptional blend of smoky exotic sandalwoods."
-    },
-    "scentComposition": {
-      "bg": "Сандалово Дърво, Кожа, Бергамонт",
-      "en": "Sandalwood, Leather, Bergamot"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 7,
-    "name": {
-      "bg": "Flower",
-      "en": "Flower"
-    },
-    "category": {
-      "bg": "Сладки",
-      "en": "Sweet"
-    },
-    "imgSource": "/Images/foen/Flower.jpg",
-    "description": {
-      "bg": "Цветен аромат  , който точно отразява женската природа - той е синоним на елегантност, деликатност и перверзен характер, който от една страна има успокояващ ефект, а от друга стимулира сетивата. Внесете цъфтяща поляна във вашия интериор. Въпреки доминиращия характер, парфюмите Flower са приятни, не дразнят обонянието, а при продължителна употреба са просто неустоими.",
-      "en": "A colorful scent that exactly reflects the feminine nature - it is synonymous with elegance, delicacy and versatile character, which on one hand has a calming effect, and on the other stimulates the senses. Bring a flowering meadow into your interior. Despite the dominant character, the perfumes Flower are pleasant, do not irritate the sense of smell, and with prolonged use are simply irresistible."
-    },
-    "shortDescription": {
-        "bg":"Представяне на цветен аромат в магическата атмосфера.",
-        "en":"Introducing a floral aroma int the magical atmosphere."
-    },
-    "scentComposition": {
-      "bg": "Цвят на хибискус, Ананас, Червен портокал, Кокос, Мускус, Сандалово дърво",
-      "en": "Hibiscus Flower, Pineapple, Red Orange, Coconut, Musk, Sandalwood"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 8,
-    "name": {
-      "bg": "Forest",
-      "en": "Forest"
-    },
-    "category": {
-      "bg": "Свежи",
-      "en": "Fresh"
-    },
-    "imgSource": "/Images/foen/Forest.jpg",
-    "description": {
-      "bg": "Изключително ароматната и балансирана композиция на Foen Forest е покана към вътрешността на една стара, атмосферна и зашеметяваща горска миризма. Влезте в този свят и усетете сладкия, смолист аромат на кедрово дърво. Останете в него за по-дълго и се насладете на пробуждащия сетивата мускус с добавка на тропическо пачули и ободряваща свежа зеленина. Нека този аромат остане с вас за по-дълго и ефективно да подобри вашето благосъстояние.",
-      "en": "An extremely aromatic and balanced composition of Foen Forest is an invitation to the interior of an old, atmospheric and breathtaking forest scent. Enter this world and feel the sweet, resinous scent of cedar wood. Stay in it longer and enjoy the awakening musk with the addition of tropical patchouli and invigorating fresh greenery. Let this scent remain with you for longer and more effectively to improve your well-being."
-    },
-    "shortDescription": {
-        "bg":"Усетете аромата на току-що отсечено дърво. Свеж горски аромат.",
-        "en":"Feel the aroma of a frshly cut tree. Fresh forest scent."
-    },
-    "scentComposition": {
-      "bg": "Пачули, Лилия, Морски аромат",
-      "en": "Patchouli, Lily, Sea Aroma"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 9,
-    "name": {
-      "bg": "Gentleman",
-      "en": "Gentleman"
-    },
-    "category": {
-      "bg": "Интензивни",
-      "en": "Intense"
-    },
-    "imgSource": "/Images/foen/Gentleman.jpg",
-    "description": {
-      "bg": "Празнувайте мъжествеността във всеки възможен аспект! Парфюмът Gentleman естествено ще подчертае силата и самочувствието, а бляскавият аромат в ретро стил ще се впише идеално в помещения и превозни средства. Заложете на комбинация от тестостерон, сила и добри обноски, скрити в малка опаковка с дозатор.",
-      "en": "Celebrate masculinity in every possible aspect! The Gentleman perfume naturally will highlight the strength and self-confidence, and the shiny retro scent will fit perfectly into rooms and vehicles. Place a combination of testosterone, strength and good care, hidden in a small package with a dispenser."
-    },
-    "shortDescription": {
-        "bg":"Привлекателен аромат в ретро стил, идеален за стаи и превозни средства.",
-        "en":"An attractive fragnance in a retro style, ideal for rooms and vehicles."
-    },
-    "scentComposition": {
-      "bg": "Лавандула, Бергамот, Пачули, Жасмин",
-      "en": "Lavender, Bergamot, Patchouli, Jasmine"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 10,
-    "name": {
-      "bg": "Glamour",
-      "en": "Glamour"
-    },
-    "category": {
-      "bg": "Сладки",
-      "en": "Sweet"
-    },
-    "imgSource": "/Images/foen/Glamour.jpg",
-    "description": {
-      "bg": "Ароматът Foen Glamour с чувствено и съблазнително лице е идеален за женствени пространства и интериори, които са предназначени да създават топло, уютно и луксозно впечатление. Независимо дали го използвате в колата, дома или офиса, можете да сте сигурни, че този аромат ще ви помогне да създадете абсолютно уникална, много позитивна и енергична атмосфера.",
-      "en": "The Foen Glamour scent with sensually and alluring face is ideal for feminine spaces and interiors designed to create warm, cozy and luxurious impression. Whether you use it in the car, at home or in the office, you can be sure that this scent will help you create an absolutely unique, very positive and energetic atmosphere."
-    },
-    "shortDescription":{
-        "bg":"Сладък цитрусов аромат, подсилен с ноти на мускус.",
-        "en":"A sweet citrus aroma turned up by a scent of musk."
-    },
-    "scentComposition": {
-      "bg": "Мускус, Ирис, Мандарина",
-      "en": "Musk, Orchid, Mandarin"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 11,
-    "name": {
-      "bg": "Green Tea",
-      "en": "Green Tea"
-    },
-    "category": {
-      "bg": "Свежи",
-      "en": "Fresh"
-    },
-    "imgSource": "/Images/foen/Green-Tea.jpg",
-    "description": {
-      "bg": "Миризмата на зелен чай  е чудесен вариант за почитателите на тази напитка и не само. Отсега нататък ароматният чай може да се усети както в кухнята, така и във всеки ъгъл на къщата, колата, хотела и навсякъде, където има нужда от освежаване. Погрижете се за приятната  миризма в колата. Зеленият чай  има свойства на ароматерапия, ще ви помогне да постигнете състояние на релаксация и ще пречисти въздуха от токсини.",
-      "en": "The scent of green tea is a wonderful option for tea lovers and not only. From now on, the aromatic tea can be felt both in the kitchen and in every corner of the house, car, hotel and wherever there is a need for refreshment. Take care of the pleasant scent in the car. Green tea has properties of aromatherapy, will help you achieve a state of relaxation and will clear the air of toxins."
-    },
-    "shortDescription":{
-        "bg":"Стимулиращият аромат на зелен чай перфектно почиства всеки интериор.",
-        "en":"The stimulating scent of green tea perfectly cleans any interior"
-    },
-    "scentComposition": {
-      "bg": "Зелен чай, Лимон, Маслиново дърво",
-      "en": "Green tea, Lemon, Olive"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 12,
-    "name": {
-      "bg": "Her & His",
-      "en": "Her & His"
-    },
-    "category": {
-      "bg": "Уникални",
-      "en": "Unique"
-    },
-    "imgSource": "/Images/foen/Her-His.jpg",
-    "description": {
-      "bg": "Жената и мъжът са перфектна комбинация, като Ин и Ян. Освежаващ  аромат за нея и за него , който е създаден от комбинация на внимателно подбрани съставки. Който се запознае с хармоничната рецепта ще разбере, че нито един от елементите тук не е случаен. Елегантен  аромат за нея и за него  ще бъде идеален за всяка стая, независимо дали е салон за красота, ресторант, клуб или частен апартамент.",
-      "en": "The woman and man are a perfect combination, like Yin and Yang. A refreshing scent for her and him, which is created from a carefully selected combination of ingredients. Whoever learns the harmonious recipe will understand that none of the ingredients here is accidental. Elegant scent for her and him will be ideal for every room, regardless of whether it is a beauty salon, restaurant, club or private apartment."
-    },
-    "shortDescription":{
-        "bg":"Аромат, който перфектно допълва интериора на света на мъжете и жените.",
-        "en":"An aroma that perfectly completes the interior of the world of men and women."
-    },
-    "scentComposition": {
-      "bg": "Бергамот, Грейпфрут, Джинджифил, Сандалово дърво, Мускус",
-      "en": "Bergamot, Grapefruit, Jasmine, Sandalwood, Musk"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 13,
-    "name": {
-      "bg": "Jack",
-      "en": "Jack"
-    },
-    "category": {
-      "bg": "Интензивни",
-      "en": "Intense"
-    },
-    "imgSource": "/Images/foen/Jack.jpg",
-    "description": {
-      "bg": "Проявата на мъжка сила в ароматна форма е предложение, адресирано до самоуверени, решителни и активни мъже. Когато създавахме Foen Jack, ние се фокусирахме върху интензивността, която перфектно подчертава харизмата и силата. Открийте аромата, който релаксира, има благоприятен ефект върху доброто състояние и успокоява цялото тяло.",
-      "en": "The expression of masculine power in a fragrant form is an offer addressed to confident, decisive and active men. When we created Foen Jack, we focused on the intensity that perfectly highlights charm and strength. Discover the scent that relaxes, has a beneficial effect on good condition and calms the entire body."
-    },
-    "shortDescription":{
-        "bg":"Открийте мъжкия свят и усетете аромата на пура с чаша фино уиски.",
-        "en":"Discover the masculine world and feel the aroma of a cigar with a glass of fine whiskey."
-    },
-    "scentComposition": {
-      "bg": "Сандалово дърво, Ванилия, Кардамон, Мента",
-      "en": "Sandalwood, Vanilla, Cinnamon, Menthol"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 14,
-    "name": {
-      "bg": "Laguna",
-      "en": "Laguna"
-    },
-    "category": {
-      "bg": "Уникални",
-      "en": "Unique"
-    },
-    "imgSource": "/Images/foen/Laguna.jpg",
-    "description": {
-      "bg": "Потопете се в морския бриз, който ви дава почивка, позволява ви да се отпуснете и да се отправите на чувствено пътешествие по плажовете на тропиците. Foen Laguna е мястото, където морето среща сушата, създавайки ефирна, естествена и освежаваща комбинация. Най-интензивният аромат на Foen пленява със своя състав и характер. Ще се хареса на мистериозни, креативни и самоуверени хора.",
-      "en": "Dive into the sea breeze that gives you rest, allows you to relax and set off on a sensuous journey on the beaches of the tropics. Foen Laguna is the place where the sea meets the land, creating an aromatic, natural and refreshing combination. The most intense Foen perfume captivates with its composition and character. It will suit mysterious, creative and confident people."
-    },
-    "shortDescription":{
-        "bg":"Най-интензивната композиция с успокояващи свойства.",
-        "en":"The most intense composition with calming properties."
-    },
-    "scentComposition": {
-      "bg": "Карамфил, обогатен с мускусно-амбаров акорд, Жасмин и Тубероза",
-      "en": "Caramfil, enriched with musk-ambered chord, Jasmine and Tubereuse"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 15,
-    "name": {
-      "bg": "New Car Leather",
-      "en": "New Car Leather"
-    },
-    "category": {
-      "bg": "Интензивни",
-      "en": "Intense"
-    },
-    "imgSource": "/Images/foen/New-Car-Leather.jpg",
-    "description": {
-      "bg": "Какво може да бъде по-свързано с мъжествения характер от  миризмата на кожа,  заобиколена от дървесни, балсамови нотки на аромат. Приглушен, но леко кадифен акцент ще се впише перфектно в подредбата на стаите и интериора на автомобила. Мирисът на кожа  изпълва пространството, успокоява и стимулира сетивата. Освен това ухае на шик и не ви оставя да подминете безразлични.",
-      "en": "What could be more associated with the masculine character than the scent of leather, surrounded by woody, balsam notes of aroma. Softened, but slightly camphor accent will fit perfectly into the arrangement of rooms and the interior of the car. The scent of leather fills the space, calms and stimulates the senses. In addition, it smells of chic and does not let you pass indifferently."
-    },
-    "shortDescription":{
-        "bg":"Интериора на вашето превозно средство ще приеме нов характер.",
-        "en":"The interior of your vehicle will take on a new character."
-    },
-    "scentComposition": {
-      "bg": "Естествена кожа и Дървесни нотки",
-      "en": "Natural leather and woody notes"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 16,
-    "name": {
-      "bg": "No Smoking",
-      "en": "No Smoking"
-    },
-    "category": {
-      "bg": "Интензивни",
-      "en": "Intense"
-    },
-    "imgSource": "/Images/foen/No-Smoking.jpg",
-    "description": {
-      "bg": "Мечтаете ли да  неутрализирате миризмата на цигари в колата  или дома си? Ние имаме решение за вас. Foen No Smoking е начин да замените миризмата на цигарен дим с приятен, успокояващ растителен акорд. Ако сте непушач и имате нужда от освежаване,  неутрализирането на миризмата на цигари в колата  ще се окаже спасител.",
-      "en": "Do you dream of neutralizing the smell of cigarettes in the car or at home? We have a solution for you. Foen No Smoking is a way to replace the smell of smoke with a pleasant, calming plant chord. If you are a non-smoker and need to refresh, neutralizing the smell of cigarettes in the car will be a lifesaver."
-    },
-    "shortDescription":{
-        "bg":"Идеален за неутрализирането на неприятните миризми на цигари.",
-        "en":"Ideal for neuralising unpleasant cigarette smells."
-    },
-    "scentComposition": {
-      "bg": "Азиатско пачули и Масло от бадиан",
-      "en": "Tropical patchouli and balm oil"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 17,
-    "name": {
-      "bg": "Sandalwood",
-      "en": "Sandalwood"
-    },
-    "category": {
-      "bg": "Интензивни",
-      "en": "Intense"
-    },
-    "imgSource": "/Images/foen/Sandalwood.jpg",
-    "description": {
-      "bg": "Открийте тропическото сандалово дърво, което расте в низините на Австралия, Югоизточна Азия и островите в Тихия океан. Отведете сетивата си на пътешествие по стъпките на ориенталските аромати. Ароматът на сандалово дърво  е елегантност и оригинален характер, които ще ви накарат да се откроите. Етеричното масло е създадено по уникална растителна рецепта, благодарение на която изветрява бавно и ефективно освежава въздуха.",
-      "en": "Discover the tropical sandalwood that grows in the lowlands of Australia, Southeast Asia and islands in the Pacific Ocean. Take your senses on a journey through the steps of oriental aromas. The scent of sandalwood is elegance and original character that will make you open up. The essential oil is created by a unique plant recipe, thanks to which it slowly and effectively refreshes the air."
-    },
-    "shortDescription":{
-        "bg":"Луксозен аромат на сандалово дърво.",
-        "en":"A luxurious scent of sandalwood."
-    },
-    "scentComposition": {
-      "bg": "Сандалово дърво, Смирна, Ванилия",
-      "en": "Sandalwood, Cedar, Vanilla"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 18,
-    "name": {
-      "bg": "Savor",
-      "en": "Savor"
-    },
-    "category": {
-      "bg": "Сладки",
-      "en": "Sweet"
-    },
-    "imgSource": "/Images/foen/Savor.jpg",
-    "description": {
-      "bg": "Може ли един аромат да бъде лек, ефирен, деликатен и в същото време чувствен и изкусителен? Оказва се, че да. Foen Savor е квинтесенцията на женската природа в ефирна форма. Сладкото ухание съблазнява с плодова мелодия, а изисканата комбинация от съставки перфектно подчертава елегантността на места като ресторанти или хотели и има положителен ефект върху благосъстоянието.",
-      "en": "Can an aroma be light, ethereal, delicate and at the same time sensual and seductive? It turns out that yes. Foen Savor is the quintessence of feminine nature in an aromatic form. The sweet aroma seduces with a fruity melody, and the elegant combination of ingredients perfectly highlights the elegance of places such as restaurants or hotels and has a positive effect on well-being."
-    },
-    "shortDescription":{
-        "bg":"Елегантен, сладък аромат, който ще промени интериора ви.",
-        "en":"An elegant, sweet fragnance that will change your interior."
-    },
-    "scentComposition": {
-      "bg": "Касис, Мандарина, Портокал, Боровинка, Джинджифил, зърна Тонка, Мускус, Жасмин, Роза",
-      "en": "Cassis, Mandarin, Orange, Blackberry, Jasmine, Fine grain, Musk, Rose"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 19,
-    "name": {
-      "bg": "Soul",
-      "en": "Soul"
-    },
-    "category": {
-      "bg": "Свежи",
-      "en": "Fresh"
-    },
-    "imgSource": "/Images/foen/Soul.jpg",
-    "description": {
-      "bg": "Вслушайте се в себе си и посегнете към аромат, който като никой друг ще успокои душата ви и ще ви даде усещане за неповторима хармония. Foen Soul е уникална композиция, която започва с климата на слънчев цитрус, за да ви отведе до аромата на роза, потопена в кехлибар. Кулминацията на цялото ще бъде невероятно чувствен мускус, заобиколен от цветя, които ще очароват сетивата ви с богатство от усещания.",
-      "en": "Listen to yourself and reach for the scent that, like no other, will calm your soul and give you a sense of unique harmony. Foen Soul is a unique composition that starts with the climate of sunny citrus, to take you to the scent of rose, immersed in cyclamen. The culmination of everything will be an incredibly sensual musk, surrounded by flowers that will enchant your senses with a wealth of sensations."
-    },
-    "shortDescription":{
-        "bg":"Аромат, който ще декорира интериора ви с естествената свежест.",
-        "en":"A fragnance that will decorate your interior with the freshness of the nature."
-    },
-    "scentComposition": {
-      "bg": "Цветя, билкови и пикантни Подправки, Цитрус",
-      "en": "Flowers, herbs and spicy spices, Citrus"
-    },
-    "price": "23.40"
-  },
-  {
-    "id": 20,
-    "name": {
-      "bg": "Vanilla",
-      "en": "Vanilla"
-    },
-    "category": {
-      "bg": "Сладки",
-      "en": "Sweet"
-    },
-    "imgSource": "/Images/foen/Vanilla.jpg",
-    "description": {
-      "bg": "Открийте  аромата на ванилия  с добавка на цитрус. Интензивният и мек аромат успокоява и създава атмосфера, предразполагаща към релаксация. Удивително е колко много може да се извлече от растението, свързано с вкуса на сладолед, ароматна подправка и ефирно бяло цвете. Открийте освежаващ бриз с нотка на плодове. Усетете универсалния тон на аромата, който въпреки интензивността си не дразни обонянието, естествен е и осигурява необходимото освежаване на интериора.",
-      "en": "Discover the scent of vanilla with the addition of citrus. The intense and soft aroma calms and creates an atmosphere predisposing to relaxation. It is amazing how much can be extracted from the plant related to the taste of ice cream, aromatic spice and white flower essence. Discover a refreshing breeze with a fruit note. Feel the universal tone of the scent, which despite its intensity does not irritate the sense of smell, is natural and provides the necessary refreshing of the interior."
-    },
-    "shortDescription":{
-        "bg":"Ароматът на парфюмирана ванилия, перфектен за всички ъгли на вашата кола или дом.",
-        "en":"The scent of perfumed vanilla, perfect for all corners of your car or home."
-    },
-    "scentComposition": {
-      "bg": "Сладостта на Ванилия с нотки на Мандарина и Лайм",
-      "en": "Vanilla, Mandarin, Lemon"
-    },
-    "price": "23.40"
-  }
-]
+    {
+      "id": 1,
+      "name": {
+        "bg": "Adventure",
+        "en": "Adventure"
+      },
+      "category": {
+        "bg": "Сладки",
+        "en": "Sweet"
+      },
+      "imgSource": "/Images/foen/Adventure.jpg",
+      "description": {
+        "bg": "Усетете полъха на приключението, изследвайте нови места и гледайте любопитно в неизвестното. Интериорните парфюми Adventure са посветени на изследователите, които искат да открият хармоничната комбинация от съставки, включително аромата Ylang-Ylang . Успокояващият ключ на ароматите мобилизира, изпълва с желание за завладяване на света и дава сила за действие!",
+        "en": "Feel the magic of adventure, explore new places and look curiously into the unknown. The Adventure interior perfumes are dedicated to the explorers who want to discover the harmonious combination of ingredients, including the Ylang-Ylang scent. The calming key of the perfumes mobilizes, fills with desire to conquer the world and gives strength to act!"
+      },
+      "shortDescription": {
+        "bg": "Необичайна ароматна композиция, идеална за ценителите на приключения.",
+        "en": "An unusual fragnance bouquet, perfect for adventure lovers."
+      },
+      "scentComposition": {
+        "bg": "Цветя иланг-иланг, Кедрово дърво и Ябълка.",
+        "en": "Flowers Ilang-Ilang, Cedar and Apple."
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 2,
+      "name": {
+        "bg": "Aqua",
+        "en": "Aqua"
+      },
+      "category": {
+        "bg": "Свежи",
+        "en": "Fresh"
+      },
+      "imgSource": "/Images/foen/Aqua.jpg",
+      "description": {
+        "bg": "Свежият цитрусов аромат разнася в пространството неповторима аура на домашно огнище, той е пречистващ и фин, а в същото време сладък и нежен. Благодарение на оптимално подбраните ароматни нотки, Foen Aqua добавя енергия, релаксира цялото тяло и позволява на ума ви да се отнесе в далечна страна на мечтите. Поддайте се на релаксацията, която ще почувствате, като впръскате свеж цитрусов аромат, който нежно навлиза в ноздрите, успокоява нервите и подобрява благосъстоянието.",
+        "en": "The fresh citrus scent spreads the unique aura of a home fireplace in space, it is purifying and fine, yet sweet and gentle. Thanks to the optimally selected aromatic notes, Foen Aqua adds energy, relaxes the entire body and allows your mind to travel to a distant country of dreams. Submit to the relaxation you will feel when you spray the fresh citrus scent, which gently enters the nostrils, calms the nerves and improves well-being."
+      },
+      "shortDescription": {
+        "bg": "Интензивен и освежаващ аромат, който леко възбужда въздуха в интериора ви.",
+        "en": "An intensely refreshing fragrance that gently energizes the air of your interior."
+      },
+      "scentComposition": {
+        "bg": "Цитруси, леко подправени с ментов Пипер",
+        "en": "Citrus, lightly enhanced with Menthol Pepper"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 3,
+      "name": {
+        "bg": "Black",
+        "en": "Black"
+      },
+      "category": {
+        "bg": "Уникални",
+        "en": "Unique"
+      },
+      "imgSource": "/Images/foen/Black.jpg",
+      "description": {
+        "bg": "Почувствайте вълнението от състезанието, което ще ви отведе направо до стартовата линия. Black парфюм е добър аромат за кола, който ще бъде идеален за ежедневна грижа за автомобила и повърхностите у дома. Комбинацията от подправки, плодове и растения създава балансирана аранжировка, която изпълва всички ъгли на пространството.",
+        "en": "Feel the excitement of the race that will take you straight to the starting line. Black perfume is a good car fragrance, which will be ideal for daily care of the car and surfaces at home. The combination of spices, fruits and plants creates a balanced arrangement that fills all corners of the space."
+      },
+      "shortDescription": {
+        "bg": "Дълбок аромат с интензивен и спортен характер.",
+        "en": "A deep scent of intensive and sporty character."
+      },
+      "scentComposition": {
+        "bg": "Розов пипер, Кумкуат, Кардамон, Индийско орехче, Кожа, Сандалово дърво",
+        "en": "Rose Pepper, Kumquat, Cinnamon, Indian Nut, Leather, Sandalwood"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 4,
+      "name": {
+        "bg": "Mr. Boss",
+        "en": "Mr.Boss"
+      },
+      "category": {
+        "bg": "Уникални",
+        "en": "Unique"
+      },
+      "imgSource": "/Images/foen/Boss.jpg",
+      "description": {
+        "bg": "Поемете дълбоко въздух, за да успокоите нервите си. Аромати за стая Mr. Boss е свеж мъжки аромат, който ще ви накара да въздъхнете с облекчение и да се унесете с аромата на плодови растения. Отправете се на чувствено пътешествие, което води през ароматна горичка, пълна с цъфтящи дървета, плодове и буйна растителност. Почувствайте силата на природата!",
+        "en": "Take a deep breath to calm your nerves. Mr. Boss room fragrances are a fresh masculine scent that will make you exhale with relief and carry the scent of fruit plants. Set off on a sensuous journey that leads through an aromatic grove, full of flowering trees, fruits and lush vegetation. Feel the power of nature!"
+      },
+      "shortDescription": {
+        "bg": "Свеж мъжки аромат, идеален за освежаване на стаи и превозни средства.",
+        "en": "A fresh fragnance with a male note, perfect for refreshing rooms and vehicles."
+      },
+      "scentComposition": {
+        "bg": "Бергамот, Сандалово дърво, Маслиново дърво, Кедрово дърво, Дъбов мъх, Ябълка, Ветивер",
+        "en": "Bergamot, Sandalwood, Olive, Cedar, Oak Moss, Apple, Vetiver"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 5,
+      "name": {
+        "bg": "Bubble-Gum",
+        "en": "Bubble Gum"
+      },
+      "category": {
+        "bg": "Сладки",
+        "en": "Sweet"
+      },
+      "imgSource": "/Images/foen/Bubble-Gum.jpg",
+      "description": {
+        "bg": "Пренесете се в света на фантазията, който всички деца и възрастни ще харесат. Плодове, цветя и подправки са чувствена и оригинална композиция. Миризмата на дъвка напомня за времето от детството и е чудесна за освежаване на колата, апартамента или къщата. Усетете освежаващия аромат, който ви напомня за хубави моменти.",
+        "en": "Take a trip to the world of fantasy that both children and adults will love. Fruits, flowers and spices are a sensitive and original composition. The scent of bubble gum reminds of the time of childhood and is perfect for refreshing the car, apartment or house. Feel the refreshing scent that reminds you of good moments."
+      },
+      "shortDescription": {
+        "bg": "Приятен и оригинален аромат, който ви отвежда в света на детските фантазии. Аромат на дъвка.",
+        "en": "Brings you to the world of children's fantasies. Bubble gum flavor."
+      },
+      "scentComposition": {
+        "bg": "Банан, Ягода, Череша, Лилия, Ванилия, Джинджифил",
+        "en": "Banana, Blackberry, Cherry, Lily, Vanilla, Jasmine"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 6,
+      "name": {
+        "bg": "Carbon",
+        "en": "Carbon"
+      },
+      "category": {
+        "bg": "Уникални",
+        "en": "Unique"
+      },
+      "imgSource": "/Images/foen/Carbon.jpg",
+      "description": {
+        "bg": "Парфюмът Carbon е изключително интензивно и чувствено предложение, което напълно ще промени атмосферата на интериора на всеки автомобил, апартамент и офис. Климатът на Близкия изток от бергамот и розов пипер се превръща в загрята от слънцето ванилия и ароматна кожа, а към всичко това се присъединява смес от опушено с въглища сандалово дърво. Този аромат ще ви постави в състояние на блажена релаксация, успокоявайки сетивата ви с топлина и завладяваща сладост.",
+        "en": "The Carbon perfume is an extremely intense and sensitive offer that will completely change the atmosphere of the interior of every car, apartment and office. The climate of the Middle East from bergamot and rose pepper turns into the sun-warmed vanilla and aromatic leather, and to all this is added a mixture of charred sandalwood. This scent will put you in a state of blessed relaxation, calming your senses with warmth and irresistible sweetness."
+      },
+      "shortDescription": {
+        "bg": "Изключителната смес от опушени екзотични сандалови дървета.",
+        "en": "The exceptional blend of smoky exotic sandalwoods."
+      },
+      "scentComposition": {
+        "bg": "Сандалово Дърво, Кожа, Бергамонт",
+        "en": "Sandalwood, Leather, Bergamot"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 7,
+      "name": {
+        "bg": "Flower",
+        "en": "Flower"
+      },
+      "category": {
+        "bg": "Сладки",
+        "en": "Sweet"
+      },
+      "imgSource": "/Images/foen/Flower.jpg",
+      "description": {
+        "bg": "Цветен аромат, който точно отразява женската природа - той е синоним на елегантност, деликатност и перверзен характер, който от една страна има успокояващ ефект, а от друга стимулира сетивата. Внесете цъфтяща поляна във вашия интериор. Въпреки доминиращия характер, парфюмите Flower са приятни, не дразнят обонянието, а при продължителна употреба са просто неустоими.",
+        "en": "A colorful scent that exactly reflects the feminine nature - it is synonymous with elegance, delicacy and versatile character, which on one hand has a calming effect, and on the other stimulates the senses. Bring a flowering meadow into your interior. Despite the dominant character, the perfumes Flower are pleasant, do not irritate the sense of smell, and with prolonged use are simply irresistible."
+      },
+      "shortDescription": {
+        "bg": "Представяне на цветен аромат в магическата атмосфера.",
+        "en": "Introducing a floral aroma int the magical atmosphere."
+      },
+      "scentComposition": {
+        "bg": "Цвят на хибискус, Ананас, Червен портокал, Кокос, Мускус, Сандалово дърво",
+        "en": "Hibiscus Flower, Pineapple, Red Orange, Coconut, Musk, Sandalwood"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 8,
+      "name": {
+        "bg": "Forest",
+        "en": "Forest"
+      },
+      "category": {
+        "bg": "Свежи",
+        "en": "Fresh"
+      },
+      "imgSource": "/Images/foen/Forest.jpg",
+      "description": {
+        "bg": "Изключително ароматната и балансирана композиция на Foen Forest е покана към вътрешността на една стара, атмосферна и зашеметяваща горска миризма. Влезте в този свят и усетете сладкия, смолист аромат на кедрово дърво. Останете в него за по-дълго и се насладете на пробуждащия сетивата мускус с добавка на тропическо пачули и ободряваща свежа зеленина. Нека този аромат остане с вас за по-дълго и ефективно да подобри вашето благосъстояние.",
+        "en": "An extremely aromatic and balanced composition of Foen Forest is an invitation to the interior of an old, atmospheric and breathtaking forest scent. Enter this world and feel the sweet, resinous scent of cedar wood. Stay in it longer and enjoy the awakening musk with the addition of tropical patchouli and invigorating fresh greenery. Let this scent remain with you for longer and more effectively to improve your well-being."
+      },
+      "shortDescription": {
+        "bg": "Усетете аромата на току-що отсечено дърво. Свеж горски аромат.",
+        "en": "Feel the aroma of a frshly cut tree. Fresh forest scent."
+      },
+      "scentComposition": {
+        "bg": "Пачули, Лилия, Морски аромат",
+        "en": "Patchouli, Lily, Sea Aroma"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 9,
+      "name": {
+        "bg": "Gentleman",
+        "en": "Gentleman"
+      },
+      "category": {
+        "bg": "Интензивни",
+        "en": "Intense"
+      },
+      "imgSource": "/Images/foen/Gentleman.jpg",
+      "description": {
+        "bg": "Празнувайте мъжествеността във всеки възможен аспект! Парфюмът Gentleman естествено ще подчертае силата и самочувствието, а бляскавият аромат в ретро стил ще се впише идеално в помещения и превозни средства. Заложете на комбинация от тестостерон, сила и добри обноски, скрити в малка опаковка с дозатор.",
+        "en": "Celebrate masculinity in every possible aspect! The Gentleman perfume naturally will highlight the strength and self-confidence, and the shiny retro scent will fit perfectly into rooms and vehicles. Place a combination of testosterone, strength and good care, hidden in a small package with a dispenser."
+      },
+      "shortDescription": {
+        "bg": "Привлекателен аромат в ретро стил, идеален за стаи и превозни средства.",
+        "en": "An attractive fragnance in a retro style, ideal for rooms and vehicles."
+      },
+      "scentComposition": {
+        "bg": "Лавандула, Бергамот, Пачули, Жасмин",
+        "en": "Lavender, Bergamot, Patchouli, Jasmine"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 10,
+      "name": {
+        "bg": "Glamour",
+        "en": "Glamour"
+      },
+      "category": {
+        "bg": "Сладки",
+        "en": "Sweet"
+      },
+      "imgSource": "/Images/foen/Glamour.jpg",
+      "description": {
+        "bg": "Ароматът Foen Glamour с чувствено и съблазнително лице е идеален за женствени пространства и интериори, които са предназначени да създават топло, уютно и луксозно впечатление. Независимо дали го използвате в колата, дома или офиса, можете да сте сигурни, че този аромат ще ви помогне да създадете абсолютно уникална, много позитивна и енергична атмосфера.",
+        "en": "The Foen Glamour scent with sensually and alluring face is ideal for feminine spaces and interiors designed to create warm, cozy and luxurious impression. Whether you use it in the car, at home or in the office, you can be sure that this scent will help you create an absolutely unique, very positive and energetic atmosphere."
+      },
+      "shortDescription": {
+        "bg": "Сладък цитрусов аромат, подсилен с ноти на мускус.",
+        "en": "A sweet citrus aroma turned up by a scent of musk."
+      },
+      "scentComposition": {
+        "bg": "Мускус, Ирис, Мандарина",
+        "en": "Musk, Orchid, Mandarin"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 11,
+      "name": {
+        "bg": "Green Tea",
+        "en": "Green Tea"
+      },
+      "category": {
+        "bg": "Свежи",
+        "en": "Fresh"
+      },
+      "imgSource": "/Images/foen/Green-Tea.jpg",
+      "description": {
+        "bg": "Миризмата на зелен чай е чудесен вариант за почитателите на тази напитка и не само. Отсега нататък ароматният чай може да се усети както в кухнята, така и във всеки ъгъл на къщата, колата, хотела и навсякъде, където има нужда от освежаване. Погрижете се за приятната миризма в колата. Зеленият чай има свойства на ароматерапия, ще ви помогне да постигнете състояние на релаксация и ще пречисти въздуха от токсини.",
+        "en": "The scent of green tea is a wonderful option for tea lovers and not only. From now on, the aromatic tea can be felt both in the kitchen and in every corner of the house, car, hotel and wherever there is a need for refreshment. Take care of the pleasant scent in the car. Green tea has properties of aromatherapy, will help you achieve a state of relaxation and will clear the air of toxins."
+      },
+      "shortDescription": {
+        "bg": "Стимулиращият аромат на зелен чай перфектно почиства всеки интериор.",
+        "en": "The stimulating scent of green tea perfectly cleans any interior"
+      },
+      "scentComposition": {
+        "bg": "Зелен чай, Лимон, Маслиново дърво",
+        "en": "Green tea, Lemon, Olive"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 12,
+      "name": {
+        "bg": "Her & His",
+        "en": "Her & His"
+      },
+      "category": {
+        "bg": "Уникални",
+        "en": "Unique"
+      },
+      "imgSource": "/Images/foen/Her-His.jpg",
+      "description": {
+        "bg": "Жената и мъжът са перфектна комбинация, като Ин и Ян. Освежаващ аромат за нея и за него, който е създаден от комбинация на внимателно подбрани съставки. Който се запознае с хармоничната рецепта ще разбере, че нито един от елементите тук не е случаен. Елегантен аромат за нея и за него ще бъде идеален за всяка стая, независимо дали е салон за красота, ресторант, клуб или частен апартамент.",
+        "en": "The woman and man are a perfect combination, like Yin and Yang. A refreshing scent for her and him, which is created from a carefully selected combination of ingredients. Whoever learns the harmonious recipe will understand that none of the ingredients here is accidental. Elegant scent for her and him will be ideal for every room, regardless of whether it is a beauty salon, restaurant, club or private apartment."
+      },
+      "shortDescription": {
+        "bg": "Аромат, който перфектно допълва интериора на света на мъжете и жените.",
+        "en": "An aroma that perfectly completes the interior of the world of men and women."
+      },
+      "scentComposition": {
+        "bg": "Бергамот, Грейпфрут, Джинджифил, Сандалово дърво, Мускус",
+        "en": "Bergamot, Grapefruit, Jasmine, Sandalwood, Musk"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 13,
+      "name": {
+        "bg": "Jack",
+        "en": "Jack"
+      },
+      "category": {
+        "bg": "Интензивни",
+        "en": "Intense"
+      },
+      "imgSource": "/Images/foen/Jack.jpg",
+      "description": {
+        "bg": "Проявата на мъжка сила в ароматна форма е предложение, адресирано до самоуверени, решителни и активни мъже. Когато създавахме Foen Jack, ние се фокусирахме върху интензивността, която перфектно подчертава харизмата и силата. Открийте аромата, който релаксира, има благоприятен ефект върху доброто състояние и успокоява цялото тяло.",
+        "en": "The expression of masculine power in a fragrant form is an offer addressed to confident, decisive and active men. When we created Foen Jack, we focused on the intensity that perfectly highlights charm and strength. Discover the scent that relaxes, has a beneficial effect on good condition and calms the entire body."
+      },
+      "shortDescription": {
+        "bg": "Открийте мъжкия свят и усетете аромата на пура с чаша фино уиски.",
+        "en": "Discover the masculine world and feel the aroma of a cigar with a glass of fine whiskey."
+      },
+      "scentComposition": {
+        "bg": "Сандалово дърво, Ванилия, Кардамон, Мента",
+        "en": "Sandalwood, Vanilla, Cinnamon, Menthol"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 14,
+      "name": {
+        "bg": "Laguna",
+        "en": "Laguna"
+      },
+      "category": {
+        "bg": "Уникални",
+        "en": "Unique"
+      },
+      "imgSource": "/Images/foen/Laguna.jpg",
+      "description": {
+        "bg": "Потопете се в морския бриз, който ви дава почивка, позволява ви да се отпуснете и да се отправите на чувствено пътешествие по плажовете на тропиците. Foen Laguna е мястото, където морето среща сушата, създавайки ефирна, естествена и освежаваща комбинация. Най-интензивният аромат на Foen пленява със своя състав и характер. Ще се хареса на мистериозни, креативни и самоуверени хора.",
+        "en": "Dive into the sea breeze that gives you rest, allows you to relax and set off on a sensuous journey on the beaches of the tropics. Foen Laguna is the place where the sea meets the land, creating an aromatic, natural and refreshing combination. The most intense Foen perfume captivates with its composition and character. It will suit mysterious, creative and confident people."
+      },
+      "shortDescription": {
+        "bg": "Най-интензивната композиция с успокояващи свойства.",
+        "en": "The most intense composition with calming properties."
+      },
+      "scentComposition": {
+        "bg": "Карамфил, обогатен с мускусно-амбаров акорд, Жасмин и Тубероза",
+        "en": "Caramfil, enriched with musk-ambered chord, Jasmine and Tubereuse"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 15,
+      "name": {
+        "bg": "New Car Leather",
+        "en": "New Car Leather"
+      },
+      "category": {
+        "bg": "Интензивни",
+        "en": "Intense"
+      },
+      "imgSource": "/Images/foen/New-Car-Leather.jpg",
+      "description": {
+        "bg": "Какво може да бъде по-свързано с мъжествения характер от миризмата на кожа, заобиколена от дървесни, балсамови нотки на аромат. Приглушен, но леко кадифен акцент ще се впише перфектно в подредбата на стаите и интериора на автомобила. Мирисът на кожа изпълва пространството, успокоява и стимулира сетивата. Освен това ухае на шик и не ви оставя да подминете безразлични.",
+        "en": "What could be more associated with the masculine character than the scent of leather, surrounded by woody, balsam notes of aroma. Softened, but slightly camphor accent will fit perfectly into the arrangement of rooms and the interior of the car. The scent of leather fills the space, calms and stimulates the senses. In addition, it smells of chic and does not let you pass indifferently."
+      },
+      "shortDescription": {
+        "bg": "Интериора на вашето превозно средство ще приеме нов характер.",
+        "en": "The interior of your vehicle will take on a new character."
+      },
+      "scentComposition": {
+        "bg": "Естествена кожа и Дървесни нотки",
+        "en": "Natural leather and woody notes"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 16,
+      "name": {
+        "bg": "No Smoking",
+        "en": "No Smoking"
+      },
+      "category": {
+        "bg": "Интензивни",
+        "en": "Intense"
+      },
+      "imgSource": "/Images/foen/No-Smoking.jpg",
+      "description": {
+        "bg": "Мечтаете ли да неутрализирате миризмата на цигари в колата или дома си? Ние имаме решение за вас. Foen No Smoking е начин да замените миризмата на цигарен дим с приятен, успокояващ растителен акорд. Ако сте непушач и имате нужда от освежаване, неутрализирането на миризмата на цигари в колата ще се окаже спасител.",
+        "en": "Do you dream of neutralizing the smell of cigarettes in the car or at home? We have a solution for you. Foen No Smoking is a way to replace the smell of smoke with a pleasant, calming plant chord. If you are a non-smoker and need to refresh, neutralizing the smell of cigarettes in the car will be a lifesaver."
+      },
+      "shortDescription": {
+        "bg": "Идеален за неутрализирането на неприятните миризми на цигари.",
+        "en": "Ideal for neuralising unpleasant cigarette smells."
+      },
+      "scentComposition": {
+        "bg": "Азиатско пачули и Масло от бадиан",
+        "en": "Tropical patchouli and balm oil"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 17,
+      "name": {
+        "bg": "Sandalwood",
+        "en": "Sandalwood"
+      },
+      "category": {
+        "bg": "Интензивни",
+        "en": "Intense"
+      },
+      "imgSource": "/Images/foen/Sandalwood.jpg",
+      "description": {
+        "bg": "Открийте тропическото сандалово дърво, което расте в низините на Австралия, Югоизточна Азия и островите в Тихия океан. Отведете сетивата си на пътешествие по стъпките на ориенталските аромати. Ароматът на сандалово дърво е елегантност и оригинален характер, които ще ви накарат да се откроите. Етеричното масло е създадено по уникална растителна рецепта, благодарение на която изветрява бавно и ефективно освежава въздуха.",
+        "en": "Discover the tropical sandalwood that grows in the lowlands of Australia, Southeast Asia and islands in the Pacific Ocean. Take your senses on a journey through the steps of oriental aromas. The scent of sandalwood is elegance and original character that will make you open up. The essential oil is created by a unique plant recipe, thanks to which it slowly and effectively refreshes the air."
+      },
+      "shortDescription": {
+        "bg": "Луксозен аромат на сандалово дърво.",
+        "en": "A luxurious scent of sandalwood."
+      },
+      "scentComposition": {
+        "bg": "Сандалово дърво, Смирна, Ванилия",
+        "en": "Sandalwood, Cedar, Vanilla"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 18,
+      "name": {
+        "bg": "Savor",
+        "en": "Savor"
+      },
+      "category": {
+        "bg": "Сладки",
+        "en": "Sweet"
+      },
+      "imgSource": "/Images/foen/Savor.jpg",
+      "description": {
+        "bg": "Може ли един аромат да бъде лек, ефирен, деликатен и в същото време чувствен и изкусителен? Оказва се, че да. Foen Savor е квинтесенцията на женската природа в ефирна форма. Сладкото ухание съблазнява с плодова мелодия, а изисканата комбинация от съставки перфектно подчертава елегантността на места като ресторанти или хотели и има положителен ефект върху благосъстоянието.",
+        "en": "Can an aroma be light, ethereal, delicate and at the same time sensual and seductive? It turns out that yes. Foen Savor is the quintessence of feminine nature in an aromatic form. The sweet aroma seduces with a fruity melody, and the elegant combination of ingredients perfectly highlights the elegance of places such as restaurants or hotels and has a positive effect on well-being."
+      },
+      "shortDescription": {
+        "bg": "Елегантен, сладък аромат, който ще промени интериора ви.",
+        "en": "An elegant, sweet fragnance that will change your interior."
+      },
+      "scentComposition": {
+        "bg": "Касис, Мандарина, Портокал, Боровинка, Джинджифил, зърна Тонка, Мускус, Жасмин, Роза",
+        "en": "Cassis, Mandarin, Orange, Blackberry, Jasmine, Fine grain, Musk, Rose"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 19,
+      "name": {
+        "bg": "Soul",
+        "en": "Soul"
+      },
+      "category": {
+        "bg": "Свежи",
+        "en": "Fresh"
+      },
+      "imgSource": "/Images/foen/Soul.jpg",
+      "description": {
+        "bg": "Вслушайте се в себе си и посегнете към аромат, който като никой друг ще успокои душата ви и ще ви даде усещане за неповторима хармония. Foen Soul е уникална композиция, която започва с климата на слънчев цитрус, за да ви отведе до аромата на роза, потопена в кехлибар. Кулминацията на цялото ще бъде невероятно чувствен мускус, заобиколен от цветя, които ще очароват сетивата ви с богатство от усещания.",
+        "en": "Listen to yourself and reach for the scent that, like no other, will calm your soul and give you a sense of unique harmony. Foen Soul is a unique composition that starts with the climate of sunny citrus, to take you to the scent of rose, immersed in cyclamen. The culmination of everything will be an incredibly sensual musk, surrounded by flowers that will enchant your senses with a wealth of sensations."
+      },
+      "shortDescription": {
+        "bg": "Аромат, който ще декорира интериора ви с естествената свежест.",
+        "en": "A fragnance that will decorate your interior with the freshness of the nature."
+      },
+      "scentComposition": {
+        "bg": "Цветя, билкови и пикантни Подправки, Цитрус",
+        "en": "Flowers, herbs and spicy spices, Citrus"
+      },
+      "price": "23.40"
+    },
+    {
+      "id": 20,
+      "name": {
+        "bg": "Vanilla",
+        "en": "Vanilla"
+      },
+      "category": {
+        "bg": "Сладки",
+        "en": "Sweet"
+      },
+      "imgSource": "/Images/foen/Vanilla.jpg",
+      "description": {
+        "bg": "Открийте аромата на ванилия с добавка на цитрус. Интензивният и мек аромат успокоява и създава атмосфера, предразполагаща към релаксация. Удивително е колко много може да се извлече от растението, свързано с вкуса на сладолед, ароматна подправка и ефирно бяло цвете. Открийте освежаващ бриз с нотка на плодове. Усетете универсалния тон на аромата, който въпреки интензивността си не дразни обонянието, естествен е и осигурява необходимото освежаване на интериора.",
+        "en": "Discover the scent of vanilla with the addition of citrus. The intense and soft aroma calms and creates an atmosphere predisposing to relaxation. It is amazing how much can be extracted from the plant related to the taste of ice cream, aromatic spice and white flower essence. Discover a refreshing breeze with a fruit note. Feel the universal tone of the scent, which despite its intensity does not irritate the sense of smell, is natural and provides the necessary refreshing of the interior."
+      },
+      "shortDescription": {
+        "bg": "Ароматът на парфюмирана ванилия, перфектен за всички ъгли на вашата кола или дом.",
+        "en": "The scent of perfumed vanilla, perfect for all corners of your car or home."
+      },
+      "scentComposition": {
+        "bg": "Сладостта на Ванилия с нотки на Мандарина и Лайм",
+        "en": "Vanilla, Mandarin, Lemon"
+      },
+      "price": "23.40"
+    }
+  ]

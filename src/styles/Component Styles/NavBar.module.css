@@ -250,7 +250,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .topBar {
     padding: 10px 0;
   }
