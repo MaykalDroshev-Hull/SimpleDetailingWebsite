@@ -577,6 +577,15 @@
   .filtersContainer {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
+  
+  .modalContent {
+    max-height: 90vh;
+  }
+  
+  .modalBody {
+    max-height: calc(90vh - 250px);
+    overflow-y: auto;
+  }
 }
 
 /* Responsive Design - Mobile */
@@ -650,6 +659,20 @@
     padding: 5px 10px;
     top: 10px;
     left: 10px;
+  }
+  
+  .modalContent {
+    max-height: 88vh;
+  }
+  
+  .modalHeader {
+    padding: 20px;
+  }
+  
+  .modalBody {
+    padding: 20px;
+    max-height: calc(88vh - 220px);
+    overflow-y: auto;
   }
 }
 
@@ -770,13 +793,13 @@
   .modalContent {
     max-width: 100%;
     margin: 10px;
-    max-height: 95vh;
+    max-height: 85vh;
   }
   
   .modalHeader {
     flex-direction: column;
-    padding: 20px;
-    gap: 15px;
+    padding: 15px;
+    gap: 12px;
   }
   
   .modalHeaderLeft {
@@ -784,28 +807,42 @@
   }
   
   .modalImageContainer {
-    width: 120px;
-    height: 120px;
-    min-width: 120px;
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
     align-self: center;
   }
   
   .modalBody {
-    padding: 20px;
+    padding: 15px;
+    max-height: calc(70vh - 200px);
+    overflow-y: auto;
   }
   
   .modalTitle {
-    font-size: clamp(1.3rem, 4vw, 1.8rem);
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
     text-align: center;
   }
   
   .modalCategory {
     align-self: center;
+    font-size: 0.75rem;
+    padding: 5px 10px;
   }
   
   .modalDescription {
-    font-size: 0.9rem;
-    line-height: 1.7;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  
+  .modalScentComposition {
+    padding: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .modalPrice {
+    padding-top: 15px;
   }
   
   .readMoreButton {
@@ -851,8 +888,8 @@
   position: absolute;
   top: 15px;
   right: 15px;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   background: rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
