@@ -98,6 +98,7 @@ const NavBar = () => {
             <Link href="/services" className={styles.navLink}>{t('Services')}</Link>
             <Link href="/contact" className={styles.navLink}>{t('Contacts')}</Link>
             <Link href="/reviews" className={styles.navLink}>{t('Reviews')}</Link>
+            <Link href="/parfumes" className={styles.navLink}>{t('InteriorParfumes')}</Link>
             <LanguageSwitch />
           </div>
 
@@ -134,6 +135,9 @@ const NavBar = () => {
             </Link>
             <Link href="/reviews" className={styles.mobileNavLink} onClick={closeMenu}>
               {t('Reviews')}
+            </Link>
+            <Link href="/parfumes" className={styles.mobileNavLink} onClick={closeMenu}>
+              {t('InteriorParfumes')}
             </Link>
             <div className={styles.mobileLanguageSwitch}>
               <LanguageSwitch />
