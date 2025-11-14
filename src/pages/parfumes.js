@@ -16,7 +16,6 @@ const Parfumes = () => {
   const parfumesData = require('public/Data/parfumes.json');
   
   // Filter states
-  const [searchName, setSearchName] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedScent, setSelectedScent] = useState('');
   
@@ -70,21 +69,18 @@ const Parfumes = () => {
   // Filter parfumes
   const filteredParfumes = useMemo(() => {
     return parfumesData.filter(parfume => {
-      const name = (parfume.name[locale] || parfume.name.bg).toLowerCase();
       const category = parfume.category[locale] || parfume.category.bg;
       const composition = parfume.scentComposition[locale] || parfume.scentComposition.bg;
       const scentList = composition.split(',').map(s => s.trim().toLowerCase());
       
-      const matchesName = !searchName || name.includes(searchName.toLowerCase());
       const matchesCategory = !selectedCategory || category === selectedCategory;
       const matchesScent = !selectedScent || scentList.includes(selectedScent.toLowerCase());
       
-      return matchesName && matchesCategory && matchesScent;
+      return matchesCategory && matchesScent;
     });
-  }, [parfumesData, locale, searchName, selectedCategory, selectedScent]);
+  }, [parfumesData, locale, selectedCategory, selectedScent]);
   
   const resetFilters = () => {
-    setSearchName('');
     setSelectedCategory('');
     setSelectedScent('');
   };
@@ -117,20 +113,6 @@ const Parfumes = () => {
       <section className={styles.filtersSection}>
         <div className={styles.container}>
           <div className={styles.filtersContainer}>
-            {/* Search by Name */}
-            <div className={styles.filterGroup}>
-              <label className={styles.filterLabel}>
-                {locale === 'en' ? 'Search by Name' : 'Търсене по име'}
-              </label>
-              <input
-                type="text"
-                className={styles.filterInput}
-                placeholder={locale === 'en' ? 'Enter parfume name...' : 'Въведете име на парфюма...'}
-                value={searchName}
-                onChange={(e) => setSearchName(e.target.value)}
-              />
-            </div>
-            
             {/* Category Filter */}
             <div className={styles.filterGroup}>
               <label className={styles.filterLabel}>
@@ -174,7 +156,7 @@ const Parfumes = () => {
             </div>
             
             {/* Reset Button */}
-            {(searchName || selectedCategory || selectedScent) && (
+            {(selectedCategory || selectedScent) && (
               <button 
                 className={styles.resetButton}
                 onClick={resetFilters}
