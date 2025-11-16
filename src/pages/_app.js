@@ -5,6 +5,7 @@ import { appWithTranslation } from 'next-i18next'
 import '../styles/globals.css'
 import BackToTop from "@/components/Page Components/BackToTop";
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 //Changing subset of 'Nunito' font to latin and setting it to its own variable
@@ -21,6 +22,7 @@ const MyApp = ({ Component, pageProps }) => (
       </Layout>
     </main>
     <Analytics />
+    <SpeedInsights />
   </ChakraProvider>
 )
 
