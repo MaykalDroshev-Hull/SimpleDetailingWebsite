@@ -262,39 +262,11 @@ const Parfumes = () => {
       <section className={styles.usageSection}>
         <div className={styles.container}>
           <div className={styles.usageContent}>
-            {/* What it's used for */}
-            <div className={styles.usageBlock}>
-              <h3 className={styles.usageTitle}>{t('ParfumesUsedFor')}</h3>
-              <ul className={styles.usageList}>
-                <li>{t('ParfumesUsedFor1')}</li>
-                <li>{t('ParfumesUsedFor2')}</li>
-                <li>{t('ParfumesUsedFor3')}</li>
-                <li>{t('ParfumesUsedFor4')}</li>
-                <li>{t('ParfumesUsedFor5')}</li>
-                <li>{t('ParfumesUsedFor6')}</li>
-              </ul>
-            </div>
 
             {/* Guidance for use */}
             <div className={styles.usageBlock}>
               <h3 className={styles.usageTitle}>{t('ParfumesGuidanceTitle')}</h3>
               <p className={styles.usageText}>{t('ParfumesGuidance')}</p>
-            </div>
-
-            {/* Application areas */}
-            <div className={styles.usageBlock}>
-              <div className={styles.applicationArea}>
-                <h4 className={styles.applicationTitle}>{t('ParfumesVehiclesTitle')}</h4>
-                <p className={styles.applicationText}>{t('ParfumesVehicles')}</p>
-              </div>
-              <div className={styles.applicationArea}>
-                <h4 className={styles.applicationTitle}>{t('ParfumesRoomsTitle')}</h4>
-                <p className={styles.applicationText}>{t('ParfumesRooms')}</p>
-              </div>
-              <div className={styles.applicationArea}>
-                <h4 className={styles.applicationTitle}>{t('ParfumesSanitaryTitle')}</h4>
-                <p className={styles.applicationText}>{t('ParfumesSanitary')}</p>
-              </div>
             </div>
 
             {/* Safety warnings */}
