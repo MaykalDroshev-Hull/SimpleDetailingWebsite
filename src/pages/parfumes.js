@@ -13,7 +13,7 @@ const Parfumes = () => {
   const { locale } = router;
   
   // Load parfumes data
-  const parfumesData = require('public/Data/parfumes.json');
+  const parfumesData = require('../../public/Data/parfumes.json');
   
   // Filter states
   const [selectedCategory, setSelectedCategory] = useState('');

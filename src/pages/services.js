@@ -12,8 +12,8 @@ const Services = () => {
   
   // Dynamically import services data based on language
   const servicesData = locale === 'en' 
-    ? require('public/Data/services-en.json')
-    : require('public/Data/services.json')
+    ? require('../../public/Data/services-en.json')
+    : require('../../public/Data/services.json')
   
   return (
     <>
