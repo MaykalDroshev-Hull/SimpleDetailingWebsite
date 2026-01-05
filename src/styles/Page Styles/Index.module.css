@@ -343,6 +343,40 @@
   line-height: 1.6;
 }
 
+.rewardBadge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  padding: 2rem 0;
+  gap: 1rem;
+}
+
+.awardText {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffd700;
+  margin: 0;
+  text-align: center;
+}
+
+.rewardBadge a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.rewardBadge a:hover {
+  transform: scale(1.05);
+}
+
+.rewardBadge img {
+  width: 250px;
+  height: 60px;
+  border: 0;
+  display: block;
+}
+
 /* CTA Section */
 .ctaSection {
   padding: 80px 0;
@@ -425,6 +459,19 @@
   .featuresImage img {
     height: 300px;
   }
+  
+  .rewardBadge {
+    margin-top: 3rem;
+  }
+  
+  .awardText {
+    font-size: 1rem;
+  }
+  
+  .rewardBadge img {
+    width: 200px;
+    height: 48px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -443,6 +490,15 @@
   
   .heroContent {
     padding: 0 15px;
+  }
+  
+  .awardText {
+    font-size: 0.9rem;
+  }
+  
+  .rewardBadge img {
+    width: 180px;
+    height: 43px;
   }
 }
 

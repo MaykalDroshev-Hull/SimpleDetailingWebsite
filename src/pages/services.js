@@ -15,6 +15,13 @@ const Services = () => {
     ? require('../../public/Data/services-en.json')
     : require('../../public/Data/services.json')
   
+  // Function to swap currency order from "BGN / EUR" to "EUR / BGN"
+  const swapCurrencyOrder = (description) => {
+    // Pattern to match: number BGN/лева / number EUR
+    // This will match patterns like "710 BGN / 363.02 EUR" or "710 лева / 363.02 EUR"
+    return description.replace(/(\d+(?:\.\d+)?)\s+(BGN|лева)\s*\/\s*(\d+(?:\.\d+)?)\s+EUR/g, '$3 EUR / $1 $2')
+  }
+  
   return (
     <>
       <Meta
@@ -55,7 +62,7 @@ const Services = () => {
                   <h2 className={styles.serviceTitle}>{service.title}</h2>
                   <div 
                     className={styles.serviceDescription}
-                    dangerouslySetInnerHTML={{ __html: service.description }} 
+                    dangerouslySetInnerHTML={{ __html: swapCurrencyOrder(service.description) }} 
                   />
                 </div>
               </div>

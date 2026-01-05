@@ -164,6 +164,16 @@ const Home = () => {
               </div>
             </div>
           </div>
+          <div className={styles.rewardBadge}>
+            <p className={styles.awardText}>{t('AwardText')}</p>
+            <a href="https://www.zlatnafirma.eu/company/asea-m-detailing-1213837" target="_blank" rel="noopener noreferrer">
+              <img 
+                src="https://www.zlatnafirma.eu/company-image/1213837-white.png" 
+                alt="ASEA-M Detailing - Ловеч" 
+                title="ASEA-M Detailing - Ловеч"
+              />
+            </a>
+          </div>
         </div>
       </section>
 
