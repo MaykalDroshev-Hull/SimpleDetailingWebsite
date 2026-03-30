@@ -2,6 +2,16 @@ import { NextRequest, NextResponse } from "next/server";
 
 const IMAGE_EXTENSION_REGEX = /\.(?:avif|bmp|gif|ico|jpe?g|png|svg|webp)$/i;
 const HOTLINK_FALLBACK_IMAGE_PATH = "/Images/download.jpg";
+const LINK_PREVIEW_FALLBACK_IMAGE_PATH = "/Logo-Square.png";
+const LINK_PREVIEW_BOT_REGEX =
+  /(facebookexternalhit|facebot|meta-externalagent|twitterbot|slackbot|discordbot|skypeuripreview|whatsapp)/i;
+
+function getBlockedImagePath(request: NextRequest) {
+  const userAgent = request.headers.get("user-agent") ?? "";
+  return LINK_PREVIEW_BOT_REGEX.test(userAgent)
+    ? LINK_PREVIEW_FALLBACK_IMAGE_PATH
+    : HOTLINK_FALLBACK_IMAGE_PATH;
+}
 
 export function middleware(request: NextRequest) {
   const { pathname, host } = request.nextUrl;
@@ -10,14 +20,17 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  if (pathname === HOTLINK_FALLBACK_IMAGE_PATH) {
+  if (
+    pathname === HOTLINK_FALLBACK_IMAGE_PATH ||
+    pathname === LINK_PREVIEW_FALLBACK_IMAGE_PATH
+  ) {
     return NextResponse.next();
   }
 
   const referer = request.headers.get("referer");
 
   if (!referer) {
-    return NextResponse.rewrite(new URL(HOTLINK_FALLBACK_IMAGE_PATH, request.url));
+    return NextResponse.rewrite(new URL(getBlockedImagePath(request), request.url));
   }
 
   try {
@@ -32,10 +45,10 @@ export function middleware(request: NextRequest) {
     ]);
 
     if (!allowedHosts.has(refererHost)) {
-      return NextResponse.rewrite(new URL(HOTLINK_FALLBACK_IMAGE_PATH, request.url));
+      return NextResponse.rewrite(new URL(getBlockedImagePath(request), request.url));
     }
   } catch {
-    return NextResponse.rewrite(new URL(HOTLINK_FALLBACK_IMAGE_PATH, request.url));
+    return NextResponse.rewrite(new URL(getBlockedImagePath(request), request.url));
   }
 
   return NextResponse.next();
